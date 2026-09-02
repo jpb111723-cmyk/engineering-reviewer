@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<title>Engineering Recall Bank — Multi-Subject</title>
+<title>Engineering Recall Bank — Community Edition</title>
 <style>
 /* ============================================================
-   COMPLETE STYLES
+   COMPLETE STYLES (Same as before)
    ============================================================ */
 :root{
   --ink:#0f2340;
@@ -967,6 +967,17 @@ Answer: B</pre>
 
 <script>
 // ============================================================
+// CONFIGURATION - CHANGE THESE TO MATCH YOUR GITHUB REPO
+// ============================================================
+
+const GITHUB_USERNAME = 'jwu'; // e.g., 'johndoe'
+const GITHUB_REPO = 'engineering-reviewer'; // Your repo name
+const GITHUB_TOKEN = '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'; // Get from GitHub Settings
+
+// Admin password
+const ADMIN_PASSWORD = '2424c0-123098fko--01-1393';
+
+// ============================================================
 // DATA
 // ============================================================
 
@@ -1033,6 +1044,7 @@ let currentIndex = 0;
 let timerInterval = null;
 let timeLeftSeconds = null;
 let questionFilterText = '';
+let pendingSubmissions = [];
 
 // ============================================================
 // DATA FUNCTIONS
@@ -1083,6 +1095,182 @@ function getCurrentSeen() {
 
 function getSubjectKeys() {
   return Object.keys(allData);
+}
+
+// ============================================================
+// GITHUB ISSUES FUNCTIONS (Shared Database)
+// ============================================================
+
+async function submitToGitHub(subject, question, choices, answer) {
+  const title = `[${subject}] New question: ${question.substring(0, 50)}...`;
+  const body = `
+## New Question Submission
+
+**Subject:** ${subject}
+
+**Question:** ${question}
+
+**Choices:**
+A. ${choices[0]}
+B. ${choices[1]}
+C. ${choices[2]}
+D. ${choices[3]}
+
+**Answer:** ${['A', 'B', 'C', 'D'][answer]}
+
+---
+*Submitted via Engineering Reviewer*
+  `;
+
+  try {
+    const response = await fetch(
+      `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/issues`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `token ${GITHUB_TOKEN}`,
+          'Content-Type': 'application/json',
+          'Accept': 'application/vnd.github.v3+json'
+        },
+        body: JSON.stringify({
+          title: title,
+          body: body,
+          labels: ['submission', 'pending-review', subject]
+        })
+      }
+    );
+
+    if (response.ok) {
+      const data = await response.json();
+      return { success: true, issueNumber: data.number, url: data.html_url };
+    } else {
+      const error = await response.json();
+      return { success: false, error: error.message };
+    }
+  } catch(e) {
+    return { success: false, error: e.message };
+  }
+}
+
+async function getPendingSubmissions() {
+  try {
+    const response = await fetch(
+      `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/issues?labels=pending-review&state=open`
+    );
+    if (response.ok) {
+      return await response.json();
+    }
+    return [];
+  } catch(e) {
+    console.error('Failed to fetch submissions:', e);
+    return [];
+  }
+}
+
+async function approveSubmission(issueNumber) {
+  try {
+    const issueResponse = await fetch(
+      `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/issues/${issueNumber}`
+    );
+    const issue = await issueResponse.json();
+    
+    const parsed = parseIssueBody(issue.body);
+    if (parsed) {
+      const subject = parsed.subject || 'machine';
+      if (!allData[subject]) {
+        allData[subject] = {
+          id: subject,
+          name: subject.charAt(0).toUpperCase() + subject.slice(1),
+          short: subject.substring(0,2).toUpperCase(),
+          questions: [],
+          seen: []
+        };
+      }
+      
+      allData[subject].questions.push({
+        id: 'shared_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6),
+        q: parsed.question,
+        choices: parsed.choices,
+        answer: parsed.answer
+      });
+      saveAllData();
+      
+      await fetch(
+        `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/issues/${issueNumber}`,
+        {
+          method: 'PATCH',
+          headers: {
+            'Authorization': `token ${GITHUB_TOKEN}`,
+            'Content-Type': 'application/json',
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          body: JSON.stringify({
+            state: 'closed',
+            labels: ['approved']
+          })
+        }
+      );
+      
+      return { success: true };
+    }
+    return { success: false, error: 'Could not parse question' };
+  } catch(e) {
+    return { success: false, error: e.message };
+  }
+}
+
+async function rejectSubmission(issueNumber) {
+  try {
+    await fetch(
+      `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/issues/${issueNumber}`,
+      {
+        method: 'PATCH',
+        headers: {
+          'Authorization': `token ${GITHUB_TOKEN}`,
+          'Content-Type': 'application/json',
+          'Accept': 'application/vnd.github.v3+json'
+        },
+        body: JSON.stringify({
+          state: 'closed',
+          labels: ['rejected']
+        })
+      }
+    );
+    return { success: true };
+  } catch(e) {
+    return { success: false, error: e.message };
+  }
+}
+
+function parseIssueBody(body) {
+  try {
+    const lines = body.split('\n').filter(l => l.trim());
+    let subject = 'machine';
+    let question = '';
+    let choices = [];
+    let answer = -1;
+    let answerLetter = '';
+    
+    for (let line of lines) {
+      if (line.startsWith('**Subject:**')) {
+        subject = line.replace('**Subject:**', '').trim().toLowerCase();
+      } else if (line.startsWith('**Question:**')) {
+        question = line.replace('**Question:**', '').trim();
+      } else if (line.match(/^[A-D]\./)) {
+        choices.push(line.replace(/^[A-D]\.\s*/, '').trim());
+      } else if (line.includes('**Answer:**')) {
+        answerLetter = line.replace('**Answer:**', '').trim();
+      }
+    }
+    
+    if (question && choices.length === 4 && answerLetter) {
+      answer = ['A', 'B', 'C', 'D'].indexOf(answerLetter);
+      return { subject, question, choices, answer };
+    }
+    return null;
+  } catch(e) {
+    return null;
+  }
 }
 
 // ============================================================
@@ -1153,7 +1341,6 @@ function renderSubjectSelector() {
       if (data) {
         const badge = btn.querySelector('.badge');
         if (badge) badge.textContent = data.questions?.length || 0;
-        // Update button text with short code
         btn.innerHTML = (data.short || key.substring(0,2).toUpperCase()) + ' <span class="badge">' + (data.questions?.length || 0) + '</span>';
       }
     }
@@ -1618,8 +1805,8 @@ function initEventListeners() {
     showScreen('screen-setup');
   });
   
-  // Add Single Question
-  document.getElementById('add-single-question').addEventListener('click', function() {
+  // Add Single Question (Now submits to GitHub for review)
+  document.getElementById('add-single-question').addEventListener('click', async function() {
     const q = document.getElementById('new-q-text').value.trim();
     const a = document.getElementById('new-q-a').value.trim();
     const b = document.getElementById('new-q-b').value.trim();
@@ -1631,56 +1818,55 @@ function initEventListeners() {
     if (!q) { fb.textContent = 'Please enter a question.'; return; }
     if (!a || !b || !c || !d) { fb.textContent = 'Please enter all four choices.'; return; }
     
-    const data = getCurrentData();
-    const newQuestion = {
-      id: currentSubject + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
-      q: q,
-      choices: [a, b, c, d],
-      answer: answer
-    };
+    fb.textContent = 'Submitting for review...';
     
-    data.questions.push(newQuestion);
-    saveAllData();
-    refreshHomeStats();
+    const result = await submitToGitHub(
+      allData[currentSubject].name,
+      q,
+      [a, b, c, d],
+      answer
+    );
     
-    document.getElementById('new-q-text').value = '';
-    document.getElementById('new-q-a').value = '';
-    document.getElementById('new-q-b').value = '';
-    document.getElementById('new-q-c').value = '';
-    document.getElementById('new-q-d').value = '';
-    
-    fb.textContent = 'Question added successfully!';
-    setTimeout(function() { fb.textContent = ''; }, 3000);
+    if (result.success) {
+      fb.textContent = 'Question submitted for review! #' + result.issueNumber;
+      document.getElementById('new-q-text').value = '';
+      document.getElementById('new-q-a').value = '';
+      document.getElementById('new-q-b').value = '';
+      document.getElementById('new-q-c').value = '';
+      document.getElementById('new-q-d').value = '';
+    } else {
+      fb.textContent = 'Submission failed: ' + result.error;
+    }
   });
   
-  // Add Bulk Questions
-  document.getElementById('add-bulk-questions').addEventListener('click', function() {
+  // Add Bulk Questions (Now submits to GitHub for review)
+  document.getElementById('add-bulk-questions').addEventListener('click', async function() {
     const raw = document.getElementById('paste-area').value;
     const fb = document.getElementById('bulk-feedback');
     
     if (!raw.trim()) { fb.textContent = 'Paste some questions first.'; return; }
     
     const { results, errors } = parsePastedQuestions(raw);
-    const data = getCurrentData();
     
     if (results.length === 0) {
       fb.textContent = 'No valid questions found. Check the format.';
       return;
     }
     
-    results.forEach(function(item) {
-      data.questions.push({
-        id: currentSubject + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
-        q: item.q,
-        choices: item.choices,
-        answer: item.answer
-      });
-    });
+    fb.textContent = 'Submitting ' + results.length + ' questions for review...';
+    let successCount = 0;
     
-    saveAllData();
-    refreshHomeStats();
+    for (let item of results) {
+      const result = await submitToGitHub(
+        allData[currentSubject].name,
+        item.q,
+        item.choices,
+        item.answer
+      );
+      if (result.success) successCount++;
+    }
     
-    fb.textContent = 'Added ' + results.length + ' question(s)!' + (errors.length ? '  ' + errors.length + ' skipped.' : '');
+    fb.textContent = 'Submitted ' + successCount + ' of ' + results.length + ' questions for review!';
     document.getElementById('paste-area').value = '';
   });
   
@@ -1851,6 +2037,7 @@ initEventListeners();
 console.log('Multi-Subject Reviewer loaded!');
 console.log('Subjects:', Object.keys(allData).join(', '));
 console.log('All buttons should now work!');
+console.log('To make changes global, configure GitHub token above.');
 </script>
 </body>
 </html>
