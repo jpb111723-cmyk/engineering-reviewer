@@ -680,19 +680,19 @@ select:focus, input:focus, textarea:focus, button:focus-visible{
     
     <!-- SUBJECT SELECTOR -->
     <div class="subject-selector" id="subject-selector">
-      <span class="subject-selector-label">📚 Subject:</span>
-      <button class="subject-btn active" data-subject="machine">⚙️ Machine Design <span class="badge">5</span></button>
-      <button class="subject-btn" data-subject="thermo">🔥 Thermodynamics <span class="badge">3</span></button>
-      <button class="subject-btn" data-subject="electrical">⚡ Electrical Engineering <span class="badge">3</span></button>
-      <button class="subject-btn" data-subject="mechanics">📐 Mechanics <span class="badge">3</span></button>
-      <button class="btn btn-sm btn-ghost" id="manage-subjects-btn" style="margin-left:auto; padding:4px 12px; font-size:11px;">⚙️ Manage Subjects</button>
+      <span class="subject-selector-label">Subject:</span>
+      <button class="subject-btn active" data-subject="machine">MD <span class="badge">5</span></button>
+      <button class="subject-btn" data-subject="thermo">TD <span class="badge">3</span></button>
+      <button class="subject-btn" data-subject="electrical">EE <span class="badge">3</span></button>
+      <button class="subject-btn" data-subject="mechanics">EM <span class="badge">3</span></button>
+      <button class="btn btn-sm btn-ghost" id="manage-subjects-btn" style="margin-left:auto; padding:4px 12px; font-size:11px;">Manage Subjects</button>
     </div>
 
     <div class="masthead">
       <div class="masthead-marks" aria-hidden="true">
         <span class="tick tl"></span><span class="tick tr"></span>
       </div>
-      <p class="eyebrow" id="subject-eyebrow">📚 ENGINEERING · RECALL BANK</p>
+      <p class="eyebrow" id="subject-eyebrow">ENGINEERING · RECALL BANK</p>
       <h1 id="subject-title">ENGINEERING<br>REVIEWER</h1>
       <p class="subhead" id="subject-subhead">Select a subject above to begin.</p>
     </div>
@@ -714,7 +714,7 @@ select:focus, input:focus, textarea:focus, button:focus-visible{
 
     <div class="home-actions">
       <button class="btn btn-primary" id="go-setup">Start Exam →</button>
-      <button class="btn btn-ghost" id="go-add-questions">📝 Add Questions</button>
+      <button class="btn btn-ghost" id="go-add-questions">Add Questions</button>
       <button class="btn btn-ghost" id="go-manage">Manage Question Bank</button>
       <button class="btn btn-ghost" id="reset-progress">Reset Progress</button>
     </div>
@@ -825,7 +825,7 @@ select:focus, input:focus, textarea:focus, button:focus-visible{
   <!-- ADD QUESTIONS -->
   <section id="screen-add-questions" class="screen">
     <button class="btn-back" data-target="screen-home">← Back</button>
-    <h2 class="screen-title">📝 Add Questions</h2>
+    <h2 class="screen-title">Add Questions</h2>
 
     <div class="alert alert-info" id="add-questions-info">
       Adding questions to: <strong id="add-subject-name">Machine Design</strong>
@@ -865,7 +865,7 @@ select:focus, input:focus, textarea:focus, button:focus-visible{
         </div>
       </div>
       <div class="manage-actions">
-        <button class="btn btn-primary" id="add-single-question">➕ Add Question</button>
+        <button class="btn btn-primary" id="add-single-question">Add Question</button>
         <span class="parse-feedback" id="add-single-feedback"></span>
       </div>
     </div>
@@ -888,7 +888,7 @@ D. 6
 Answer: B</pre>
       <textarea id="paste-area" rows="8" placeholder="Paste questions here..."></textarea>
       <div class="manage-actions">
-        <button class="btn btn-primary" id="add-bulk-questions">📥 Add All Questions</button>
+        <button class="btn btn-primary" id="add-bulk-questions">Add All Questions</button>
         <span class="mono parse-feedback" id="bulk-feedback"></span>
       </div>
     </div>
@@ -914,12 +914,12 @@ Answer: B</pre>
     <div class="panel">
       <h3 class="panel-title">Import / Export</h3>
       <div class="manage-actions">
-        <button class="btn btn-ghost" id="export-added">📤 Export Questions</button>
-        <button class="btn btn-ghost" id="import-added">📥 Import Questions</button>
+        <button class="btn btn-ghost" id="export-added">Export Questions</button>
+        <button class="btn btn-ghost" id="import-added">Import Questions</button>
         <input type="file" id="import-file" accept=".txt" style="display:none">
       </div>
       <div class="manage-actions" style="margin-top:8px; border-top:1px solid var(--line); padding-top:12px;">
-        <button class="btn btn-danger" id="clear-added">🗑️ Remove All Questions</button>
+        <button class="btn btn-danger" id="clear-added">Remove All Questions</button>
       </div>
     </div>
   </section>
@@ -927,7 +927,7 @@ Answer: B</pre>
   <!-- MANAGE SUBJECTS -->
   <section id="screen-manage-subjects" class="screen">
     <button class="btn-back" data-target="screen-home">← Back</button>
-    <h2 class="screen-title">⚙️ Manage Subjects</h2>
+    <h2 class="screen-title">Manage Subjects</h2>
 
     <div class="panel">
       <h3 class="panel-title">Add New Subject</h3>
@@ -937,15 +937,11 @@ Answer: B</pre>
           <input type="text" id="new-subject-name" placeholder="e.g., Civil Engineering">
         </div>
         <div class="editor-field">
-          <label>Icon (emoji)</label>
-          <input type="text" id="new-subject-icon" placeholder="🏗️" maxlength="2" style="width:60px;">
-        </div>
-        <div class="editor-field">
           <label>Short Code</label>
           <input type="text" id="new-subject-short" placeholder="CE" maxlength="6" style="width:80px;">
         </div>
         <div class="editor-field" style="justify-content:flex-end;">
-          <button class="btn btn-primary" id="add-subject-btn" style="width:100%;">➕ Add Subject</button>
+          <button class="btn btn-primary" id="add-subject-btn" style="width:100%;">Add Subject</button>
         </div>
       </div>
       <span class="parse-feedback" id="add-subject-feedback"></span>
@@ -959,8 +955,8 @@ Answer: B</pre>
     <div class="panel">
       <h3 class="panel-title">Backup All Data</h3>
       <div class="manage-actions">
-        <button class="btn btn-ghost" id="export-all-data">💾 Export All Subjects & Questions</button>
-        <button class="btn btn-ghost" id="import-all-data">📥 Import All Data</button>
+        <button class="btn btn-ghost" id="export-all-data">Export All Subjects &amp; Questions</button>
+        <button class="btn btn-ghost" id="import-all-data">Import All Data</button>
         <input type="file" id="import-all-file" accept=".json" style="display:none">
       </div>
       <span class="parse-feedback" id="backup-feedback"></span>
@@ -980,7 +976,6 @@ const DEFAULT_SUBJECTS = {
   machine: {
     id: 'machine',
     name: 'Machine Design',
-    icon: '⚙️',
     short: 'MD',
     questions: [
       {id:"m1", q:"Determine the estimated weight of an A-36 steel plate size 3/16 \" x 6' x 20'", choices:["919 lbs","1012 lbs","829 lbs","735 lbs"], answer:0},
@@ -994,7 +989,6 @@ const DEFAULT_SUBJECTS = {
   thermo: {
     id: 'thermo',
     name: 'Thermodynamics',
-    icon: '🔥',
     short: 'TD',
     questions: [
       {id:"t1", q:"What is the SI unit of temperature?", choices:["Celsius","Fahrenheit","Kelvin","Rankine"], answer:2},
@@ -1006,7 +1000,6 @@ const DEFAULT_SUBJECTS = {
   electrical: {
     id: 'electrical',
     name: 'Electrical Engineering',
-    icon: '⚡',
     short: 'EE',
     questions: [
       {id:"e1", q:"What is the unit of electrical resistance?", choices:["Volt","Ampere","Ohm","Watt"], answer:2},
@@ -1018,7 +1011,6 @@ const DEFAULT_SUBJECTS = {
   mechanics: {
     id: 'mechanics',
     name: 'Engineering Mechanics',
-    icon: '📐',
     short: 'EM',
     questions: [
       {id:"me1", q:"The sum of all forces acting on a body in equilibrium is:", choices:["Zero","Maximum","Minimum","Infinite"], answer:0},
@@ -1051,10 +1043,10 @@ function loadAllData() {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
       allData = JSON.parse(saved);
-      // Ensure all subjects have seen array
       for (let key in allData) {
         if (!allData[key].seen) allData[key].seen = [];
         if (!allData[key].questions) allData[key].questions = [];
+        if (!allData[key].short) allData[key].short = key.substring(0,2).toUpperCase();
       }
       return;
     }
@@ -1141,18 +1133,17 @@ function switchSubject(key) {
   });
   
   const data = allData[key];
-  document.getElementById('subject-eyebrow').textContent = `${data.icon || '📚'} ${data.name.toUpperCase()} · RECALL BANK`;
+  document.getElementById('subject-eyebrow').textContent = data.name.toUpperCase() + ' · RECALL BANK';
   document.getElementById('subject-title').innerHTML = data.name.toUpperCase().replace(' ', '<br>');
-  document.getElementById('subject-subhead').textContent = `Offline recall exam for ${data.name}.`;
+  document.getElementById('subject-subhead').textContent = 'Offline recall exam for ' + data.name + '.';
   document.getElementById('add-subject-name').textContent = data.name;
-  document.getElementById('manage-title').textContent = `Manage Questions — ${data.name}`;
-  document.getElementById('add-questions-info').innerHTML = `Adding questions to: <strong>${data.name}</strong>`;
+  document.getElementById('manage-title').textContent = 'Manage Questions — ' + data.name;
+  document.getElementById('add-questions-info').innerHTML = 'Adding questions to: <strong>' + data.name + '</strong>';
   
   refreshHomeStats();
 }
 
 function renderSubjectSelector() {
-  // Subject buttons are already in HTML, just update their active state
   const keys = getSubjectKeys();
   document.querySelectorAll('.subject-btn').forEach(btn => {
     const key = btn.dataset.subject;
@@ -1162,6 +1153,8 @@ function renderSubjectSelector() {
       if (data) {
         const badge = btn.querySelector('.badge');
         if (badge) badge.textContent = data.questions?.length || 0;
+        // Update button text with short code
+        btn.innerHTML = (data.short || key.substring(0,2).toUpperCase()) + ' <span class="badge">' + (data.questions?.length || 0) + '</span>';
       }
     }
   });
@@ -1438,13 +1431,13 @@ function renderSubjectList() {
     div.className = 'subject-list-item';
     div.innerHTML = `
       <div>
-        <span class="name">${data.icon || '📚'} ${data.name}</span>
+        <span class="name">${data.short || key.substring(0,2).toUpperCase()} - ${data.name}</span>
         <span class="count">(${data.questions?.length || 0} questions)</span>
         ${key === currentSubject ? ' <span style="color:var(--brass-light);font-size:11px;">● Active</span>' : ''}
       </div>
       <div class="actions">
-        <button class="select-subject" data-key="${key}">🔀 Switch</button>
-        <button class="delete-subject-btn danger" data-key="${key}">🗑️</button>
+        <button class="select-subject" data-key="${key}">Switch</button>
+        <button class="delete-subject-btn danger" data-key="${key}">Delete</button>
       </div>
     `;
     container.appendChild(div);
@@ -1635,8 +1628,8 @@ function initEventListeners() {
     const answer = parseInt(document.getElementById('new-q-answer').value);
     const fb = document.getElementById('add-single-feedback');
     
-    if (!q) { fb.textContent = '❌ Please enter a question.'; return; }
-    if (!a || !b || !c || !d) { fb.textContent = '❌ Please enter all four choices.'; return; }
+    if (!q) { fb.textContent = 'Please enter a question.'; return; }
+    if (!a || !b || !c || !d) { fb.textContent = 'Please enter all four choices.'; return; }
     
     const data = getCurrentData();
     const newQuestion = {
@@ -1656,7 +1649,7 @@ function initEventListeners() {
     document.getElementById('new-q-c').value = '';
     document.getElementById('new-q-d').value = '';
     
-    fb.textContent = '✅ Question added successfully!';
+    fb.textContent = 'Question added successfully!';
     setTimeout(function() { fb.textContent = ''; }, 3000);
   });
   
@@ -1665,13 +1658,13 @@ function initEventListeners() {
     const raw = document.getElementById('paste-area').value;
     const fb = document.getElementById('bulk-feedback');
     
-    if (!raw.trim()) { fb.textContent = '❌ Paste some questions first.'; return; }
+    if (!raw.trim()) { fb.textContent = 'Paste some questions first.'; return; }
     
     const { results, errors } = parsePastedQuestions(raw);
     const data = getCurrentData();
     
     if (results.length === 0) {
-      fb.textContent = '❌ No valid questions found. Check the format.';
+      fb.textContent = 'No valid questions found. Check the format.';
       return;
     }
     
@@ -1687,7 +1680,7 @@ function initEventListeners() {
     saveAllData();
     refreshHomeStats();
     
-    fb.textContent = '✅ Added ' + results.length + ' question(s)!' + (errors.length ? ' ⚠️ ' + errors.length + ' skipped.' : '');
+    fb.textContent = 'Added ' + results.length + ' question(s)!' + (errors.length ? '  ' + errors.length + ' skipped.' : '');
     document.getElementById('paste-area').value = '';
   });
   
@@ -1766,23 +1759,21 @@ function initEventListeners() {
   // Add Subject
   document.getElementById('add-subject-btn').addEventListener('click', function() {
     const name = document.getElementById('new-subject-name').value.trim();
-    const icon = document.getElementById('new-subject-icon').value.trim() || '📚';
     const short = document.getElementById('new-subject-short').value.trim().toUpperCase() || name.substring(0, 2).toUpperCase();
     const fb = document.getElementById('add-subject-feedback');
     
-    if (!name) { fb.textContent = '❌ Please enter a subject name.'; return; }
+    if (!name) { fb.textContent = 'Please enter a subject name.'; return; }
     
     const keys = getSubjectKeys();
     const id = name.toLowerCase().replace(/[^a-z0-9]/g, '');
     if (keys.includes(id)) {
-      fb.textContent = '❌ A subject with this name already exists.';
+      fb.textContent = 'A subject with this name already exists.';
       return;
     }
     
     allData[id] = {
       id: id,
       name: name,
-      icon: icon,
       short: short,
       questions: [],
       seen: []
@@ -1794,9 +1785,8 @@ function initEventListeners() {
     refreshHomeStats();
     
     document.getElementById('new-subject-name').value = '';
-    document.getElementById('new-subject-icon').value = '';
     document.getElementById('new-subject-short').value = '';
-    fb.textContent = '✅ Subject "' + name + '" created!';
+    fb.textContent = 'Subject "' + name + '" created!';
     setTimeout(function() { fb.textContent = ''; }, 3000);
   });
   
@@ -1812,7 +1802,7 @@ function initEventListeners() {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    document.getElementById('backup-feedback').textContent = '✅ Data exported!';
+    document.getElementById('backup-feedback').textContent = 'Data exported!';
     setTimeout(function() { document.getElementById('backup-feedback').textContent = ''; }, 3000);
   });
   
@@ -1834,40 +1824,33 @@ function initEventListeners() {
           renderSubjectSelector();
           refreshHomeStats();
           renderSubjectList();
-          document.getElementById('backup-feedback').textContent = '✅ Data imported successfully!';
+          document.getElementById('backup-feedback').textContent = 'Data imported successfully!';
           setTimeout(function() { document.getElementById('backup-feedback').textContent = ''; }, 3000);
         }
       } catch(e) {
-        document.getElementById('backup-feedback').textContent = '❌ Invalid JSON file.';
+        document.getElementById('backup-feedback').textContent = 'Invalid JSON file.';
       }
     };
     reader.readAsText(file);
     e.target.value = '';
   });
   
-  console.log('✅ All event listeners initialized!');
+  console.log('All event listeners initialized!');
 }
 
 // ============================================================
 // INITIALIZATION
 // ============================================================
 
-// Load data
 loadAllData();
-
-// Set initial subject
 currentSubject = 'machine';
-
-// Render initial UI
 renderSubjectSelector();
 refreshHomeStats();
-
-// Initialize event listeners
 initEventListeners();
 
-console.log('📚 Multi-Subject Reviewer loaded!');
-console.log('📖 Subjects:', Object.keys(allData).join(', '));
-console.log('✅ All buttons should now work!');
+console.log('Multi-Subject Reviewer loaded!');
+console.log('Subjects:', Object.keys(allData).join(', '));
+console.log('All buttons should now work!');
 </script>
 </body>
 </html>
