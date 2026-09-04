@@ -17114,11 +17114,11 @@ D. Varies 1.60 to 1.80
 Answer: B
 
 What is usually the loss factor for most wire ropes and chains with 180° contact at low speeds?
-A. Varies from 1.03 to 1.06
-B. Varies 1.07 to 1.10
-C. Varies 1.20 to 1.50
-D. Varies 1.60 to 1.80
-Answer: A
+A. Gears
+B. Flywheels
+C. Pulleys
+D. Ropes
+Answer: C
 
 Which of the following is the method to determine the reactions on continuous beams?
 A. two-moment equations
