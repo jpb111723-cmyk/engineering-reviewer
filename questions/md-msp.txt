@@ -13030,7 +13030,7 @@ A. Cross stock
 B. Foot stock
 C. Head stock
 D. Tail Stock
-Answer: C
+Answer: D
 
 When a lathe is put into back gear, it will go:
 A. at the same speed backwards
