@@ -6,7 +6,7 @@
 <title>Engineering Recall Bank</title>
 <style>
 /* ============================================================
-   COMPLETE STYLES
+   COMPLETE STYLES (Your original design preserved)
    ============================================================ */
 :root{
   --ink:#0f2340;
@@ -911,37 +911,147 @@ const SUBJECT_CONFIG = {
 const STORAGE_KEY = 'reviewer_data_v2';
 
 // ============================================================
-// CONVERT TEXT QUESTIONS TO OBJECTS
+// 🧠 SUPER FLEXIBLE PARSER - Handles ANY reasonable format
 // ============================================================
 
 function parseQuestionsFromText(text) {
-  const blocks = text.split(/\n\s*\n+/).map(b => b.trim()).filter(Boolean);
   const results = [];
   
+  // Method 1: Split by blank lines (standard format)
+  let blocks = text.split(/\n\s*\n+/).map(b => b.trim()).filter(b => b.length > 0);
+  
+  // Method 2: If no blocks found or too few, try splitting by "Answer:" pattern
+  if (blocks.length < 2) {
+    // Try splitting by "Answer:" followed by A-D
+    const answerMatches = text.match(/Answer\s*[:.]?\s*[A-D]/gi);
+    if (answerMatches && answerMatches.length > 1) {
+      // Split by "Answer:" pattern and keep the question before it
+      const parts = text.split(/(?=Answer\s*[:.]?\s*[A-D])/i);
+      blocks = parts.map(p => p.trim()).filter(p => p.length > 10);
+    }
+  }
+  
+  // Method 3: If still no blocks, try splitting by question marks or numbers
+  if (blocks.length < 2) {
+    // Try splitting by question marks followed by newline
+    const parts = text.split(/\?\s*\n/);
+    if (parts.length > 1) {
+      blocks = parts.map((p, i) => {
+        if (i < parts.length - 1) return p + '?';
+        return p;
+      }).filter(p => p.trim().length > 10);
+    }
+  }
+  
+  // If still no blocks, treat the whole text as one block
+  if (blocks.length === 0 && text.trim().length > 10) {
+    blocks = [text.trim()];
+  }
+  
+  // Process each block
   blocks.forEach(block => {
     const lines = block.split('\n').map(l => l.trim()).filter(l => l.length > 0);
-    const choiceRe = /^([A-Da-d])[\.\)]\s*(.*)$/;
-    const answerRe = /^(answer|ans|correct)\s*[:\-]?\s*([A-Da-d])\)?\.?$/i;
-
+    if (lines.length < 5) return; // Need at least question + 4 choices
+    
     let questionLines = [];
     let choices = {};
     let answerLetter = null;
-
+    
+    // Patterns to match
+    const choicePatterns = [
+      /^([A-Da-d])[\.\)]\s*(.*)$/,           // A. Choice
+      /^([A-Da-d])\s+([A-Da-d])\.?\s*(.*)$/, // A B. Choice (duplicate letter)
+      /^([A-Da-d])\s+.*$/,                   // A Choice (no dot)
+    ];
+    const answerPatterns = [
+      /^(answer|ans|correct)\s*[:.]?\s*([A-Da-d])\)?\.?$/i,
+      /^([A-Da-d])\)?\.?\s*is\s*(correct|answer)/i,
+      /^right\s*answer\s*[:.]?\s*([A-Da-d])/i,
+    ];
+    
+    let foundAnswer = false;
+    
     lines.forEach(line => {
-      const am = line.match(answerRe);
-      if (am) { answerLetter = am[2].toUpperCase(); return; }
-      const cm = line.match(choiceRe);
-      if (cm) { choices[cm[1].toUpperCase()] = cm[2].trim(); return; }
-      questionLines.push(line);
+      // Check if this is an answer line
+      for (let pattern of answerPatterns) {
+        const match = line.match(pattern);
+        if (match) {
+          const letter = match[2] || match[1];
+          if (letter && letter.match(/[A-Da-d]/)) {
+            answerLetter = letter.toUpperCase();
+            foundAnswer = true;
+            return;
+          }
+        }
+      }
+      if (foundAnswer) return;
+      
+      // Check if this is a choice line
+      let isChoice = false;
+      for (let pattern of choicePatterns) {
+        const match = line.match(pattern);
+        if (match) {
+          const letter = match[1].toUpperCase();
+          const text = (match[2] || match[3] || '').trim();
+          if (letter && text && !choices[letter]) {
+            choices[letter] = text;
+            isChoice = true;
+            break;
+          }
+        }
+      }
+      
+      // If not a choice and not an answer, it's part of the question
+      if (!isChoice && !foundAnswer) {
+        questionLines.push(line);
+      }
     });
-
+    
+    // If answer not found in a separate line, try to find it in the last line
+    if (!answerLetter && lines.length > 0) {
+      const lastLine = lines[lines.length - 1];
+      const match = lastLine.match(/answer\s*[:.]?\s*([A-Da-d])/i);
+      if (match) {
+        answerLetter = match[1].toUpperCase();
+      }
+    }
+    
+    // If still no answer, try to find "Answer:" in the whole block
+    if (!answerLetter) {
+      const answerMatch = block.match(/answer\s*[:.]?\s*([A-Da-d])/i);
+      if (answerMatch) {
+        answerLetter = answerMatch[1].toUpperCase();
+      }
+    }
+    
+    // Build the question
     const letters = ['A', 'B', 'C', 'D'];
-    if (questionLines.length > 0 && Object.keys(choices).length === 4 && answerLetter) {
-      results.push({
-        q: questionLines.join(' '),
-        choices: letters.map(L => choices[L]),
-        answer: letters.indexOf(answerLetter)
-      });
+    const question = questionLines.join(' ').trim();
+    
+    // If we have all 4 choices and an answer
+    if (question && Object.keys(choices).length === 4 && answerLetter) {
+      const answerIndex = letters.indexOf(answerLetter);
+      if (answerIndex >= 0) {
+        results.push({
+          q: question,
+          choices: letters.map(L => choices[L] || ''),
+          answer: answerIndex
+        });
+      }
+    }
+    // If we have choices but some are missing, fill with empty
+    else if (question && Object.keys(choices).length > 0 && answerLetter) {
+      const answerIndex = letters.indexOf(answerLetter);
+      if (answerIndex >= 0) {
+        const filledChoices = letters.map(L => choices[L] || '');
+        if (filledChoices.filter(c => c).length >= 2) {
+          results.push({
+            q: question,
+            choices: filledChoices,
+            answer: answerIndex
+          });
+        }
+      }
     }
   });
   
@@ -964,8 +1074,16 @@ async function loadQuestionsFromFile(filePath) {
       throw new Error('Failed to load: ' + response.status);
     }
     const text = await response.text();
+    console.log('📄 File size:', text.length, 'characters');
+    
     const parsed = parseQuestionsFromText(text);
-    console.log('✅ Loaded ' + parsed.length + ' questions from ' + filePath);
+    console.log('✅ Parsed', parsed.length, 'questions from', filePath);
+    
+    // Log first question as sample
+    if (parsed.length > 0) {
+      console.log('📝 Sample:', parsed[0].q.substring(0, 50) + '...');
+    }
+    
     return parsed;
   } catch (e) {
     console.warn('⚠️ Could not load ' + filePath + ':', e.message);
@@ -1162,60 +1280,30 @@ function shuffleArray(arr) {
 }
 
 // ============================================================
-// PARSE FUNCTIONS
+// PARSE FUNCTIONS (for user imports)
 // ============================================================
 
 function parseBlock(block) {
-  const lines = block.split('\n').map(l => l.trim()).filter(l => l.length > 0);
-  const choiceRe = /^([A-Da-d])[\.\)]\s*(.*)$/;
-  const answerRe = /^(answer|ans|correct)\s*[:\-]?\s*([A-Da-d])\)?\.?$/i;
-
-  let questionLines = [];
-  let choices = {};
-  let answerLetter = null;
-
-  lines.forEach(line => {
-    const am = line.match(answerRe);
-    if (am) { answerLetter = am[2].toUpperCase(); return; }
-    const cm = line.match(choiceRe);
-    if (cm) { choices[cm[1].toUpperCase()] = cm[2].trim(); return; }
-    questionLines.push(line);
-  });
-
-  const letters = ['A', 'B', 'C', 'D'];
-  const missingChoices = letters.filter(L => !choices[L] || choices[L].length === 0);
-
-  const problems = [];
-  if (questionLines.length === 0) problems.push('no question text found');
-  if (missingChoices.length) problems.push('missing choice(s) ' + missingChoices.join(', '));
-  if (!answerLetter) problems.push('no "Answer:" line found');
-  else if (!choices[answerLetter]) problems.push('answer letter "' + answerLetter + '" doesn\'t match any A–D choice line');
-
-  if (problems.length) {
-    return { ok: false, reason: problems.join('; ') };
+  // Reuse the flexible parser
+  const results = parseQuestionsFromText(block);
+  if (results.length > 0) {
+    return { ok: true, item: results[0] };
   }
-
-  return {
-    ok: true,
-    item: {
-      q: questionLines.join(' '),
-      choices: letters.map(L => choices[L]),
-      answer: letters.indexOf(answerLetter),
-    }
-  };
+  return { ok: false, reason: 'Could not parse question' };
 }
 
 function parsePastedQuestions(raw) {
-  const blocks = raw.split(/\n\s*\n+/).map(b => b.trim()).filter(Boolean);
-  const results = [];
+  const results = parseQuestionsFromText(raw);
   const errors = [];
-
-  blocks.forEach(block => {
-    const r = parseBlock(block);
-    if (r.ok) results.push(r.item);
-    else errors.push({ raw: block, reason: r.reason });
-  });
-
+  // If parsing failed, try the old method
+  if (results.length === 0) {
+    const blocks = raw.split(/\n\s*\n+/).map(b => b.trim()).filter(Boolean);
+    blocks.forEach(block => {
+      const r = parseBlock(block);
+      if (r.ok) results.push(r.item);
+      else errors.push({ raw: block, reason: r.reason });
+    });
+  }
   return { results, errors };
 }
 
@@ -1776,7 +1864,12 @@ loadAllData().then(() => {
   console.log('📖 Subjects: PIPE, MDMSP, MEEBES');
   console.log('📁 Questions loaded from /questions/ folder');
   console.log('📝 To add questions: Edit the .txt files in /questions/');
-  console.log('📊 Total questions:', Object.keys(allData).reduce((sum, key) => sum + allData[key].questions.length, 0));
+  
+  let total = 0;
+  for (let key in allData) {
+    total += allData[key].questions.length;
+  }
+  console.log('📊 Total questions loaded:', total);
 });
 </script>
 </body>
