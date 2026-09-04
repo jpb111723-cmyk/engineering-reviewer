@@ -1388,7 +1388,7 @@ A. It is impossible to construct a heat engine that operates in a cycle and rece
 B. It is impossible to construct a device that operates in a cycle and produces no effect other than the transfer of heat from a cooler body to hotter body.
 C. When two dissimilar metals are heated at one end and cooled at other, e.m.f. that is developed is proportional to difference of temperatures at two ends
 D. Work can't be converted into heat
-Answer: D
+Answer: C
 
 In actual gases the molecular collisions are:
 A. Plastic
