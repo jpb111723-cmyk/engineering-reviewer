@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<title>Engineering Recall Bank — Community Edition</title>
+<title>Engineering Recall Bank</title>
 <style>
 /* ============================================================
-   COMPLETE STYLES (Same as before)
+   COMPLETE STYLES
    ============================================================ */
 :root{
   --ink:#0f2340;
@@ -611,43 +611,6 @@ select:focus, input:focus, textarea:focus, button:focus-visible{
   outline-offset:1px;
 }
 
-.subject-list-item{
-  background:var(--ink);
-  border:1px solid var(--line);
-  border-radius:3px;
-  padding:10px 14px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:6px;
-}
-.subject-list-item .name{
-  font-weight:bold;
-  color:var(--text);
-}
-.subject-list-item .count{
-  font-size:12px;
-  color:var(--text-muted);
-}
-.subject-list-item .actions{
-  display:flex;
-  gap:8px;
-}
-.subject-list-item .actions button{
-  background:none;
-  border:none;
-  color:var(--text-muted);
-  cursor:pointer;
-  font-size:14px;
-  padding:2px 6px;
-}
-.subject-list-item .actions button:hover{
-  color:var(--brass-light);
-}
-.subject-list-item .actions button.danger:hover{
-  color:var(--incorrect);
-}
-
 .alert{
   padding:12px 16px;
   border-radius:3px;
@@ -678,14 +641,12 @@ select:focus, input:focus, textarea:focus, button:focus-visible{
   <!-- HOME -->
   <section id="screen-home" class="screen active">
     
-    <!-- SUBJECT SELECTOR -->
+    <!-- SUBJECT SELECTOR - 3 FIXED SUBJECTS -->
     <div class="subject-selector" id="subject-selector">
       <span class="subject-selector-label">Subject:</span>
-      <button class="subject-btn active" data-subject="machine">MD <span class="badge">5</span></button>
-      <button class="subject-btn" data-subject="thermo">TD <span class="badge">3</span></button>
-      <button class="subject-btn" data-subject="electrical">EE <span class="badge">3</span></button>
-      <button class="subject-btn" data-subject="mechanics">EM <span class="badge">3</span></button>
-      <button class="btn btn-sm btn-ghost" id="manage-subjects-btn" style="margin-left:auto; padding:4px 12px; font-size:11px;">Manage Subjects</button>
+      <button class="subject-btn active" data-subject="pipe">PIPE <span class="badge">0</span></button>
+      <button class="subject-btn" data-subject="mdmsp">MDMSP <span class="badge">0</span></button>
+      <button class="subject-btn" data-subject="meebes">MEEBES <span class="badge">0</span></button>
     </div>
 
     <div class="masthead">
@@ -828,7 +789,7 @@ select:focus, input:focus, textarea:focus, button:focus-visible{
     <h2 class="screen-title">Add Questions</h2>
 
     <div class="alert alert-info" id="add-questions-info">
-      Adding questions to: <strong id="add-subject-name">Machine Design</strong>
+      Adding questions to: <strong id="add-subject-name">Power and Industrial Plant Engineering</strong>
     </div>
 
     <div class="panel">
@@ -897,7 +858,7 @@ Answer: B</pre>
   <!-- MANAGE -->
   <section id="screen-manage" class="screen">
     <button class="btn-back" data-target="screen-home">← Back</button>
-    <h2 class="screen-title" id="manage-title">Manage Questions — Machine Design</h2>
+    <h2 class="screen-title" id="manage-title">Manage Questions — Power and Industrial Plant Engineering</h2>
 
     <div class="panel">
       <p class="manage-count">Total: <strong id="count-total">0</strong> &nbsp;·&nbsp; Set aside: <strong id="count-seen">0</strong></p>
@@ -924,133 +885,140 @@ Answer: B</pre>
     </div>
   </section>
 
-  <!-- MANAGE SUBJECTS -->
-  <section id="screen-manage-subjects" class="screen">
-    <button class="btn-back" data-target="screen-home">← Back</button>
-    <h2 class="screen-title">Manage Subjects</h2>
-
-    <div class="panel">
-      <h3 class="panel-title">Add New Subject</h3>
-      <div class="editor-grid">
-        <div class="editor-field">
-          <label>Subject Name</label>
-          <input type="text" id="new-subject-name" placeholder="e.g., Civil Engineering">
-        </div>
-        <div class="editor-field">
-          <label>Short Code</label>
-          <input type="text" id="new-subject-short" placeholder="CE" maxlength="6" style="width:80px;">
-        </div>
-        <div class="editor-field" style="justify-content:flex-end;">
-          <button class="btn btn-primary" id="add-subject-btn" style="width:100%;">Add Subject</button>
-        </div>
-      </div>
-      <span class="parse-feedback" id="add-subject-feedback"></span>
-    </div>
-
-    <div class="panel">
-      <h3 class="panel-title">Existing Subjects</h3>
-      <div id="subject-list"></div>
-    </div>
-
-    <div class="panel">
-      <h3 class="panel-title">Backup All Data</h3>
-      <div class="manage-actions">
-        <button class="btn btn-ghost" id="export-all-data">Export All Subjects &amp; Questions</button>
-        <button class="btn btn-ghost" id="import-all-data">Import All Data</button>
-        <input type="file" id="import-all-file" accept=".json" style="display:none">
-      </div>
-      <span class="parse-feedback" id="backup-feedback"></span>
-    </div>
-  </section>
-
 </div>
 
 <script>
 // ============================================================
-// CONFIGURATION - CHANGE THESE TO MATCH YOUR GITHUB REPO
+// 📁  3 FIXED SUBJECTS - Load questions from files
 // ============================================================
 
-const GITHUB_USERNAME = 'jwu'; // e.g., 'johndoe'
-const GITHUB_REPO = 'engineering-reviewer'; // Your repo name
-const GITHUB_TOKEN = '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'; // Get from GitHub Settings
-
-// Admin password
-const ADMIN_PASSWORD = '2424c0-123098fko--01-1393';
-
-// ============================================================
-// DATA
-// ============================================================
-
-const STORAGE_KEY = 'multisubject_reviewer_data';
-
-const DEFAULT_SUBJECTS = {
-  machine: {
-    id: 'machine',
-    name: 'Machine Design',
-    short: 'MD',
-    questions: [
-      {id:"m1", q:"Determine the estimated weight of an A-36 steel plate size 3/16 \" x 6' x 20'", choices:["919 lbs","1012 lbs","829 lbs","735 lbs"], answer:0},
-      {id:"m2", q:"The minimum clearance allowed for meshing spur gears with a circular pitch of 0.1571 and diametral pitch of 20.", choices:["0.007855","0.008578","0.007558","0.007585"], answer:0},
-      {id:"m3", q:"A 3\" diameter short shaft carrying two pulleys close to the bearings transmit how much horsepower if the shaft makes 280 rpm?", choices:["199 Hp","198 Hp","200 Hp","210 Hp"], answer:0},
-      {id:"m4", q:"What pressure is required to punch a hole 2\" diameter through a ¼\" steel plate?", choices:["10 tons","20 tons","30 tons","40 tons"], answer:3},
-      {id:"m5", q:"Compute the working strength of 1\" bolt which is screwed up tightly in packed joint when the allowable working stress is 13,000 psi.", choices:["3600 lbs","3950 lbs","3900 lbs","3800 lbs"], answer:2},
-    ],
-    seen: []
+const SUBJECT_CONFIG = {
+  pipe: { 
+    id: 'pipe', 
+    name: 'Power and Industrial Plant Engineering', 
+    short: 'PIPE', 
+    file: 'questions/pipe.txt' 
   },
-  thermo: {
-    id: 'thermo',
-    name: 'Thermodynamics',
-    short: 'TD',
-    questions: [
-      {id:"t1", q:"What is the SI unit of temperature?", choices:["Celsius","Fahrenheit","Kelvin","Rankine"], answer:2},
-      {id:"t2", q:"The First Law of Thermodynamics is a statement about:", choices:["Energy conservation","Entropy","Heat transfer","Work"], answer:0},
-      {id:"t3", q:"What is the efficiency of a Carnot engine operating between 500K and 300K?", choices:["40%","60%","50%","30%"], answer:0},
-    ],
-    seen: []
+  mdmsp: { 
+    id: 'mdmsp', 
+    name: 'Machine Design, Materials, and Shop Practice', 
+    short: 'MDMSP', 
+    file: 'questions/md-msp.txt' 
   },
-  electrical: {
-    id: 'electrical',
-    name: 'Electrical Engineering',
-    short: 'EE',
-    questions: [
-      {id:"e1", q:"What is the unit of electrical resistance?", choices:["Volt","Ampere","Ohm","Watt"], answer:2},
-      {id:"e2", q:"Ohm's Law states that V = ?", choices:["IR","I/R","R/I","I+R"], answer:0},
-      {id:"e3", q:"What is the frequency of AC power in the Philippines?", choices:["50 Hz","60 Hz","100 Hz","120 Hz"], answer:1},
-    ],
-    seen: []
-  },
-  mechanics: {
-    id: 'mechanics',
-    name: 'Engineering Mechanics',
-    short: 'EM',
-    questions: [
-      {id:"me1", q:"The sum of all forces acting on a body in equilibrium is:", choices:["Zero","Maximum","Minimum","Infinite"], answer:0},
-      {id:"me2", q:"Moment of a force is also called:", choices:["Torque","Work","Energy","Power"], answer:0},
-      {id:"me3", q:"The center of gravity of a uniform rod is at its:", choices:["Center","End","Quarter point","Third point"], answer:0},
-    ],
-    seen: []
+  meebes: { 
+    id: 'meebes', 
+    name: 'Mathematics, Engineering Economics, and Basic Engineering Sciences', 
+    short: 'MEEBES', 
+    file: 'questions/mee-bes.txt' 
   }
 };
 
+// Storage key
+const STORAGE_KEY = 'reviewer_data_v2';
+
 // ============================================================
-// STATE
+// CONVERT TEXT QUESTIONS TO OBJECTS
+// ============================================================
+
+function parseQuestionsFromText(text) {
+  const blocks = text.split(/\n\s*\n+/).map(b => b.trim()).filter(Boolean);
+  const results = [];
+  
+  blocks.forEach(block => {
+    const lines = block.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+    const choiceRe = /^([A-Da-d])[\.\)]\s*(.*)$/;
+    const answerRe = /^(answer|ans|correct)\s*[:\-]?\s*([A-Da-d])\)?\.?$/i;
+
+    let questionLines = [];
+    let choices = {};
+    let answerLetter = null;
+
+    lines.forEach(line => {
+      const am = line.match(answerRe);
+      if (am) { answerLetter = am[2].toUpperCase(); return; }
+      const cm = line.match(choiceRe);
+      if (cm) { choices[cm[1].toUpperCase()] = cm[2].trim(); return; }
+      questionLines.push(line);
+    });
+
+    const letters = ['A', 'B', 'C', 'D'];
+    if (questionLines.length > 0 && Object.keys(choices).length === 4 && answerLetter) {
+      results.push({
+        q: questionLines.join(' '),
+        choices: letters.map(L => choices[L]),
+        answer: letters.indexOf(answerLetter)
+      });
+    }
+  });
+  
+  return results;
+}
+
+// ============================================================
+// LOAD QUESTIONS FROM GITHUB
+// ============================================================
+
+async function loadQuestionsFromFile(filePath) {
+  try {
+    const baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+    const fullUrl = `${baseUrl}/${filePath}`;
+    
+    console.log(`📁 Loading: ${fullUrl}`);
+    
+    const response = await fetch(fullUrl);
+    if (!response.ok) {
+      throw new Error(`Failed to load ${filePath}: ${response.status}`);
+    }
+    const text = await response.text();
+    return parseQuestionsFromText(text);
+  } catch (e) {
+    console.warn(`⚠️ Could not load ${filePath}:`, e.message);
+    return [];
+  }
+}
+
+// ============================================================
+// BUILD SUBJECTS FROM FILES
+// ============================================================
+
+async function buildSubjectsFromFiles() {
+  const subjects = {};
+  
+  for (let key in SUBJECT_CONFIG) {
+    const config = SUBJECT_CONFIG[key];
+    const parsedQuestions = await loadQuestionsFromFile(config.file);
+    
+    subjects[key] = {
+      id: config.id,
+      name: config.name,
+      short: config.short,
+      questions: parsedQuestions.map((q, idx) => ({
+        id: key + '_' + (idx + 1),
+        q: q.q,
+        choices: q.choices,
+        answer: q.answer
+      })),
+      seen: []
+    };
+  }
+  
+  return subjects;
+}
+
+// ============================================================
+// DATA FUNCTIONS
 // ============================================================
 
 let allData = {};
-let currentSubject = 'machine';
+let currentSubject = 'pipe';
 let examQuestions = [];
 let examAnswers = [];
 let currentIndex = 0;
 let timerInterval = null;
 let timeLeftSeconds = null;
 let questionFilterText = '';
-let pendingSubmissions = [];
 
-// ============================================================
-// DATA FUNCTIONS
-// ============================================================
-
-function loadAllData() {
+async function loadAllData() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
@@ -1063,13 +1031,10 @@ function loadAllData() {
       return;
     }
   } catch(e) {
-    console.warn('Failed to load data, using defaults');
+    console.warn('Failed to load data, loading from files');
   }
   
-  allData = JSON.parse(JSON.stringify(DEFAULT_SUBJECTS));
-  for (let key in allData) {
-    if (!allData[key].seen) allData[key].seen = [];
-  }
+  allData = await buildSubjectsFromFiles();
   saveAllData();
 }
 
@@ -1095,182 +1060,6 @@ function getCurrentSeen() {
 
 function getSubjectKeys() {
   return Object.keys(allData);
-}
-
-// ============================================================
-// GITHUB ISSUES FUNCTIONS (Shared Database)
-// ============================================================
-
-async function submitToGitHub(subject, question, choices, answer) {
-  const title = `[${subject}] New question: ${question.substring(0, 50)}...`;
-  const body = `
-## New Question Submission
-
-**Subject:** ${subject}
-
-**Question:** ${question}
-
-**Choices:**
-A. ${choices[0]}
-B. ${choices[1]}
-C. ${choices[2]}
-D. ${choices[3]}
-
-**Answer:** ${['A', 'B', 'C', 'D'][answer]}
-
----
-*Submitted via Engineering Reviewer*
-  `;
-
-  try {
-    const response = await fetch(
-      `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/issues`,
-      {
-        method: 'POST',
-        headers: {
-          'Authorization': `token ${GITHUB_TOKEN}`,
-          'Content-Type': 'application/json',
-          'Accept': 'application/vnd.github.v3+json'
-        },
-        body: JSON.stringify({
-          title: title,
-          body: body,
-          labels: ['submission', 'pending-review', subject]
-        })
-      }
-    );
-
-    if (response.ok) {
-      const data = await response.json();
-      return { success: true, issueNumber: data.number, url: data.html_url };
-    } else {
-      const error = await response.json();
-      return { success: false, error: error.message };
-    }
-  } catch(e) {
-    return { success: false, error: e.message };
-  }
-}
-
-async function getPendingSubmissions() {
-  try {
-    const response = await fetch(
-      `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/issues?labels=pending-review&state=open`
-    );
-    if (response.ok) {
-      return await response.json();
-    }
-    return [];
-  } catch(e) {
-    console.error('Failed to fetch submissions:', e);
-    return [];
-  }
-}
-
-async function approveSubmission(issueNumber) {
-  try {
-    const issueResponse = await fetch(
-      `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/issues/${issueNumber}`
-    );
-    const issue = await issueResponse.json();
-    
-    const parsed = parseIssueBody(issue.body);
-    if (parsed) {
-      const subject = parsed.subject || 'machine';
-      if (!allData[subject]) {
-        allData[subject] = {
-          id: subject,
-          name: subject.charAt(0).toUpperCase() + subject.slice(1),
-          short: subject.substring(0,2).toUpperCase(),
-          questions: [],
-          seen: []
-        };
-      }
-      
-      allData[subject].questions.push({
-        id: 'shared_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6),
-        q: parsed.question,
-        choices: parsed.choices,
-        answer: parsed.answer
-      });
-      saveAllData();
-      
-      await fetch(
-        `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/issues/${issueNumber}`,
-        {
-          method: 'PATCH',
-          headers: {
-            'Authorization': `token ${GITHUB_TOKEN}`,
-            'Content-Type': 'application/json',
-            'Accept': 'application/vnd.github.v3+json'
-          },
-          body: JSON.stringify({
-            state: 'closed',
-            labels: ['approved']
-          })
-        }
-      );
-      
-      return { success: true };
-    }
-    return { success: false, error: 'Could not parse question' };
-  } catch(e) {
-    return { success: false, error: e.message };
-  }
-}
-
-async function rejectSubmission(issueNumber) {
-  try {
-    await fetch(
-      `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/issues/${issueNumber}`,
-      {
-        method: 'PATCH',
-        headers: {
-          'Authorization': `token ${GITHUB_TOKEN}`,
-          'Content-Type': 'application/json',
-          'Accept': 'application/vnd.github.v3+json'
-        },
-        body: JSON.stringify({
-          state: 'closed',
-          labels: ['rejected']
-        })
-      }
-    );
-    return { success: true };
-  } catch(e) {
-    return { success: false, error: e.message };
-  }
-}
-
-function parseIssueBody(body) {
-  try {
-    const lines = body.split('\n').filter(l => l.trim());
-    let subject = 'machine';
-    let question = '';
-    let choices = [];
-    let answer = -1;
-    let answerLetter = '';
-    
-    for (let line of lines) {
-      if (line.startsWith('**Subject:**')) {
-        subject = line.replace('**Subject:**', '').trim().toLowerCase();
-      } else if (line.startsWith('**Question:**')) {
-        question = line.replace('**Question:**', '').trim();
-      } else if (line.match(/^[A-D]\./)) {
-        choices.push(line.replace(/^[A-D]\.\s*/, '').trim());
-      } else if (line.includes('**Answer:**')) {
-        answerLetter = line.replace('**Answer:**', '').trim();
-      }
-    }
-    
-    if (question && choices.length === 4 && answerLetter) {
-      answer = ['A', 'B', 'C', 'D'].indexOf(answerLetter);
-      return { subject, question, choices, answer };
-    }
-    return null;
-  } catch(e) {
-    return null;
-  }
 }
 
 // ============================================================
@@ -1322,7 +1111,7 @@ function switchSubject(key) {
   
   const data = allData[key];
   document.getElementById('subject-eyebrow').textContent = data.name.toUpperCase() + ' · RECALL BANK';
-  document.getElementById('subject-title').innerHTML = data.name.toUpperCase().replace(' ', '<br>');
+  document.getElementById('subject-title').innerHTML = data.short + '<br>REVIEWER';
   document.getElementById('subject-subhead').textContent = 'Offline recall exam for ' + data.name + '.';
   document.getElementById('add-subject-name').textContent = data.name;
   document.getElementById('manage-title').textContent = 'Manage Questions — ' + data.name;
@@ -1602,62 +1391,6 @@ function renderQuestionList() {
   });
 }
 
-function renderSubjectList() {
-  const container = document.getElementById('subject-list');
-  container.innerHTML = '';
-  const keys = getSubjectKeys();
-  
-  if (keys.length === 0) {
-    container.innerHTML = '<p class="empty-note">No subjects yet. Create one above!</p>';
-    return;
-  }
-  
-  keys.forEach(function(key) {
-    const data = allData[key];
-    const div = document.createElement('div');
-    div.className = 'subject-list-item';
-    div.innerHTML = `
-      <div>
-        <span class="name">${data.short || key.substring(0,2).toUpperCase()} - ${data.name}</span>
-        <span class="count">(${data.questions?.length || 0} questions)</span>
-        ${key === currentSubject ? ' <span style="color:var(--brass-light);font-size:11px;">● Active</span>' : ''}
-      </div>
-      <div class="actions">
-        <button class="select-subject" data-key="${key}">Switch</button>
-        <button class="delete-subject-btn danger" data-key="${key}">Delete</button>
-      </div>
-    `;
-    container.appendChild(div);
-  });
-  
-  container.querySelectorAll('.select-subject').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      switchSubject(this.dataset.key);
-      showScreen('screen-home');
-    });
-  });
-  
-  container.querySelectorAll('.delete-subject-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      const key = this.dataset.key;
-      if (key === 'machine') {
-        alert('Cannot delete the default subject!');
-        return;
-      }
-      if (confirm('Delete "' + allData[key].name + '" and all its questions? This cannot be undone!')) {
-        delete allData[key];
-        saveAllData();
-        if (currentSubject === key) {
-          currentSubject = 'machine';
-        }
-        renderSubjectList();
-        renderSubjectSelector();
-        refreshHomeStats();
-      }
-    });
-  });
-}
-
 // ============================================================
 // EVENT LISTENERS
 // ============================================================
@@ -1693,12 +1426,6 @@ function initEventListeners() {
   // Go to Add Questions
   document.getElementById('go-add-questions').addEventListener('click', function() {
     showScreen('screen-add-questions');
-  });
-  
-  // Manage Subjects
-  document.getElementById('manage-subjects-btn').addEventListener('click', function() {
-    renderSubjectList();
-    showScreen('screen-manage-subjects');
   });
   
   // Results Home
@@ -1805,8 +1532,8 @@ function initEventListeners() {
     showScreen('screen-setup');
   });
   
-  // Add Single Question (Now submits to GitHub for review)
-  document.getElementById('add-single-question').addEventListener('click', async function() {
+  // Add Single Question
+  document.getElementById('add-single-question').addEventListener('click', function() {
     const q = document.getElementById('new-q-text').value.trim();
     const a = document.getElementById('new-q-a').value.trim();
     const b = document.getElementById('new-q-b').value.trim();
@@ -1818,55 +1545,56 @@ function initEventListeners() {
     if (!q) { fb.textContent = 'Please enter a question.'; return; }
     if (!a || !b || !c || !d) { fb.textContent = 'Please enter all four choices.'; return; }
     
-    fb.textContent = 'Submitting for review...';
+    const data = getCurrentData();
+    const newQuestion = {
+      id: currentSubject + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
+      q: q,
+      choices: [a, b, c, d],
+      answer: answer
+    };
     
-    const result = await submitToGitHub(
-      allData[currentSubject].name,
-      q,
-      [a, b, c, d],
-      answer
-    );
+    data.questions.push(newQuestion);
+    saveAllData();
+    refreshHomeStats();
     
-    if (result.success) {
-      fb.textContent = 'Question submitted for review! #' + result.issueNumber;
-      document.getElementById('new-q-text').value = '';
-      document.getElementById('new-q-a').value = '';
-      document.getElementById('new-q-b').value = '';
-      document.getElementById('new-q-c').value = '';
-      document.getElementById('new-q-d').value = '';
-    } else {
-      fb.textContent = 'Submission failed: ' + result.error;
-    }
+    document.getElementById('new-q-text').value = '';
+    document.getElementById('new-q-a').value = '';
+    document.getElementById('new-q-b').value = '';
+    document.getElementById('new-q-c').value = '';
+    document.getElementById('new-q-d').value = '';
+    
+    fb.textContent = 'Question added successfully!';
+    setTimeout(function() { fb.textContent = ''; }, 3000);
   });
   
-  // Add Bulk Questions (Now submits to GitHub for review)
-  document.getElementById('add-bulk-questions').addEventListener('click', async function() {
+  // Add Bulk Questions
+  document.getElementById('add-bulk-questions').addEventListener('click', function() {
     const raw = document.getElementById('paste-area').value;
     const fb = document.getElementById('bulk-feedback');
     
     if (!raw.trim()) { fb.textContent = 'Paste some questions first.'; return; }
     
     const { results, errors } = parsePastedQuestions(raw);
+    const data = getCurrentData();
     
     if (results.length === 0) {
       fb.textContent = 'No valid questions found. Check the format.';
       return;
     }
     
-    fb.textContent = 'Submitting ' + results.length + ' questions for review...';
-    let successCount = 0;
+    results.forEach(function(item) {
+      data.questions.push({
+        id: currentSubject + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
+        q: item.q,
+        choices: item.choices,
+        answer: item.answer
+      });
+    });
     
-    for (let item of results) {
-      const result = await submitToGitHub(
-        allData[currentSubject].name,
-        item.q,
-        item.choices,
-        item.answer
-      );
-      if (result.success) successCount++;
-    }
+    saveAllData();
+    refreshHomeStats();
     
-    fb.textContent = 'Submitted ' + successCount + ' of ' + results.length + ' questions for review!';
+    fb.textContent = 'Added ' + results.length + ' question(s)!' + (errors.length ? '  ' + errors.length + ' skipped.' : '');
     document.getElementById('paste-area').value = '';
   });
   
@@ -1942,85 +1670,6 @@ function initEventListeners() {
     }
   });
   
-  // Add Subject
-  document.getElementById('add-subject-btn').addEventListener('click', function() {
-    const name = document.getElementById('new-subject-name').value.trim();
-    const short = document.getElementById('new-subject-short').value.trim().toUpperCase() || name.substring(0, 2).toUpperCase();
-    const fb = document.getElementById('add-subject-feedback');
-    
-    if (!name) { fb.textContent = 'Please enter a subject name.'; return; }
-    
-    const keys = getSubjectKeys();
-    const id = name.toLowerCase().replace(/[^a-z0-9]/g, '');
-    if (keys.includes(id)) {
-      fb.textContent = 'A subject with this name already exists.';
-      return;
-    }
-    
-    allData[id] = {
-      id: id,
-      name: name,
-      short: short,
-      questions: [],
-      seen: []
-    };
-    
-    saveAllData();
-    renderSubjectList();
-    renderSubjectSelector();
-    refreshHomeStats();
-    
-    document.getElementById('new-subject-name').value = '';
-    document.getElementById('new-subject-short').value = '';
-    fb.textContent = 'Subject "' + name + '" created!';
-    setTimeout(function() { fb.textContent = ''; }, 3000);
-  });
-  
-  // Export All Data
-  document.getElementById('export-all-data').addEventListener('click', function() {
-    const data = JSON.stringify(allData, null, 2);
-    const blob = new Blob([data], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'all-reviewer-data.json';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    document.getElementById('backup-feedback').textContent = 'Data exported!';
-    setTimeout(function() { document.getElementById('backup-feedback').textContent = ''; }, 3000);
-  });
-  
-  // Import All Data
-  document.getElementById('import-all-data').addEventListener('click', function() {
-    document.getElementById('import-all-file').click();
-  });
-  
-  document.getElementById('import-all-file').addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function() {
-      try {
-        const data = JSON.parse(reader.result);
-        if (confirm('This will replace ALL current data. Continue?')) {
-          allData = data;
-          saveAllData();
-          renderSubjectSelector();
-          refreshHomeStats();
-          renderSubjectList();
-          document.getElementById('backup-feedback').textContent = 'Data imported successfully!';
-          setTimeout(function() { document.getElementById('backup-feedback').textContent = ''; }, 3000);
-        }
-      } catch(e) {
-        document.getElementById('backup-feedback').textContent = 'Invalid JSON file.';
-      }
-    };
-    reader.readAsText(file);
-    e.target.value = '';
-  });
-  
   console.log('All event listeners initialized!');
 }
 
@@ -2028,16 +1677,17 @@ function initEventListeners() {
 // INITIALIZATION
 // ============================================================
 
-loadAllData();
-currentSubject = 'machine';
-renderSubjectSelector();
-refreshHomeStats();
-initEventListeners();
-
-console.log('Multi-Subject Reviewer loaded!');
-console.log('Subjects:', Object.keys(allData).join(', '));
-console.log('All buttons should now work!');
-console.log('To make changes global, configure GitHub token above.');
+loadAllData().then(() => {
+  currentSubject = 'pipe';
+  renderSubjectSelector();
+  refreshHomeStats();
+  initEventListeners();
+  
+  console.log('✅ Engineering Reviewer loaded!');
+  console.log('📖 Subjects: PIPE, MDMSP, MEEBES');
+  console.log('📁 Questions loaded from /questions/ folder');
+  console.log('📝 To add questions: Edit the .txt files in /questions/');
+});
 </script>
 </body>
 </html>
