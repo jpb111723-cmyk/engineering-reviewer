@@ -269,12 +269,6 @@ body{
   border-color:var(--incorrect);
 }
 .btn-danger:hover{ background:rgba(193,68,61,0.12); }
-.btn-success{
-  background:transparent;
-  color:var(--correct);
-  border-color:var(--correct);
-}
-.btn-success:hover{ background:rgba(63,157,116,0.12); }
 
 .btn-wide{ width:100%; margin-top:8px; }
 .btn-sm{
@@ -318,7 +312,7 @@ body{
   text-transform:uppercase;
   color:var(--text-muted);
 }
-select, input[type=number], textarea, input[type=password], input[type=text]{
+select, input[type=number], textarea, input[type=text]{
   font-family:var(--font-mono);
   background:var(--ink);
   border:1px solid var(--line);
@@ -642,7 +636,7 @@ select:focus, input:focus, textarea:focus, button:focus-visible{
   <section id="screen-home" class="screen active">
     
     <!-- SUBJECT SELECTOR - 3 FIXED SUBJECTS -->
-    <div class="subject-selector" id="subject-selector">
+    <div class="subject-selector">
       <span class="subject-selector-label">Subject:</span>
       <button class="subject-btn active" data-subject="pipe">PIPE <span class="badge">0</span></button>
       <button class="subject-btn" data-subject="mdmsp">MDMSP <span class="badge">0</span></button>
@@ -963,16 +957,18 @@ async function loadQuestionsFromFile(filePath) {
     const baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
     const fullUrl = `${baseUrl}/${filePath}`;
     
-    console.log(`📁 Loading: ${fullUrl}`);
+    console.log('📁 Loading:', fullUrl);
     
     const response = await fetch(fullUrl);
     if (!response.ok) {
-      throw new Error(`Failed to load ${filePath}: ${response.status}`);
+      throw new Error('Failed to load: ' + response.status);
     }
     const text = await response.text();
-    return parseQuestionsFromText(text);
+    const parsed = parseQuestionsFromText(text);
+    console.log('✅ Loaded ' + parsed.length + ' questions from ' + filePath);
+    return parsed;
   } catch (e) {
-    console.warn(`⚠️ Could not load ${filePath}:`, e.message);
+    console.warn('⚠️ Could not load ' + filePath + ':', e.message);
     return [];
   }
 }
@@ -1028,12 +1024,14 @@ async function loadAllData() {
         if (!allData[key].questions) allData[key].questions = [];
         if (!allData[key].short) allData[key].short = key.substring(0,2).toUpperCase();
       }
+      console.log('📚 Loaded data from localStorage');
       return;
     }
   } catch(e) {
-    console.warn('Failed to load data, loading from files');
+    console.warn('Failed to load data from localStorage');
   }
   
+  console.log('📁 Loading questions from files...');
   allData = await buildSubjectsFromFiles();
   saveAllData();
 }
@@ -1068,21 +1066,25 @@ function getSubjectKeys() {
 
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+  const target = document.getElementById(id);
+  if (target) target.classList.add('active');
   window.scrollTo(0, 0);
 }
 
 function refreshHomeStats() {
   const questions = getCurrentQuestions();
   const seen = getCurrentSeen();
-  document.getElementById('stat-total').textContent = questions.length;
-  document.getElementById('stat-remaining').textContent = questions.filter(q => !seen.has(q.id)).length;
-  document.getElementById('stat-seen').textContent = seen.size;
+  const totalEl = document.getElementById('stat-total');
+  const remainingEl = document.getElementById('stat-remaining');
+  const seenEl = document.getElementById('stat-seen');
+  
+  if (totalEl) totalEl.textContent = questions.length;
+  if (remainingEl) remainingEl.textContent = questions.filter(q => !seen.has(q.id)).length;
+  if (seenEl) seenEl.textContent = seen.size;
   updateBadges();
 }
 
 function updateBadges() {
-  const keys = getSubjectKeys();
   document.querySelectorAll('.subject-btn').forEach(btn => {
     const key = btn.dataset.subject;
     if (key && allData[key]) {
@@ -1095,7 +1097,8 @@ function updateBadges() {
 function updatePoolHint() {
   const total = getCurrentQuestions().length;
   const remaining = getCurrentQuestions().filter(q => !getCurrentSeen().has(q.id)).length;
-  document.getElementById('pool-hint').textContent = remaining + ' of ' + total + ' question(s) not yet answered.';
+  const hintEl = document.getElementById('pool-hint');
+  if (hintEl) hintEl.textContent = remaining + ' of ' + total + ' question(s) not yet answered.';
 }
 
 function switchSubject(key) {
@@ -1110,18 +1113,25 @@ function switchSubject(key) {
   });
   
   const data = allData[key];
-  document.getElementById('subject-eyebrow').textContent = data.name.toUpperCase() + ' · RECALL BANK';
-  document.getElementById('subject-title').innerHTML = data.short + '<br>REVIEWER';
-  document.getElementById('subject-subhead').textContent = 'Offline recall exam for ' + data.name + '.';
-  document.getElementById('add-subject-name').textContent = data.name;
-  document.getElementById('manage-title').textContent = 'Manage Questions — ' + data.name;
-  document.getElementById('add-questions-info').innerHTML = 'Adding questions to: <strong>' + data.name + '</strong>';
+  
+  const eyebrowEl = document.getElementById('subject-eyebrow');
+  const titleEl = document.getElementById('subject-title');
+  const subheadEl = document.getElementById('subject-subhead');
+  const addNameEl = document.getElementById('add-subject-name');
+  const manageTitleEl = document.getElementById('manage-title');
+  const addInfoEl = document.getElementById('add-questions-info');
+  
+  if (eyebrowEl) eyebrowEl.textContent = data.name.toUpperCase() + ' · RECALL BANK';
+  if (titleEl) titleEl.innerHTML = data.short + '<br>REVIEWER';
+  if (subheadEl) subheadEl.textContent = 'Offline recall exam for ' + data.name + '.';
+  if (addNameEl) addNameEl.textContent = data.name;
+  if (manageTitleEl) manageTitleEl.textContent = 'Manage Questions — ' + data.name;
+  if (addInfoEl) addInfoEl.innerHTML = 'Adding questions to: <strong>' + data.name + '</strong>';
   
   refreshHomeStats();
 }
 
 function renderSubjectSelector() {
-  const keys = getSubjectKeys();
   document.querySelectorAll('.subject-btn').forEach(btn => {
     const key = btn.dataset.subject;
     if (key) {
@@ -1243,35 +1253,46 @@ function stopTimer() {
 function updateTimerText() {
   const m = Math.floor(timeLeftSeconds / 60);
   const s = timeLeftSeconds % 60;
-  document.getElementById('timer-text').textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+  const timerEl = document.getElementById('timer-text');
+  if (timerEl) timerEl.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
 }
 
 function renderQuestion() {
   const item = examQuestions[currentIndex];
-  document.getElementById('q-number').textContent = 'Q' + (currentIndex + 1);
-  document.getElementById('q-text').textContent = item.q;
-  document.getElementById('progress-text').textContent = (currentIndex + 1) + ' / ' + examQuestions.length;
-  document.getElementById('progress-fill').style.width = (((currentIndex) / examQuestions.length) * 100) + '%';
-
+  const qNumEl = document.getElementById('q-number');
+  const qTextEl = document.getElementById('q-text');
+  const progressEl = document.getElementById('progress-text');
+  const fillEl = document.getElementById('progress-fill');
   const choicesEl = document.getElementById('choices');
-  choicesEl.innerHTML = '';
-  const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
-  item.choices.forEach(function(c, idx) {
-    const btn = document.createElement('button');
-    btn.className = 'choice-btn';
-    if (examAnswers[currentIndex] === idx) btn.classList.add('selected');
-    btn.innerHTML = '<span class="choice-letter">' + letters[idx] + '.</span><span>' + escapeHtml(c.text) + '</span>';
-    btn.addEventListener('click', function() {
-      examAnswers[currentIndex] = idx;
-      renderQuestion();
-    });
-    choicesEl.appendChild(btn);
-  });
-
-  document.getElementById('prev-q').disabled = currentIndex === 0;
+  const prevBtn = document.getElementById('prev-q');
   const nextBtn = document.getElementById('next-q');
-  nextBtn.disabled = false;
-  nextBtn.textContent = (currentIndex === examQuestions.length - 1) ? 'Finish' : 'Next →';
+  
+  if (qNumEl) qNumEl.textContent = 'Q' + (currentIndex + 1);
+  if (qTextEl) qTextEl.textContent = item.q;
+  if (progressEl) progressEl.textContent = (currentIndex + 1) + ' / ' + examQuestions.length;
+  if (fillEl) fillEl.style.width = (((currentIndex) / examQuestions.length) * 100) + '%';
+
+  if (choicesEl) {
+    choicesEl.innerHTML = '';
+    const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+    item.choices.forEach(function(c, idx) {
+      const btn = document.createElement('button');
+      btn.className = 'choice-btn';
+      if (examAnswers[currentIndex] === idx) btn.classList.add('selected');
+      btn.innerHTML = '<span class="choice-letter">' + letters[idx] + '.</span><span>' + escapeHtml(c.text) + '</span>';
+      btn.addEventListener('click', function() {
+        examAnswers[currentIndex] = idx;
+        renderQuestion();
+      });
+      choicesEl.appendChild(btn);
+    });
+  }
+
+  if (prevBtn) prevBtn.disabled = currentIndex === 0;
+  if (nextBtn) {
+    nextBtn.disabled = false;
+    nextBtn.textContent = (currentIndex === examQuestions.length - 1) ? 'Finish' : 'Next →';
+  }
 }
 
 function finishExam() {
@@ -1288,26 +1309,34 @@ function finishExam() {
   refreshHomeStats();
   const pct = Math.round((correctCount / examQuestions.length) * 100);
 
-  document.getElementById('score-text').textContent = pct + '%';
-  document.getElementById('score-sub').textContent = correctCount + ' of ' + examQuestions.length + ' correct';
+  const scoreEl = document.getElementById('score-text');
+  const subEl = document.getElementById('score-sub');
+  if (scoreEl) scoreEl.textContent = pct + '%';
+  if (subEl) subEl.textContent = correctCount + ' of ' + examQuestions.length + ' correct';
 
   const circumference = 314;
   const offset = circumference - (circumference * pct / 100);
   const fillEl = document.getElementById('gauge-fill');
-  fillEl.style.strokeDashoffset = circumference;
-  void fillEl.offsetWidth;
-  fillEl.style.strokeDashoffset = offset;
-  fillEl.style.stroke = pct >= 75 ? 'var(--correct)' : (pct >= 50 ? '#c98a3d' : 'var(--incorrect)');
+  if (fillEl) {
+    fillEl.style.strokeDashoffset = circumference;
+    void fillEl.offsetWidth;
+    fillEl.style.strokeDashoffset = offset;
+    fillEl.style.stroke = pct >= 75 ? 'var(--correct)' : (pct >= 50 ? '#c98a3d' : 'var(--incorrect)');
+  }
 
   const needleAngle = -90 + (pct / 100 * 180);
   const needleEl = document.getElementById('gauge-needle');
-  needleEl.style.transform = 'rotate(-90deg)';
-  void needleEl.offsetWidth;
-  needleEl.style.transform = 'rotate(' + needleAngle + 'deg)';
+  if (needleEl) {
+    needleEl.style.transform = 'rotate(-90deg)';
+    void needleEl.offsetWidth;
+    needleEl.style.transform = 'rotate(' + needleAngle + 'deg)';
+  }
 
   renderReview();
-  document.getElementById('review-list').classList.remove('open');
-  document.getElementById('toggle-review').textContent = 'Review Answers';
+  const reviewList = document.getElementById('review-list');
+  if (reviewList) reviewList.classList.remove('open');
+  const toggleBtn = document.getElementById('toggle-review');
+  if (toggleBtn) toggleBtn.textContent = 'Review Answers';
 
   showScreen('screen-results');
 }
@@ -1315,6 +1344,7 @@ function finishExam() {
 function renderReview() {
   const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
   const listEl = document.getElementById('review-list');
+  if (!listEl) return;
   listEl.innerHTML = '';
   examQuestions.forEach(function(item, i) {
     const picked = examAnswers[i];
@@ -1345,13 +1375,16 @@ function renderReview() {
 function renderManageScreen() {
   const questions = getCurrentQuestions();
   const seen = getCurrentSeen();
-  document.getElementById('count-total').textContent = questions.length;
-  document.getElementById('count-seen').textContent = seen.size;
+  const totalEl = document.getElementById('count-total');
+  const seenEl = document.getElementById('count-seen');
+  if (totalEl) totalEl.textContent = questions.length;
+  if (seenEl) seenEl.textContent = seen.size;
   renderQuestionList();
 }
 
 function renderQuestionList() {
   const listEl = document.getElementById('added-list');
+  if (!listEl) return;
   listEl.innerHTML = '';
   const questions = getCurrentQuestions();
   const seen = getCurrentSeen();
@@ -1412,265 +1445,321 @@ function initEventListeners() {
   });
   
   // Go to Setup
-  document.getElementById('go-setup').addEventListener('click', function() {
-    updatePoolHint();
-    showScreen('screen-setup');
-  });
+  const setupBtn = document.getElementById('go-setup');
+  if (setupBtn) {
+    setupBtn.addEventListener('click', function() {
+      updatePoolHint();
+      showScreen('screen-setup');
+    });
+  }
   
   // Go to Manage
-  document.getElementById('go-manage').addEventListener('click', function() {
-    renderManageScreen();
-    showScreen('screen-manage');
-  });
+  const manageBtn = document.getElementById('go-manage');
+  if (manageBtn) {
+    manageBtn.addEventListener('click', function() {
+      renderManageScreen();
+      showScreen('screen-manage');
+    });
+  }
   
   // Go to Add Questions
-  document.getElementById('go-add-questions').addEventListener('click', function() {
-    showScreen('screen-add-questions');
-  });
+  const addBtn = document.getElementById('go-add-questions');
+  if (addBtn) {
+    addBtn.addEventListener('click', function() {
+      showScreen('screen-add-questions');
+    });
+  }
   
   // Results Home
-  document.getElementById('results-home').addEventListener('click', function() {
-    refreshHomeStats();
-    showScreen('screen-home');
-  });
-  
-  // Exit Exam
-  document.getElementById('exit-exam').addEventListener('click', function() {
-    if (confirm('Abandon this exam? Your progress will be lost.')) {
-      stopTimer();
+  const homeBtn = document.getElementById('results-home');
+  if (homeBtn) {
+    homeBtn.addEventListener('click', function() {
       refreshHomeStats();
       showScreen('screen-home');
-    }
-  });
+    });
+  }
+  
+  // Exit Exam
+  const exitBtn = document.getElementById('exit-exam');
+  if (exitBtn) {
+    exitBtn.addEventListener('click', function() {
+      if (confirm('Abandon this exam? Your progress will be lost.')) {
+        stopTimer();
+        refreshHomeStats();
+        showScreen('screen-home');
+      }
+    });
+  }
   
   // Reset Progress
-  document.getElementById('reset-progress').addEventListener('click', function() {
-    const seen = getCurrentSeen();
-    if (seen.size === 0) {
-      alert('No progress to reset.');
-      return;
-    }
-    if (confirm('Reset progress for ' + allData[currentSubject].name + '? All ' + seen.size + ' set-aside question(s) will become available again.')) {
-      allData[currentSubject].seen = [];
-      saveAllData();
-      refreshHomeStats();
-    }
-  });
-  
-  // Begin Exam
-  document.getElementById('begin-exam').addEventListener('click', function() {
-    const poolMode = document.getElementById('opt-pool').value;
-    const countOpt = document.getElementById('opt-count').value;
-    const shuffleQ = document.getElementById('opt-shuffle').value === 'shuffle';
-    const shuffleC = document.getElementById('opt-shuffle-choices').value === 'shuffle';
-    const timerMin = parseInt(document.getElementById('opt-timer').value, 10);
-
-    let questions = getCurrentQuestions();
-    let seen = getCurrentSeen();
-    let pool = poolMode === 'unseen' ? questions.filter(q => !seen.has(q.id)) : questions;
-    
-    if (pool.length === 0) {
-      alert('No questions available for ' + allData[currentSubject].name + '!');
-      return;
-    }
-    pool = shuffleQ ? shuffleArray(pool) : pool.slice();
-
-    const n = countOpt === 'all' ? pool.length : Math.min(parseInt(countOpt, 10), pool.length);
-    pool = pool.slice(0, n);
-
-    examQuestions = pool.map(function(item) {
-      let choices = item.choices.map(function(text, idx) { return { text: text, origIndex: idx }; });
-      if (shuffleC) choices = shuffleArray(choices);
-      return {
-        id: item.id,
-        q: item.q,
-        choices: choices,
-        correctChoiceIdx: choices.findIndex(function(c) { return c.origIndex === item.answer; }),
-      };
-    });
-    examAnswers = new Array(examQuestions.length).fill(null);
-    currentIndex = 0;
-
-    if (timerMin && timerMin > 0) {
-      timeLeftSeconds = timerMin * 60;
-      startTimer();
-    } else {
-      timeLeftSeconds = null;
-      document.getElementById('timer-text').textContent = '';
-    }
-
-    renderQuestion();
-    showScreen('screen-exam');
-  });
-  
-  // Previous Question
-  document.getElementById('prev-q').addEventListener('click', function() {
-    if (currentIndex > 0) { currentIndex--; renderQuestion(); }
-  });
-  
-  // Next Question
-  document.getElementById('next-q').addEventListener('click', function() {
-    if (currentIndex < examQuestions.length - 1) {
-      currentIndex++;
-      renderQuestion();
-    } else {
-      stopTimer();
-      finishExam();
-    }
-  });
-  
-  // Toggle Review
-  document.getElementById('toggle-review').addEventListener('click', function() {
-    const listEl = document.getElementById('review-list');
-    const open = listEl.classList.toggle('open');
-    document.getElementById('toggle-review').textContent = open ? 'Hide Review' : 'Review Answers';
-  });
-  
-  // Retake
-  document.getElementById('retake').addEventListener('click', function() {
-    updatePoolHint();
-    showScreen('screen-setup');
-  });
-  
-  // Add Single Question
-  document.getElementById('add-single-question').addEventListener('click', function() {
-    const q = document.getElementById('new-q-text').value.trim();
-    const a = document.getElementById('new-q-a').value.trim();
-    const b = document.getElementById('new-q-b').value.trim();
-    const c = document.getElementById('new-q-c').value.trim();
-    const d = document.getElementById('new-q-d').value.trim();
-    const answer = parseInt(document.getElementById('new-q-answer').value);
-    const fb = document.getElementById('add-single-feedback');
-    
-    if (!q) { fb.textContent = 'Please enter a question.'; return; }
-    if (!a || !b || !c || !d) { fb.textContent = 'Please enter all four choices.'; return; }
-    
-    const data = getCurrentData();
-    const newQuestion = {
-      id: currentSubject + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
-      q: q,
-      choices: [a, b, c, d],
-      answer: answer
-    };
-    
-    data.questions.push(newQuestion);
-    saveAllData();
-    refreshHomeStats();
-    
-    document.getElementById('new-q-text').value = '';
-    document.getElementById('new-q-a').value = '';
-    document.getElementById('new-q-b').value = '';
-    document.getElementById('new-q-c').value = '';
-    document.getElementById('new-q-d').value = '';
-    
-    fb.textContent = 'Question added successfully!';
-    setTimeout(function() { fb.textContent = ''; }, 3000);
-  });
-  
-  // Add Bulk Questions
-  document.getElementById('add-bulk-questions').addEventListener('click', function() {
-    const raw = document.getElementById('paste-area').value;
-    const fb = document.getElementById('bulk-feedback');
-    
-    if (!raw.trim()) { fb.textContent = 'Paste some questions first.'; return; }
-    
-    const { results, errors } = parsePastedQuestions(raw);
-    const data = getCurrentData();
-    
-    if (results.length === 0) {
-      fb.textContent = 'No valid questions found. Check the format.';
-      return;
-    }
-    
-    results.forEach(function(item) {
-      data.questions.push({
-        id: currentSubject + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
-        q: item.q,
-        choices: item.choices,
-        answer: item.answer
-      });
-    });
-    
-    saveAllData();
-    refreshHomeStats();
-    
-    fb.textContent = 'Added ' + results.length + ' question(s)!' + (errors.length ? '  ' + errors.length + ' skipped.' : '');
-    document.getElementById('paste-area').value = '';
-  });
-  
-  // Filter Questions
-  document.getElementById('question-filter').addEventListener('input', function(e) {
-    questionFilterText = e.target.value;
-    renderQuestionList();
-  });
-  
-  // Export Questions
-  document.getElementById('export-added').addEventListener('click', function() {
-    const questions = getCurrentQuestions();
-    if (questions.length === 0) {
-      alert('The question bank is empty — nothing to export.');
-      return;
-    }
-    const text = questionsToText(questions);
-    const blob = new Blob([text], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = currentSubject + '-questions.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  });
-  
-  // Import Questions
-  document.getElementById('import-added').addEventListener('click', function() {
-    document.getElementById('import-file').click();
-  });
-  
-  document.getElementById('import-file').addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function() {
-      const { results, errors } = parsePastedQuestions(reader.result);
-      const data = getCurrentData();
-      if (results.length > 0) {
-        results.forEach(function(r) {
-          data.questions.push({
-            id: currentSubject + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
-            q: r.q,
-            choices: r.choices,
-            answer: r.answer
-          });
-        });
+  const resetBtn = document.getElementById('reset-progress');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function() {
+      const seen = getCurrentSeen();
+      if (seen.size === 0) {
+        alert('No progress to reset.');
+        return;
+      }
+      if (confirm('Reset progress for ' + allData[currentSubject].name + '? All ' + seen.size + ' set-aside question(s) will become available again.')) {
+        allData[currentSubject].seen = [];
         saveAllData();
         refreshHomeStats();
       }
-      let msg = results.length + ' question(s) imported.';
-      if (errors.length) msg += ' ' + errors.length + ' skipped.';
-      document.getElementById('bulk-feedback').textContent = msg;
-      renderManageScreen();
+    });
+  }
+  
+  // Begin Exam
+  const beginBtn = document.getElementById('begin-exam');
+  if (beginBtn) {
+    beginBtn.addEventListener('click', function() {
+      const poolMode = document.getElementById('opt-pool').value;
+      const countOpt = document.getElementById('opt-count').value;
+      const shuffleQ = document.getElementById('opt-shuffle').value === 'shuffle';
+      const shuffleC = document.getElementById('opt-shuffle-choices').value === 'shuffle';
+      const timerMin = parseInt(document.getElementById('opt-timer').value, 10);
+
+      let questions = getCurrentQuestions();
+      let seen = getCurrentSeen();
+      let pool = poolMode === 'unseen' ? questions.filter(q => !seen.has(q.id)) : questions;
+      
+      if (pool.length === 0) {
+        alert('No questions available for ' + allData[currentSubject].name + '!');
+        return;
+      }
+      pool = shuffleQ ? shuffleArray(pool) : pool.slice();
+
+      const n = countOpt === 'all' ? pool.length : Math.min(parseInt(countOpt, 10), pool.length);
+      pool = pool.slice(0, n);
+
+      examQuestions = pool.map(function(item) {
+        let choices = item.choices.map(function(text, idx) { return { text: text, origIndex: idx }; });
+        if (shuffleC) choices = shuffleArray(choices);
+        return {
+          id: item.id,
+          q: item.q,
+          choices: choices,
+          correctChoiceIdx: choices.findIndex(function(c) { return c.origIndex === item.answer; }),
+        };
+      });
+      examAnswers = new Array(examQuestions.length).fill(null);
+      currentIndex = 0;
+
+      if (timerMin && timerMin > 0) {
+        timeLeftSeconds = timerMin * 60;
+        startTimer();
+      } else {
+        timeLeftSeconds = null;
+        const timerEl = document.getElementById('timer-text');
+        if (timerEl) timerEl.textContent = '';
+      }
+
+      renderQuestion();
+      showScreen('screen-exam');
+    });
+  }
+  
+  // Previous Question
+  const prevBtn = document.getElementById('prev-q');
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function() {
+      if (currentIndex > 0) { currentIndex--; renderQuestion(); }
+    });
+  }
+  
+  // Next Question
+  const nextBtn = document.getElementById('next-q');
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function() {
+      if (currentIndex < examQuestions.length - 1) {
+        currentIndex++;
+        renderQuestion();
+      } else {
+        stopTimer();
+        finishExam();
+      }
+    });
+  }
+  
+  // Toggle Review
+  const toggleBtn = document.getElementById('toggle-review');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function() {
+      const listEl = document.getElementById('review-list');
+      const open = listEl.classList.toggle('open');
+      toggleBtn.textContent = open ? 'Hide Review' : 'Review Answers';
+    });
+  }
+  
+  // Retake
+  const retakeBtn = document.getElementById('retake');
+  if (retakeBtn) {
+    retakeBtn.addEventListener('click', function() {
+      updatePoolHint();
+      showScreen('screen-setup');
+    });
+  }
+  
+  // Add Single Question
+  const addSingleBtn = document.getElementById('add-single-question');
+  if (addSingleBtn) {
+    addSingleBtn.addEventListener('click', function() {
+      const q = document.getElementById('new-q-text').value.trim();
+      const a = document.getElementById('new-q-a').value.trim();
+      const b = document.getElementById('new-q-b').value.trim();
+      const c = document.getElementById('new-q-c').value.trim();
+      const d = document.getElementById('new-q-d').value.trim();
+      const answer = parseInt(document.getElementById('new-q-answer').value);
+      const fb = document.getElementById('add-single-feedback');
+      
+      if (!q) { if (fb) fb.textContent = 'Please enter a question.'; return; }
+      if (!a || !b || !c || !d) { if (fb) fb.textContent = 'Please enter all four choices.'; return; }
+      
+      const data = getCurrentData();
+      const newQuestion = {
+        id: currentSubject + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
+        q: q,
+        choices: [a, b, c, d],
+        answer: answer
+      };
+      
+      data.questions.push(newQuestion);
+      saveAllData();
       refreshHomeStats();
-    };
-    reader.readAsText(file);
-    e.target.value = '';
-  });
+      
+      document.getElementById('new-q-text').value = '';
+      document.getElementById('new-q-a').value = '';
+      document.getElementById('new-q-b').value = '';
+      document.getElementById('new-q-c').value = '';
+      document.getElementById('new-q-d').value = '';
+      
+      if (fb) fb.textContent = 'Question added successfully!';
+      setTimeout(function() { if (fb) fb.textContent = ''; }, 3000);
+    });
+  }
+  
+  // Add Bulk Questions
+  const addBulkBtn = document.getElementById('add-bulk-questions');
+  if (addBulkBtn) {
+    addBulkBtn.addEventListener('click', function() {
+      const raw = document.getElementById('paste-area').value;
+      const fb = document.getElementById('bulk-feedback');
+      
+      if (!raw.trim()) { if (fb) fb.textContent = 'Paste some questions first.'; return; }
+      
+      const { results, errors } = parsePastedQuestions(raw);
+      const data = getCurrentData();
+      
+      if (results.length === 0) {
+        if (fb) fb.textContent = 'No valid questions found. Check the format.';
+        return;
+      }
+      
+      results.forEach(function(item) {
+        data.questions.push({
+          id: currentSubject + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
+          q: item.q,
+          choices: item.choices,
+          answer: item.answer
+        });
+      });
+      
+      saveAllData();
+      refreshHomeStats();
+      
+      if (fb) fb.textContent = 'Added ' + results.length + ' question(s)!' + (errors.length ? '  ' + errors.length + ' skipped.' : '');
+      document.getElementById('paste-area').value = '';
+    });
+  }
+  
+  // Filter Questions
+  const filterInput = document.getElementById('question-filter');
+  if (filterInput) {
+    filterInput.addEventListener('input', function(e) {
+      questionFilterText = e.target.value;
+      renderQuestionList();
+    });
+  }
+  
+  // Export Questions
+  const exportBtn = document.getElementById('export-added');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', function() {
+      const questions = getCurrentQuestions();
+      if (questions.length === 0) {
+        alert('The question bank is empty — nothing to export.');
+        return;
+      }
+      const text = questionsToText(questions);
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = currentSubject + '-questions.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+  }
+  
+  // Import Questions
+  const importBtn = document.getElementById('import-added');
+  if (importBtn) {
+    importBtn.addEventListener('click', function() {
+      document.getElementById('import-file').click();
+    });
+  }
+  
+  const importFile = document.getElementById('import-file');
+  if (importFile) {
+    importFile.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function() {
+        const { results, errors } = parsePastedQuestions(reader.result);
+        const data = getCurrentData();
+        if (results.length > 0) {
+          results.forEach(function(r) {
+            data.questions.push({
+              id: currentSubject + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
+              q: r.q,
+              choices: r.choices,
+              answer: r.answer
+            });
+          });
+          saveAllData();
+          refreshHomeStats();
+        }
+        let msg = results.length + ' question(s) imported.';
+        if (errors.length) msg += ' ' + errors.length + ' skipped.';
+        const fb = document.getElementById('bulk-feedback');
+        if (fb) fb.textContent = msg;
+        renderManageScreen();
+        refreshHomeStats();
+      };
+      reader.readAsText(file);
+      e.target.value = '';
+    });
+  }
   
   // Clear All Questions
-  document.getElementById('clear-added').addEventListener('click', function() {
-    const questions = getCurrentQuestions();
-    if (questions.length === 0) return;
-    if (confirm('Remove ALL ' + questions.length + ' questions from ' + allData[currentSubject].name + '? This cannot be undone.')) {
-      allData[currentSubject].questions = [];
-      allData[currentSubject].seen = [];
-      saveAllData();
-      renderManageScreen();
-      refreshHomeStats();
-    }
-  });
+  const clearBtn = document.getElementById('clear-added');
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function() {
+      const questions = getCurrentQuestions();
+      if (questions.length === 0) return;
+      if (confirm('Remove ALL ' + questions.length + ' questions from ' + allData[currentSubject].name + '? This cannot be undone.')) {
+        allData[currentSubject].questions = [];
+        allData[currentSubject].seen = [];
+        saveAllData();
+        renderManageScreen();
+        refreshHomeStats();
+      }
+    });
+  }
   
-  console.log('All event listeners initialized!');
+  console.log('✅ All event listeners initialized!');
 }
 
 // ============================================================
@@ -1687,6 +1776,7 @@ loadAllData().then(() => {
   console.log('📖 Subjects: PIPE, MDMSP, MEEBES');
   console.log('📁 Questions loaded from /questions/ folder');
   console.log('📝 To add questions: Edit the .txt files in /questions/');
+  console.log('📊 Total questions:', Object.keys(allData).reduce((sum, key) => sum + allData[key].questions.length, 0));
 });
 </script>
 </body>
