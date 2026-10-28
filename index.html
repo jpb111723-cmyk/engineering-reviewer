@@ -105,6 +105,18 @@ select:focus,input:focus,textarea:focus,button:focus-visible{outline:2px solid v
 .alert-info{padding:12px 16px;border-radius:3px;margin-bottom:12px;font-size:14px;background:rgba(201,138,61,.2);border:1px solid var(--brass);color:var(--brass-light)}
 @media (max-width:600px){.editor-grid{grid-template-columns:1fr}}
 @media (max-width:480px){.masthead h1{font-size:32px}.paper{padding:22px 16px}.q-text{font-size:17px;margin-left:0}.choices,.q-number{margin-left:0}.paper::before{display:none}.subject-selector{padding:10px}.subject-btn{font-size:11px;padding:4px 10px}}
+.stat-num{font-size:28px}.stat-label{font-size:11px}
+.tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}.tabs .btn{padding:8px 14px;font-size:12px}
+.btn.on{background:var(--brass);color:#1a1002;border-color:var(--brass)}
+.exam-tools{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}.exam-tools .btn{padding:8px 14px;font-size:12px}
+.qmap{display:none;flex-wrap:wrap;gap:6px;margin-bottom:16px;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:4px;max-height:220px;overflow-y:auto}.qmap.open{display:flex}
+.qm{min-width:38px;height:32px;font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);background:transparent;color:var(--text-muted);border-radius:3px;cursor:pointer;position:relative}
+.qm.ans{background:var(--line-soft);color:var(--text)}.qm.good{background:rgba(63,157,116,.4);color:var(--text)}.qm.bad{background:rgba(193,68,61,.4);color:var(--text)}
+.qm.cur{border-color:var(--brass-light);color:var(--brass-light);font-weight:700}.qm.flag::after{content:"\2691";position:absolute;top:-7px;right:-3px;font-size:11px;color:var(--incorrect)}
+.choice-btn.good{border-color:var(--correct);background:#d5ecdf}.choice-btn.bad{border-color:var(--incorrect);background:#f1d3d0}.choice-btn:disabled{cursor:default;color:var(--ink-text);opacity:1}
+.bar{height:8px;background:var(--line-soft);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--correct)}
+.trend{display:flex;align-items:flex-end;gap:6px;height:110px}.trend div{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;font-size:10px;font-family:var(--font-mono);color:var(--text-muted)}.trend i{display:block;width:100%;background:var(--brass);border-radius:2px 2px 0 0}
+.take-row{display:flex;justify-content:space-between;align-items:center;width:100%;gap:10px;margin-bottom:8px;padding:12px 14px;background:var(--panel);border:1px solid var(--line);border-radius:3px;color:var(--text);font-family:var(--font-body);font-size:14px;text-align:left;cursor:pointer}.take-row:hover{border-color:var(--brass)}
 </style>
 </head>
 <body>
@@ -122,19 +134,19 @@ select:focus,input:focus,textarea:focus,button:focus-visible{outline:2px solid v
     <span class="tick tl"></span><span class="tick tr"></span>
     <p class="eyebrow" id="subject-eyebrow">ENGINEERING · RECALL BANK</p>
     <h1 id="subject-title">ENGINEERING<br>REVIEWER</h1>
-    <p class="subhead" id="subject-subhead">Select a subject above to begin.</p>
+    <p class="subhead" id="subject-subhead">Loading…</p>
   </div>
   <div class="panel stat-panel">
-    <div class="stat"><span class="stat-num" id="stat-total">0</span><span class="stat-label">questions in bank</span></div>
-    <div class="stat"><span class="stat-num" id="stat-remaining">0</span><span class="stat-label">not yet answered</span></div>
-    <div class="stat"><span class="stat-num" id="stat-seen">0</span><span class="stat-label">set aside</span></div>
+    <div class="stat"><span class="stat-num" id="stat-total">0</span><span class="stat-label">in bank</span></div>
+    <div class="stat"><span class="stat-num" id="stat-new">0</span><span class="stat-label">never tried</span></div>
+    <div class="stat"><span class="stat-num" id="stat-miss">0</span><span class="stat-label">missed</span></div>
+    <div class="stat"><span class="stat-num" id="stat-ok">0</span><span class="stat-label">set aside ✓</span></div>
   </div>
   <div class="home-actions">
     <button class="btn btn-primary" id="go-setup">Start Exam →</button>
-    <button class="btn btn-ghost" id="go-add-questions">Add Questions</button>
-    <button class="btn btn-ghost" id="go-manage">Manage Question Bank</button>
+    <button class="btn btn-ghost" id="go-stats">Statistics</button>
+    <button class="btn btn-ghost" id="go-add-questions">My Own Questions</button>
     <button class="btn btn-ghost" id="reset-progress">Reset Progress</button>
-    <button class="btn btn-ghost" id="reload-files">Reload Bank From Files</button>
   </div>
   <p class="hint" id="load-status" style="margin-top:14px;text-align:center"></p>
 </section>
@@ -143,11 +155,23 @@ select:focus,input:focus,textarea:focus,button:focus-visible{outline:2px solid v
   <button class="btn-back" data-target="screen-home">← Back</button>
   <h2 class="screen-title">Set Up Exam</h2>
   <div class="panel form-panel">
+    <label class="field"><span class="field-label">Source</span>
+      <select id="opt-source"><option value="one" selected>Current subject only</option><option value="mix">Mixed — all three subjects</option></select></label>
+    <div class="field" id="weights" style="display:none"><span class="field-label">Mix proportion (relative weights)</span>
+      <div class="editor-grid" style="grid-template-columns:repeat(3,1fr);gap:8px">
+        <div class="editor-field"><label>PIPE</label><input type="number" id="w-pipe" value="1" min="0"></div>
+        <div class="editor-field"><label>MDMSP</label><input type="number" id="w-mdmsp" value="1" min="0"></div>
+        <div class="editor-field"><label>MEEBES</label><input type="number" id="w-meebes" value="1" min="0"></div>
+      </div></div>
     <label class="field"><span class="field-label">Question pool</span>
-      <select id="opt-pool"><option value="unseen" selected>Unseen only (skip previously answered)</option><option value="all">All questions (include previously answered)</option></select></label>
+      <select id="opt-pool"><option value="todo" selected>Not yet set aside (new + missed)</option><option value="new">Never tried only</option><option value="miss">Missed only</option><option value="all">All questions</option></select></label>
+    <label class="field"><span class="field-label">Duplicate questions (same wording, across all banks)</span>
+      <select id="opt-dup"><option value="skip" selected>Skip duplicates</option><option value="allow">Allow duplicates</option></select></label>
     <p class="hint" id="pool-hint" style="margin:-8px 0 0"></p>
     <label class="field"><span class="field-label">Number of questions</span>
-      <select id="opt-count"><option value="10">10</option><option value="25" selected>25</option><option value="50">50</option><option value="100">100</option><option value="all">All in bank</option></select></label>
+      <select id="opt-count"><option value="10">10</option><option value="25" selected>25</option><option value="50">50</option><option value="100">100</option><option value="all">All that match</option></select></label>
+    <label class="field"><span class="field-label">Mode</span>
+      <select id="opt-mode"><option value="exam" selected>Exam — results at the end</option><option value="study">Study — instant right/wrong after each answer</option></select></label>
     <label class="field"><span class="field-label">Question order</span>
       <select id="opt-shuffle"><option value="shuffle" selected>Shuffled</option><option value="order">In bank order</option></select></label>
     <label class="field"><span class="field-label">Choice order</span>
@@ -164,6 +188,11 @@ select:focus,input:focus,textarea:focus,button:focus-visible{outline:2px solid v
     <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
     <div class="exam-meta"><span id="progress-text" class="mono">1 / 25</span><span id="timer-text" class="mono timer-text"></span></div>
   </div>
+  <div class="exam-tools">
+    <button class="btn btn-ghost" id="mark-q">⚑ Mark for review</button>
+    <button class="btn btn-ghost" id="toggle-map">▦ Question map</button>
+  </div>
+  <div class="qmap" id="qmap"></div>
   <div class="paper">
     <p class="q-number mono" id="q-number">Q1</p>
     <h3 class="q-text" id="q-text"></h3>
@@ -184,24 +213,60 @@ select:focus,input:focus,textarea:focus,button:focus-visible{outline:2px solid v
       <line x1="120" y1="140" x2="120" y2="55" class="gauge-needle" id="gauge-needle"></line>
       <circle cx="120" cy="140" r="8" class="gauge-hub"></circle>
     </svg>
-    <div class="gauge-readout"><span class="mono gauge-score" id="score-text">0%</span><span class="gauge-sub" id="score-sub">0 of 0 correct</span></div>
+    <div class="gauge-readout"><span class="mono gauge-score" id="score-text">0%</span><span class="gauge-sub" id="score-sub"></span></div>
   </div>
   <div class="results-actions">
     <button class="btn btn-ghost" id="toggle-review">Review Answers</button>
-    <button class="btn btn-primary" id="retake">Retake</button>
+    <button class="btn btn-primary" id="retake">New Exam</button>
     <button class="btn btn-ghost" id="results-home">Home</button>
   </div>
   <div class="review-list" id="review-list"></div>
 </section>
 
+<section id="screen-stats" class="screen">
+  <button class="btn-back" data-target="screen-home">← Back</button>
+  <h2 class="screen-title">Statistics</h2>
+  <div class="tabs">
+    <button class="btn btn-ghost on" data-tab="overview">Overview</button>
+    <button class="btn btn-ghost" data-tab="takes">Past takes</button>
+    <button class="btn btn-ghost" data-tab="questions">Per question</button>
+  </div>
+  <div id="tab-overview"></div>
+  <div id="tab-takes" style="display:none"></div>
+  <div id="tab-questions" style="display:none">
+    <div class="panel">
+      <div class="editor-grid">
+        <div class="editor-field"><label>Subject</label><select id="qs-sub"><option value="all">All subjects</option><option value="pipe">PIPE</option><option value="mdmsp">MDMSP</option><option value="meebes">MEEBES</option></select></div>
+        <div class="editor-field"><label>Status</label><select id="qs-status"><option value="all">All</option><option value="miss">Missed</option><option value="ok">Set aside ✓</option><option value="new">Never tried</option></select></div>
+        <div class="editor-field"><label>Sort by</label><select id="qs-sort"><option value="miss">Most missed</option><option value="acc">Lowest accuracy</option><option value="slow">Slowest average</option><option value="att">Most attempts</option><option value="bank">Bank order</option></select></div>
+        <div class="editor-field"><label>Search</label><input type="text" id="qs-text" placeholder="Filter by text..."></div>
+      </div>
+    </div>
+    <p class="hint" id="qs-count"></p>
+    <div id="qs-list" class="added-list" style="max-height:none"></div>
+  </div>
+</section>
+
+<section id="screen-take" class="screen">
+  <button class="btn-back" data-target="screen-stats">← Back to statistics</button>
+  <h2 class="screen-title" id="take-title"></h2>
+  <p class="hint" id="take-meta"></p>
+  <div class="tabs" id="take-filter">
+    <button class="btn btn-ghost on" data-f="all">All</button>
+    <button class="btn btn-ghost" data-f="wrong">Wrong</button>
+    <button class="btn btn-ghost" data-f="blank">Unanswered</button>
+  </div>
+  <div class="review-list open" id="take-list"></div>
+</section>
+
 <section id="screen-add-questions" class="screen">
   <button class="btn-back" data-target="screen-home">← Back</button>
-  <h2 class="screen-title">Add Questions</h2>
-  <div class="alert-info" id="add-questions-info">Adding questions to: <strong id="add-subject-name"></strong></div>
+  <h2 class="screen-title">My Own Questions</h2>
+  <div class="alert-info">Saved in this browser only, for <strong id="add-subject-name"></strong>. They are not sent anywhere.</div>
   <div class="panel">
     <h3 class="panel-title">Quick Add Single Question</h3>
     <div class="editor-grid">
-      <div class="editor-field"><label>Question</label><input type="text" id="new-q-text" placeholder="Enter your question..."></div>
+      <div class="editor-field"><label>Question</label><input type="text" id="new-q-text"></div>
       <div class="editor-field"><label>Choice A</label><input type="text" id="new-q-a"></div>
       <div class="editor-field"><label>Choice B</label><input type="text" id="new-q-b"></div>
       <div class="editor-field"><label>Choice C</label><input type="text" id="new-q-c"></div>
@@ -212,351 +277,416 @@ select:focus,input:focus,textarea:focus,button:focus-visible{outline:2px solid v
     <div class="manage-actions"><button class="btn btn-primary" id="add-single-question">Add Question</button><span class="parse-feedback" id="add-single-feedback"></span></div>
   </div>
   <div class="panel">
-    <h3 class="panel-title">Bulk Add Multiple Questions</h3>
-    <p class="hint">Paste questions in this format (separate each with a blank line):</p>
-    <pre class="format-example mono">What is the SI unit of force?
-A. Watt
-B. Newton
-C. Joule
-D. Pascal
-Answer: B</pre>
-    <textarea id="paste-area" rows="8" placeholder="Paste questions here..."></textarea>
-    <div class="manage-actions"><button class="btn btn-primary" id="add-bulk-questions">Add All Questions</button><span class="mono parse-feedback" id="bulk-feedback"></span></div>
-  </div>
-</section>
-
-<section id="screen-manage" class="screen">
-  <button class="btn-back" data-target="screen-home">← Back</button>
-  <h2 class="screen-title" id="manage-title">Manage Questions</h2>
-  <div class="panel"><p class="manage-count">Total: <strong id="count-total">0</strong> &nbsp;·&nbsp; Set aside: <strong id="count-seen">0</strong></p></div>
-  <div class="panel">
-    <h3 class="panel-title">All Questions</h3>
-    <input type="text" id="question-filter" placeholder="Filter by text...">
-    <div id="added-list" class="added-list"></div>
-  </div>
-  <div class="panel">
-    <h3 class="panel-title">Import / Export</h3>
+    <h3 class="panel-title">Bulk Add / Import / Export</h3>
+    <p class="hint">Paste questions (blank line between each): question, A. B. C. D., then Answer: X</p>
+    <textarea id="paste-area" rows="6" placeholder="Paste questions here..."></textarea>
     <div class="manage-actions">
-      <button class="btn btn-ghost" id="export-added">Export Questions</button>
-      <button class="btn btn-ghost" id="import-added">Import Questions</button>
+      <button class="btn btn-primary" id="add-bulk-questions">Add All</button>
+      <button class="btn btn-ghost" id="import-added">Import .txt</button>
+      <button class="btn btn-ghost" id="export-added">Export This Subject</button>
       <input type="file" id="import-file" accept=".txt" style="display:none">
+      <span class="mono parse-feedback" id="bulk-feedback"></span>
     </div>
-    <div class="manage-actions" style="border-top:1px solid var(--line);padding-top:12px"><button class="btn btn-danger" id="clear-added">Remove All Questions</button></div>
   </div>
+  <div class="panel"><h3 class="panel-title">Questions I added (this subject)</h3><div id="added-list" class="added-list"></div></div>
 </section>
 
 </div>
 <script>
 const SUBJECTS = {
-  pipe:   { name: 'Power and Industrial Plant Engineering', short: 'PIPE',   file: 'questions/pipe.txt' },
-  mdmsp:  { name: 'Machine Design, Materials, and Shop Practice', short: 'MDMSP',  file: 'questions/md-msp.txt' },
+  pipe:   { name: 'Power and Industrial Plant Engineering', short: 'PIPE', file: 'questions/pipe.txt' },
+  mdmsp:  { name: 'Machine Design, Materials, and Shop Practice', short: 'MDMSP', file: 'questions/md-msp.txt' },
   meebes: { name: 'Mathematics, Engineering Economics, and Basic Engineering Sciences', short: 'MEEBES', file: 'questions/mee-bes.txt' }
 };
-// v3: ignores caches produced by the old, buggy parser
-const STORAGE_KEY = 'reviewer_data_v3';
-const LETTERS = ['A', 'B', 'C', 'D'];
+const SUBS = Object.keys(SUBJECTS), LETTERS = ['A', 'B', 'C', 'D'], KEY = 'reviewer_state_v1';
 const $ = id => document.getElementById(id);
+const esc = s => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const hash = s => { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return (h >>> 0).toString(36); };
+const dkey = s => s.toLowerCase().replace(/\s+/g, ' ').replace(/[?.:\s]+$/, '');
+const fmtT = ms => { const s = Math.round(ms / 1000); return s < 60 ? s + 's' : Math.floor(s / 60) + 'm ' + String(s % 60).padStart(2, '0') + 's'; };
+const fmtD = t => new Date(t).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' });
+const pct = (a, b) => b ? Math.round(a / b * 100) : 0;
 
 // ---------- Strict parser: question, A. B. C. D. in order, then "Answer: X" ----------
 function parseQuestionsFromText(text) {
-  const results = [];
+  const out = [];
   text.replace(/\r\n?/g, '\n').split(/\n\s*\n+/).forEach(block => {
     const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
     if (lines.length < 6) return;
-    const qLines = [], choices = [];
-    let answer = -1;
+    const ql = [], ch = []; let ans = -1;
     lines.forEach(line => {
-      const ans = line.match(/^(?:answer|ans)\s*[:.]\s*([A-Da-d])\s*$/i);
-      if (ans && choices.length === 4) { answer = LETTERS.indexOf(ans[1].toUpperCase()); return; }
-      if (answer === -1 && choices.length < 4 && qLines.length) {
-        const opt = line.match(new RegExp('^' + LETTERS[choices.length] + '[.)]\\s+(.+)$', 'i'));
-        if (opt) { choices.push(opt[1].trim()); return; }
+      const a = line.match(/^(?:answer|ans)\s*[:.]\s*([A-Da-d])\s*$/i);
+      if (a && ch.length === 4) { ans = LETTERS.indexOf(a[1].toUpperCase()); return; }
+      if (ans === -1 && ch.length < 4 && ql.length) {
+        const o = line.match(new RegExp('^' + LETTERS[ch.length] + '[.)]\\s+(.+)$', 'i'));
+        if (o) { ch.push(o[1].trim()); return; }
       }
-      if (!choices.length) qLines.push(line);
+      if (!ch.length) ql.push(line);
     });
-    if (qLines.length && choices.length === 4 && answer >= 0) results.push({ q: qLines.join(' '), choices, answer });
+    if (ql.length && ch.length === 4 && ans >= 0) out.push({ q: ql.join(' '), choices: ch, answer: ans });
   });
-  return results;
+  return out;
 }
 
-// ---------- Data ----------
-let allData = {}, currentSubject = 'pipe', examQuestions = [], examAnswers = [], currentIndex = 0;
-let timerInterval = null, timeLeft = 0, filterText = '';
+// ---------- State (progress lives in this browser; the question files are read fresh every visit) ----------
+let S = { custom: {}, stats: {}, history: [] }, bank = {}, fileQ = {}, byId = {}, cur = 'pipe';
+function loadState() {
+  try { const s = JSON.parse(localStorage.getItem(KEY)); if (s) S = Object.assign(S, s); localStorage.removeItem('reviewer_data_v2'); localStorage.removeItem('reviewer_data_v3'); } catch (e) {}
+  SUBS.forEach(k => S.custom[k] = S.custom[k] || []);
+}
+function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 
+// Stable id = subject + hash of wording, so edits to other questions never shift your progress
+function mk(k, x, used, custom) {
+  const b = k + '_' + hash(x.q + '\u0001' + x.choices.join('\u0001')); let id = b, n = 1;
+  while (used.has(id)) id = b + '_' + (++n);
+  used.add(id);
+  return { id, sub: k, q: x.q, choices: x.choices, answer: x.answer, custom: custom, dk: dkey(x.q) };
+}
+function rebuild(k) {
+  const used = new Set(), c = SUBJECTS[k];
+  bank[k] = { name: c.name, short: c.short, questions: fileQ[k].map(x => mk(k, x, used, 0)).concat(S.custom[k].map(x => mk(k, x, used, 1))) };
+  byId = {}; SUBS.forEach(s => bank[s] && bank[s].questions.forEach(x => byId[x.id] = x));
+}
 async function loadFile(path) {
   try {
-    const res = await fetch(new URL(path, document.baseURI).href, { cache: 'no-cache' });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const parsed = parseQuestionsFromText(await res.text());
-    console.log('Parsed', parsed.length, 'questions from', path);
-    return parsed;
+    const r = await fetch(new URL(path, document.baseURI).href);
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return parseQuestionsFromText(await r.text());
   } catch (e) { console.warn('Could not load', path, e.message); return null; }
 }
+const stOf = id => { const s = S.stats[id]; return !s || s.ok == null ? 'new' : s.ok ? 'ok' : 'miss'; };
 
-async function buildFromFiles(keepSeen) {
-  const out = {}; let failed = [];
-  for (const key in SUBJECTS) {
-    const c = SUBJECTS[key], parsed = await loadFile(c.file);
-    if (!parsed || !parsed.length) failed.push(c.short);
-    out[key] = { name: c.name, short: c.short, seen: keepSeen && allData[key] ? allData[key].seen : [],
-      questions: (parsed || []).map((q, i) => ({ id: key + '_' + (i + 1), q: q.q, choices: q.choices, answer: q.answer })) };
-  }
-  return { out, failed };
-}
-
-async function loadAllData() {
-  try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    if (saved && Object.keys(SUBJECTS).every(k => saved[k] && Array.isArray(saved[k].questions))) {
-      allData = saved; return;
-    }
-  } catch (e) {}
-  const { out, failed } = await buildFromFiles(false);
-  allData = out;
-  if (failed.length) $('load-status').textContent = 'Could not load: ' + failed.join(', ') + '. Serve the page over http(s) with a questions/ folder beside it.';
-  else saveAllData();   // never cache an empty or partial bank
-}
-
-function saveAllData() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(allData)); } catch (e) {} }
-const qs = () => (allData[currentSubject] || {}).questions || [];
-const seenSet = () => new Set((allData[currentSubject] || {}).seen || []);
-const esc = s => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
-const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
-const newId = () => currentSubject + '_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6);
-
-// ---------- UI ----------
-function showScreen(id) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  $(id).classList.add('active'); window.scrollTo(0, 0);
-}
-
+// ---------- Home ----------
+function showScreen(id) { document.querySelectorAll('.screen').forEach(s => s.classList.remove('active')); $(id).classList.add('active'); window.scrollTo(0, 0); }
 function refreshHome() {
-  const seen = seenSet(), q = qs();
-  $('stat-total').textContent = q.length;
-  $('stat-remaining').textContent = q.filter(x => !seen.has(x.id)).length;
-  $('stat-seen').textContent = seen.size;
+  const q = bank[cur] ? bank[cur].questions : [], c = { new: 0, ok: 0, miss: 0 };
+  q.forEach(x => c[stOf(x.id)]++);
+  $('stat-total').textContent = q.length; $('stat-new').textContent = c.new; $('stat-miss').textContent = c.miss; $('stat-ok').textContent = c.ok;
   document.querySelectorAll('.subject-btn').forEach(b => {
-    const d = allData[b.dataset.subject];
-    b.classList.toggle('active', b.dataset.subject === currentSubject);
-    b.innerHTML = (d ? d.short : b.dataset.subject.toUpperCase()) + ' <span class="badge">' + (d ? d.questions.length : 0) + '</span>';
+    const k = b.dataset.subject; b.classList.toggle('active', k === cur);
+    b.innerHTML = SUBJECTS[k].short + ' <span class="badge">' + (bank[k] ? bank[k].questions.length : 0) + '</span>';
   });
-  const d = allData[currentSubject];
-  if (!d) return;
+  const d = SUBJECTS[cur];
   $('subject-eyebrow').textContent = d.name.toUpperCase() + ' · RECALL BANK';
   $('subject-title').innerHTML = d.short + '<br>REVIEWER';
-  $('subject-subhead').textContent = 'Offline recall exam for ' + d.name + '.';
+  $('subject-subhead').textContent = 'Recall exam for ' + d.name + '.';
   $('add-subject-name').textContent = d.name;
-  $('manage-title').textContent = 'Manage Questions — ' + d.name;
 }
 
-function switchSubject(key) {
-  if (!allData[key] || key === currentSubject) return;
-  currentSubject = key; refreshHome();
+// ---------- Setup ----------
+const srcKeys = () => $('opt-source').value === 'mix' ? SUBS : [cur];
+function pickPool(k) {
+  const f = $('opt-pool').value;
+  return bank[k].questions.filter(x => { const s = stOf(x.id); return f === 'all' || (f === 'todo' && s !== 'ok') || f === s; });
+}
+function hint() {
+  const keys = srcKeys(); let all = [];
+  keys.forEach(k => all = all.concat(pickPool(k)));
+  const u = new Set(all.map(x => x.dk)).size, skip = $('opt-dup').value === 'skip';
+  $('pool-hint').textContent = all.length + ' question(s) match' + (skip && u < all.length ? ' — ' + u + ' unique after skipping duplicates' : '') + '.';
+  $('weights').style.display = keys.length > 1 ? 'flex' : 'none';
+}
+function take(list, lim, seen, skip) {
+  const t = [], left = [];
+  for (const x of list) {
+    if (t.length >= lim) { left.push(x); continue; }
+    if (skip) { if (seen.has(x.dk)) continue; seen.add(x.dk); }
+    t.push(x);
+  }
+  return { t, left };
 }
 
 // ---------- Exam ----------
-function stopTimer() { clearInterval(timerInterval); timerInterval = null; }
-function drawTimer() {
-  const m = Math.floor(timeLeft / 60), s = timeLeft % 60;
-  $('timer-text').textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
-}
-function startTimer() {
-  stopTimer(); drawTimer();
-  timerInterval = setInterval(() => { timeLeft--; drawTimer(); if (timeLeft <= 0) { stopTimer(); finishExam(); } }, 1000);
+let examQ = [], examA = [], marked = [], qms = [], idx = 0, mode = 'exam', src = 'pipe', tStart = 0, timerInt = null, timeLeft = 0, examStart = 0;
+const enter = () => { tStart = Date.now(); };
+const leave = () => { if (tStart) { qms[idx] += Date.now() - tStart; tStart = 0; } };
+const stopTimer = () => { clearInterval(timerInt); timerInt = null; };
+function drawTimer() { $('timer-text').textContent = String(Math.floor(timeLeft / 60)).padStart(2, '0') + ':' + String(timeLeft % 60).padStart(2, '0'); }
+
+function beginExam() {
+  const keys = srcKeys(), skip = $('opt-dup').value === 'skip', sh = $('opt-shuffle').value === 'shuffle';
+  const pools = {}; let total = 0;
+  keys.forEach(k => { const p = pickPool(k); pools[k] = sh ? shuffle(p) : p; total += p.length; });
+  if (!total) return alert('No questions match these settings.');
+  const c = $('opt-count').value, want = c === 'all' ? Infinity : parseInt(c, 10), seen = new Set();
+  let picked = [];
+  if (keys.length > 1 && want !== Infinity) {
+    let w = keys.map(k => Math.max(0, parseFloat($('w-' + k).value) || 0));
+    if (!w.some(x => x > 0)) w = w.map(() => 1);
+    const sw = w.reduce((a, b) => a + b, 0), raw = w.map(x => want * x / sw), base = raw.map(Math.floor);
+    let r = want - base.reduce((a, b) => a + b, 0);
+    raw.map((x, i) => [x - Math.floor(x), i]).sort((a, b) => b[0] - a[0]).forEach(p => { if (r-- > 0) base[p[1]]++; });
+    let rest = [];
+    keys.forEach((k, i) => { const t = take(pools[k], base[i], seen, skip); picked = picked.concat(t.t); rest = rest.concat(t.left); });
+    if (picked.length < want) picked = picked.concat(take(shuffle(rest), want - picked.length, seen, skip).t);
+  } else {
+    keys.forEach(k => { if (picked.length < want) picked = picked.concat(take(pools[k], want - picked.length, seen, skip).t); });
+  }
+  if (sh) picked = shuffle(picked);
+  const shC = $('opt-shuffle-choices').value === 'shuffle';
+  examQ = picked.map(x => {
+    let ch = x.choices.map((text, o) => ({ text, o }));
+    if (shC) ch = shuffle(ch);
+    return { id: x.id, q: x.q, ch, ci: ch.findIndex(z => z.o === x.answer) };
+  });
+  examA = new Array(examQ.length).fill(null); marked = new Array(examQ.length).fill(false); qms = new Array(examQ.length).fill(0);
+  idx = 0; mode = $('opt-mode').value; src = keys.length > 1 ? 'mix' : keys[0]; examStart = Date.now();
+  const min = parseInt($('opt-timer').value, 10);
+  stopTimer();
+  if (min > 0) { timeLeft = min * 60; drawTimer(); timerInt = setInterval(() => { timeLeft--; drawTimer(); if (timeLeft <= 0) finishExam(); }, 1000); }
+  else $('timer-text').textContent = '';
+  $('qmap').classList.remove('open');
+  enter(); render(); showScreen('screen-exam');
 }
 
-function renderQuestion() {
-  const item = examQuestions[currentIndex];
-  $('q-number').textContent = 'Q' + (currentIndex + 1);
-  $('q-text').textContent = item.q;
-  $('progress-text').textContent = (currentIndex + 1) + ' / ' + examQuestions.length;
-  $('progress-fill').style.width = (currentIndex / examQuestions.length * 100) + '%';
+function render() {
+  const it = examQ[idx], a = examA[idx], lock = mode === 'study' && a !== null;
+  $('q-number').textContent = 'Q' + (idx + 1) + (mode === 'study' ? ' · STUDY' : '');
+  $('q-text').textContent = it.q;
+  $('progress-text').textContent = (idx + 1) + ' / ' + examQ.length;
+  $('progress-fill').style.width = (idx / examQ.length * 100) + '%';
   const box = $('choices'); box.innerHTML = '';
-  item.choices.forEach((c, idx) => {
+  it.ch.forEach((c, i) => {
     const b = document.createElement('button');
-    b.className = 'choice-btn' + (examAnswers[currentIndex] === idx ? ' selected' : '');
-    b.innerHTML = '<span class="choice-letter">' + LETTERS[idx] + '.</span><span>' + esc(c.text) + '</span>';
-    b.onclick = () => { examAnswers[currentIndex] = idx; renderQuestion(); };
+    let cls = 'choice-btn';
+    if (lock) { if (i === it.ci) cls += ' good'; else if (i === a) cls += ' bad'; } else if (a === i) cls += ' selected';
+    b.className = cls; b.disabled = lock;
+    b.innerHTML = '<span class="choice-letter">' + LETTERS[i] + '.</span><span>' + esc(c.text) + '</span>';
+    b.onclick = () => { examA[idx] = i; render(); };
     box.appendChild(b);
   });
-  $('prev-q').disabled = currentIndex === 0;
-  $('next-q').textContent = currentIndex === examQuestions.length - 1 ? 'Finish' : 'Next →';
+  $('prev-q').disabled = idx === 0;
+  $('next-q').textContent = idx === examQ.length - 1 ? 'Finish' : 'Next →';
+  $('mark-q').classList.toggle('on', marked[idx]);
+  $('mark-q').textContent = marked[idx] ? '⚑ Marked for review' : '⚑ Mark for review';
+  if ($('qmap').classList.contains('open')) drawMap();
+}
+function drawMap() {
+  const m = $('qmap'); m.innerHTML = '';
+  examQ.forEach((it, i) => {
+    const b = document.createElement('button'), a = examA[i];
+    let cls = 'qm';
+    if (a !== null) cls += mode === 'study' ? (a === it.ci ? ' good' : ' bad') : ' ans';
+    if (i === idx) cls += ' cur';
+    if (marked[i]) cls += ' flag';
+    b.className = cls; b.textContent = i + 1; b.title = a === null ? 'Unanswered' : 'Answered';
+    b.onclick = () => { leave(); idx = i; enter(); render(); };
+    m.appendChild(b);
+  });
+}
+function tryFinish() {
+  leave();
+  const un = examA.filter(a => a === null).length, mk_ = marked.filter(Boolean).length;
+  if ((un || mk_) && !confirm(un + ' unanswered, ' + mk_ + ' marked for review. Finish anyway?')) { enter(); return; }
+  finishExam();
 }
 
 function finishExam() {
-  stopTimer();
-  let correct = 0; const seen = seenSet();
-  examQuestions.forEach((item, i) => {
-    if (examAnswers[i] === item.correctIdx) correct++;
-    if (examAnswers[i] !== null) seen.add(item.id);
+  leave(); stopTimer();
+  const now = Date.now(); let correct = 0, answered = 0; const items = [];
+  examQ.forEach((x, i) => {
+    const p = examA[i], ok = p !== null && p === x.ci;
+    if (ok) correct++;
+    items.push([x.id, p === null ? -1 : x.ch[p].o, ok ? 1 : 0, qms[i]]);
+    if (p !== null) {
+      answered++;
+      const s = S.stats[x.id] || (S.stats[x.id] = { a: 0, c: 0, ms: 0, ok: null, t: 0 });
+      s.a++; if (ok) s.c++; s.ms += qms[i]; s.ok = ok ? 1 : 0; s.t = now;
+    }
   });
-  allData[currentSubject].seen = [...seen]; saveAllData(); refreshHome();
-  const pct = Math.round(correct / examQuestions.length * 100);
-  $('score-text').textContent = pct + '%';
-  $('score-sub').textContent = correct + ' of ' + examQuestions.length + ' correct';
+  S.history.unshift({ t: now, src, mode, n: examQ.length, c: correct, an: answered, ms: now - examStart, it: items });
+  S.history = S.history.slice(0, 40); save(); refreshHome();
+  const p = pct(correct, examQ.length);
+  $('score-text').textContent = p + '%';
+  $('score-sub').textContent = correct + ' of ' + examQ.length + ' correct' + (answered < examQ.length ? ' · ' + (examQ.length - answered) + ' unanswered' : '');
   const fill = $('gauge-fill'), needle = $('gauge-needle');
   fill.style.strokeDashoffset = 314; needle.style.transform = 'rotate(-90deg)'; void fill.offsetWidth;
-  fill.style.strokeDashoffset = 314 - 314 * pct / 100;
-  fill.style.stroke = pct >= 75 ? 'var(--correct)' : pct >= 50 ? '#c98a3d' : 'var(--incorrect)';
-  needle.style.transform = 'rotate(' + (-90 + pct * 1.8) + 'deg)';
-  renderReview();
+  fill.style.strokeDashoffset = 314 - 314 * p / 100;
+  fill.style.stroke = p >= 75 ? 'var(--correct)' : p >= 50 ? '#c98a3d' : 'var(--incorrect)';
+  needle.style.transform = 'rotate(' + (-90 + p * 1.8) + 'deg)';
+  $('review-list').innerHTML = reviewHTML(examQ.map((x, i) => ({ q: x.q, ch: x.ch.map(c => c.text), ci: x.ci, p: examA[i], ms: qms[i] })), 'all');
   $('review-list').classList.remove('open'); $('toggle-review').textContent = 'Review Answers';
   showScreen('screen-results');
 }
 
-function renderReview() {
-  const list = $('review-list'); list.innerHTML = '';
-  examQuestions.forEach((item, i) => {
-    const picked = examAnswers[i], ok = picked === item.correctIdx;
-    const w = document.createElement('div');
-    w.className = 'review-item' + (ok ? ' correct' : '');
-    let h = '<p class="review-q"><strong>Q' + (i + 1) + '.</strong> ' + esc(item.q) + '</p>';
-    item.choices.forEach((c, idx) => {
-      const cls = idx === item.correctIdx ? ' was-correct' : idx === picked ? ' was-picked-wrong' : '';
-      h += '<div class="review-choice' + cls + '">' + LETTERS[idx] + '. ' + esc(c.text) +
-        (idx === item.correctIdx ? '  ✓' : idx === picked ? '  ✕ (your answer)' : '') + '</div>';
+function reviewHTML(rows, f) {
+  return rows.map((r, i) => {
+    const ok = r.p !== null && r.p === r.ci;
+    if ((f === 'wrong' && (ok || r.p === null)) || (f === 'blank' && r.p !== null)) return '';
+    let h = '<div class="review-item' + (ok ? ' correct' : '') + '"><p class="review-q"><strong>Q' + (i + 1) + '.</strong> ' + esc(r.q) +
+      ' <span class="mono" style="color:var(--text-muted)">· ' + fmtT(r.ms) + '</span></p>';
+    r.ch.forEach((c, k) => {
+      const cls = k === r.ci ? ' was-correct' : k === r.p ? ' was-picked-wrong' : '';
+      h += '<div class="review-choice' + cls + '">' + LETTERS[k] + '. ' + esc(c) + (k === r.ci ? '  ✓' : k === r.p ? '  ✕ (your answer)' : '') + '</div>';
     });
-    if (picked === null) h += '<div class="review-choice was-picked-wrong">— not answered —</div>';
-    w.innerHTML = h; list.appendChild(w);
-  });
+    if (r.p === null) h += '<div class="review-choice was-picked-wrong">— not answered —</div>';
+    return h + '</div>';
+  }).join('') || '<p class="empty-note">Nothing to show.</p>';
 }
 
-// ---------- Manage ----------
-function renderManage() {
-  $('count-total').textContent = qs().length; $('count-seen').textContent = seenSet().size;
+// ---------- Statistics ----------
+function tabOverview() {
+  const H = S.history; let h = '';
+  if (H.length) {
+    const last = H.slice(0, 15).reverse();
+    h += '<div class="panel"><h3 class="panel-title">Score trend (last ' + last.length + ' takes)</h3><div class="trend">' +
+      last.map(x => '<div title="' + fmtD(x.t) + ' — ' + pct(x.c, x.n) + '%"><i style="height:' + Math.max(3, pct(x.c, x.n)) + '%"></i><span>' + pct(x.c, x.n) + '</span></div>').join('') +
+      '</div><p class="hint" style="margin:8px 0 0">' + H.length + ' take(s) · average ' + Math.round(H.reduce((a, x) => a + pct(x.c, x.n), 0) / H.length) +
+      '% · best ' + Math.max(...H.map(x => pct(x.c, x.n))) + '%</p></div>';
+  } else h += '<p class="empty-note">No exams taken yet. Finish one and your stats appear here.</p>';
+  SUBS.forEach(k => {
+    const q = bank[k] ? bank[k].questions : []; let att = 0, cor = 0, ms = 0, tried = 0; const c = { new: 0, ok: 0, miss: 0 };
+    q.forEach(x => { const s = S.stats[x.id]; c[stOf(x.id)]++; if (s && s.a) { tried++; att += s.a; cor += s.c; ms += s.ms; } });
+    h += '<div class="panel"><h3 class="panel-title">' + SUBJECTS[k].short + ' — ' + esc(SUBJECTS[k].name) + '</h3>' +
+      '<div class="bar"><i style="width:' + pct(c.ok, q.length) + '%"></i></div>' +
+      '<p class="hint" style="margin:8px 0 0">' + c.ok + ' set aside · ' + c.miss + ' missed · ' + c.new + ' never tried (of ' + q.length + ')<br>' +
+      tried + ' question(s) attempted · ' + att + ' answer(s) given · accuracy ' + pct(cor, att) + '%' + (att ? ' · avg ' + fmtT(ms / att) + ' per answer' : '') + '</p></div>';
+  });
+  $('tab-overview').innerHTML = h;
+}
+function tabTakes() {
+  $('tab-takes').innerHTML = S.history.length ? S.history.map((x, i) =>
+    '<button class="take-row" data-i="' + i + '"><span><strong>' + (x.src === 'mix' ? 'MIXED' : SUBJECTS[x.src].short) + '</strong> · ' + (x.mode === 'study' ? 'Study' : 'Exam') +
+    '<br><span class="mono" style="color:var(--text-muted);font-size:12px">' + fmtD(x.t) + ' · ' + fmtT(x.ms) + '</span></span>' +
+    '<span class="mono" style="text-align:right"><strong>' + pct(x.c, x.n) + '%</strong><br><span style="font-size:12px;color:var(--text-muted)">' + x.c + '/' + x.n + '</span></span></button>').join('') :
+    '<p class="empty-note">No takes yet.</p>';
+  document.querySelectorAll('.take-row').forEach(b => b.onclick = () => openTake(+b.dataset.i));
+}
+let takeRows = [];
+function openTake(i) {
+  const h = S.history[i];
+  $('take-title').textContent = (h.src === 'mix' ? 'MIXED' : SUBJECTS[h.src].short) + ' · ' + pct(h.c, h.n) + '%';
+  $('take-meta').textContent = fmtD(h.t) + ' · ' + (h.mode === 'study' ? 'Study' : 'Exam') + ' · ' + h.c + ' of ' + h.n + ' correct · ' + h.an + ' answered · ' + fmtT(h.ms);
+  takeRows = h.it.map(r => {
+    const x = byId[r[0]];
+    return x ? { q: x.q, ch: x.choices, ci: x.answer, p: r[1] < 0 ? null : r[1], ms: r[3] } : { q: '(this question is no longer in the bank)', ch: [], ci: -1, p: null, ms: r[3] };
+  });
+  document.querySelectorAll('#take-filter .btn').forEach(b => b.classList.toggle('on', b.dataset.f === 'all'));
+  $('take-list').innerHTML = reviewHTML(takeRows, 'all'); showScreen('screen-take');
+}
+function tabQuestions() {
+  const sub = $('qs-sub').value, st = $('qs-status').value, so = $('qs-sort').value, t = $('qs-text').value.trim().toLowerCase();
+  let list = [];
+  SUBS.forEach(k => { if ((sub === 'all' || sub === k) && bank[k]) list = list.concat(bank[k].questions); });
+  list = list.filter(x => (st === 'all' || stOf(x.id) === st) && (!t || x.q.toLowerCase().includes(t)));
+  const g = x => S.stats[x.id] || { a: 0, c: 0, ms: 0 };
+  if (so !== 'bank') {
+    if (so !== 'att' && so !== 'miss') list = list.filter(x => g(x).a);
+    list = list.slice().sort((a, b) => {
+      const A = g(a), B = g(b);
+      if (so === 'miss') return (B.a - B.c) - (A.a - A.c) || (A.c / (A.a || 1)) - (B.c / (B.a || 1));
+      if (so === 'acc') return A.c / A.a - B.c / B.a || B.a - A.a;
+      if (so === 'slow') return B.ms / B.a - A.ms / A.a;
+      return B.a - A.a;
+    });
+  }
+  $('qs-count').textContent = list.length + ' question(s)' + (list.length > 100 ? ' — showing the first 100, narrow with the filters' : '');
+  $('qs-list').innerHTML = list.slice(0, 100).map(x => {
+    const s = g(x), s2 = stOf(x.id);
+    return '<div class="added-item qrow" data-id="' + x.id + '" style="cursor:pointer;flex-wrap:wrap"><span class="added-item-text"><span class="added-item-tag">' + SUBJECTS[x.sub].short + '</span>' +
+      esc(x.q.length > 90 ? x.q.slice(0, 90) + '…' : x.q) + '</span><span class="mono" style="white-space:nowrap;color:' + (s2 === 'miss' ? 'var(--incorrect)' : s2 === 'ok' ? 'var(--correct)' : 'var(--text-muted)') + '">' +
+      (s.a ? s.c + '/' + s.a + ' · ' + pct(s.c, s.a) + '%' : 'new') + '</span></div>';
+  }).join('');
+}
+function qDetail(row) {
+  const old = row.querySelector('.qd'); if (old) { old.remove(); return; }
+  const x = byId[row.dataset.id], s = S.stats[x.id] || { a: 0, c: 0, ms: 0 };
+  let h = '<div class="qd" style="flex-basis:100%;border-top:1px solid var(--line);padding-top:8px;margin-top:6px"><p style="margin:0 0 6px;color:var(--text)">' + esc(x.q) + '</p>';
+  x.choices.forEach((c, k) => h += '<div class="review-choice' + (k === x.answer ? ' was-correct' : '') + '">' + LETTERS[k] + '. ' + esc(c) + (k === x.answer ? '  ✓' : '') + '</div>');
+  h += '<p class="mono" style="margin:8px 0 4px;color:var(--brass-light)">' + s.a + ' attempt(s) · ' + s.c + ' correct · ' + (s.a ? 'avg ' + fmtT(s.ms / s.a) : 'not attempted') + (s.t ? ' · last ' + fmtD(s.t) : '') + '</p>';
+  let n = 0;
+  S.history.forEach(hh => { const r = hh.it.find(z => z[0] === x.id); if (r && r[1] >= 0 && n < 8) { n++; h += '<div class="mono" style="font-size:12px;color:' + (r[2] ? 'var(--correct)' : 'var(--incorrect)') + '">' + fmtD(hh.t) + ' — ' + (r[2] ? 'correct' : 'wrong (chose ' + LETTERS[r[1]] + ')') + ' · ' + fmtT(r[3]) + '</div>'; } });
+  row.insertAdjacentHTML('beforeend', h + '</div>');
+}
+function showTab(t) {
+  document.querySelectorAll('.tabs [data-tab]').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
+  ['overview', 'takes', 'questions'].forEach(n => $('tab-' + n).style.display = n === t ? '' : 'none');
+  if (t === 'overview') tabOverview(); else if (t === 'takes') tabTakes(); else tabQuestions();
+}
+
+// ---------- My own questions ----------
+function renderMine() {
   const list = $('added-list'); list.innerHTML = '';
-  const all = qs(), seen = seenSet(), f = filterText.trim().toLowerCase();
-  const items = f ? all.filter(x => x.q.toLowerCase().includes(f)) : all;
-  if (!all.length) { list.innerHTML = '<p class="empty-note">The question bank is empty.</p>'; return; }
-  if (!items.length) { list.innerHTML = '<p class="empty-note">No questions match that filter.</p>'; return; }
-  items.forEach(item => {
+  if (!S.custom[cur].length) { list.innerHTML = '<p class="empty-note">None yet.</p>'; return; }
+  S.custom[cur].forEach((x, i) => {
     const row = document.createElement('div'); row.className = 'added-item';
-    const short = item.q.length > 80 ? item.q.slice(0, 80) + '…' : item.q;
-    row.innerHTML = '<span class="added-item-text">' + (seen.has(item.id) ? '<span class="added-item-tag">Set aside</span>' : '') + esc(short) + '</span>';
-    const del = document.createElement('button'); del.className = 'added-item-del'; del.textContent = 'Remove';
-    del.onclick = () => {
-      const d = allData[currentSubject];
-      d.questions = d.questions.filter(x => x.id !== item.id);
-      d.seen = d.seen.filter(x => x !== item.id);
-      saveAllData(); renderManage(); refreshHome();
-    };
-    row.appendChild(del); list.appendChild(row);
+    row.innerHTML = '<span class="added-item-text">' + esc(x.q.length > 80 ? x.q.slice(0, 80) + '…' : x.q) + '</span>';
+    const d = document.createElement('button'); d.className = 'added-item-del'; d.textContent = 'Remove';
+    d.onclick = () => { S.custom[cur].splice(i, 1); save(); rebuild(cur); refreshHome(); renderMine(); };
+    row.appendChild(d); list.appendChild(row);
   });
 }
-
-function addParsed(list) {
-  list.forEach(r => allData[currentSubject].questions.push({ id: newId(), q: r.q, choices: r.choices, answer: r.answer }));
-  saveAllData(); refreshHome();
-}
+function addMine(list) { S.custom[cur] = S.custom[cur].concat(list); save(); rebuild(cur); refreshHome(); renderMine(); }
 
 // ---------- Events ----------
 function init() {
-  document.querySelectorAll('.subject-btn').forEach(b => b.onclick = () => switchSubject(b.dataset.subject));
+  document.querySelectorAll('.subject-btn').forEach(b => b.onclick = () => { cur = b.dataset.subject; refreshHome(); });
   document.querySelectorAll('.btn-back[data-target]').forEach(b => b.onclick = () => showScreen(b.dataset.target));
-  const hint = () => {
-    const t = qs().length, r = qs().filter(x => !seenSet().has(x.id)).length;
-    $('pool-hint').textContent = r + ' of ' + t + ' question(s) not yet answered.';
-  };
-  $('go-setup').onclick = () => { hint(); showScreen('screen-setup'); };
-  $('retake').onclick = () => { hint(); showScreen('screen-setup'); };
-  $('go-manage').onclick = () => { renderManage(); showScreen('screen-manage'); };
-  $('go-add-questions').onclick = () => showScreen('screen-add-questions');
+  const toSetup = () => { hint(); showScreen('screen-setup'); };
+  $('go-setup').onclick = toSetup; $('retake').onclick = toSetup;
+  document.querySelectorAll('#screen-setup select, #screen-setup input').forEach(e => e.onchange = hint);
+  $('go-stats').onclick = () => { showTab('overview'); showScreen('screen-stats'); };
+  $('go-add-questions').onclick = () => { renderMine(); showScreen('screen-add-questions'); };
   $('results-home').onclick = () => { refreshHome(); showScreen('screen-home'); };
-  $('exit-exam').onclick = () => { if (confirm('Abandon this exam? Your progress will be lost.')) { stopTimer(); refreshHome(); showScreen('screen-home'); } };
-
-  $('reset-progress').onclick = () => {
-    const n = seenSet().size;
-    if (!n) return alert('No progress to reset.');
-    if (confirm('Reset progress for ' + allData[currentSubject].name + '? All ' + n + ' set-aside question(s) will become available again.')) {
-      allData[currentSubject].seen = []; saveAllData(); refreshHome();
-    }
-  };
-
-  $('reload-files').onclick = async () => {
-    if (!confirm('Reload all three banks from the .txt files? Questions you added in the browser will be removed. Set-aside progress is kept.')) return;
-    $('load-status').textContent = 'Reloading…';
-    const { out, failed } = await buildFromFiles(true);
-    if (failed.length) { $('load-status').textContent = 'Could not load: ' + failed.join(', ') + '. Nothing was changed.'; return; }
-    allData = out; saveAllData(); refreshHome(); $('load-status').textContent = 'Reloaded from files.';
-  };
-
-  $('begin-exam').onclick = () => {
-    const pool0 = $('opt-pool').value === 'unseen' ? qs().filter(x => !seenSet().has(x.id)) : qs();
-    if (!pool0.length) return alert('No questions available for ' + allData[currentSubject].name + '!');
-    let pool = $('opt-shuffle').value === 'shuffle' ? shuffle(pool0) : pool0.slice();
-    const c = $('opt-count').value;
-    pool = pool.slice(0, c === 'all' ? pool.length : Math.min(parseInt(c, 10), pool.length));
-    const shuffleC = $('opt-shuffle-choices').value === 'shuffle';
-    examQuestions = pool.map(item => {
-      let ch = item.choices.map((text, orig) => ({ text, orig }));
-      if (shuffleC) ch = shuffle(ch);
-      return { id: item.id, q: item.q, choices: ch, correctIdx: ch.findIndex(x => x.orig === item.answer) };
-    });
-    examAnswers = new Array(examQuestions.length).fill(null); currentIndex = 0;
-    const min = parseInt($('opt-timer').value, 10);
-    if (min > 0) { timeLeft = min * 60; startTimer(); } else { stopTimer(); $('timer-text').textContent = ''; }
-    renderQuestion(); showScreen('screen-exam');
-  };
-
-  $('prev-q').onclick = () => { if (currentIndex > 0) { currentIndex--; renderQuestion(); } };
-  $('next-q').onclick = () => { if (currentIndex < examQuestions.length - 1) { currentIndex++; renderQuestion(); } else finishExam(); };
+  $('begin-exam').onclick = beginExam;
+  $('exit-exam').onclick = () => { if (confirm('Abandon this exam? Nothing will be recorded.')) { stopTimer(); refreshHome(); showScreen('screen-home'); } };
+  $('prev-q').onclick = () => { if (idx > 0) { leave(); idx--; enter(); render(); } };
+  $('next-q').onclick = () => { if (idx < examQ.length - 1) { leave(); idx++; enter(); render(); } else tryFinish(); };
+  $('mark-q').onclick = () => { marked[idx] = !marked[idx]; render(); };
+  $('toggle-map').onclick = () => { $('qmap').classList.toggle('open'); if ($('qmap').classList.contains('open')) drawMap(); };
   $('toggle-review').onclick = () => { const o = $('review-list').classList.toggle('open'); $('toggle-review').textContent = o ? 'Hide Review' : 'Review Answers'; };
-
+  $('reset-progress').onclick = () => {
+    const q = bank[cur].questions.filter(x => stOf(x.id) !== 'new');
+    if (!q.length) return alert('No progress to reset.');
+    if (confirm('Reset set-aside/missed status for ' + q.length + ' question(s) in ' + SUBJECTS[cur].short + '? Your take history stays.')) { q.forEach(x => S.stats[x.id].ok = null); save(); refreshHome(); }
+  };
+  document.querySelectorAll('.tabs [data-tab]').forEach(b => b.onclick = () => showTab(b.dataset.tab));
+  ['qs-sub', 'qs-status', 'qs-sort'].forEach(id => $(id).onchange = tabQuestions);
+  $('qs-text').oninput = tabQuestions;
+  $('qs-list').onclick = e => { const r = e.target.closest('.qrow'); if (r) qDetail(r); };
+  document.querySelectorAll('#take-filter .btn').forEach(b => b.onclick = () => {
+    document.querySelectorAll('#take-filter .btn').forEach(z => z.classList.toggle('on', z === b));
+    $('take-list').innerHTML = reviewHTML(takeRows, b.dataset.f);
+  });
   $('add-single-question').onclick = () => {
-    const v = id => $(id).value.trim(), fb = $('add-single-feedback');
-    const q = v('new-q-text'), ch = ['a', 'b', 'c', 'd'].map(l => v('new-q-' + l));
+    const v = id => $(id).value.trim(), fb = $('add-single-feedback'), q = v('new-q-text'), ch = ['a', 'b', 'c', 'd'].map(l => v('new-q-' + l));
     if (!q) return fb.textContent = 'Please enter a question.';
     if (ch.some(x => !x)) return fb.textContent = 'Please enter all four choices.';
-    addParsed([{ q, choices: ch, answer: parseInt($('new-q-answer').value, 10) }]);
+    addMine([{ q, choices: ch, answer: parseInt($('new-q-answer').value, 10) }]);
     ['text', 'a', 'b', 'c', 'd'].forEach(l => $('new-q-' + l).value = '');
-    fb.textContent = 'Question added successfully!'; setTimeout(() => fb.textContent = '', 3000);
+    fb.textContent = 'Question added!'; setTimeout(() => fb.textContent = '', 3000);
   };
-
   $('add-bulk-questions').onclick = () => {
     const raw = $('paste-area').value, fb = $('bulk-feedback');
     if (!raw.trim()) return fb.textContent = 'Paste some questions first.';
-    const res = parseQuestionsFromText(raw);
-    if (!res.length) return fb.textContent = 'No valid questions found. Check the format.';
-    const total = raw.trim().split(/\n\s*\n+/).length;
-    addParsed(res);
-    fb.textContent = 'Added ' + res.length + ' question(s)!' + (total > res.length ? '  ' + (total - res.length) + ' skipped.' : '');
-    $('paste-area').value = '';
+    const r = parseQuestionsFromText(raw);
+    if (!r.length) return fb.textContent = 'No valid questions found. Check the format.';
+    addMine(r); const t = raw.trim().split(/\n\s*\n+/).length;
+    fb.textContent = 'Added ' + r.length + '.' + (t > r.length ? ' ' + (t - r.length) + ' skipped.' : ''); $('paste-area').value = '';
   };
-
-  $('question-filter').oninput = e => { filterText = e.target.value; renderManage(); };
-
-  $('export-added').onclick = () => {
-    if (!qs().length) return alert('The question bank is empty — nothing to export.');
-    const text = qs().map(it => it.q + '\n' + it.choices.map((c, i) => LETTERS[i] + '. ' + c).join('\n') + '\nAnswer: ' + LETTERS[it.answer]).join('\n\n') + '\n';
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(new Blob([text], { type: 'text/plain' }));
-    a.download = currentSubject + '-questions.txt';
-    document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(a.href);
-  };
-
   $('import-added').onclick = () => $('import-file').click();
   $('import-file').onchange = e => {
-    const file = e.target.files[0]; if (!file) return;
-    const reader = new FileReader();
-    reader.onload = () => {
-      const res = parseQuestionsFromText(reader.result), total = reader.result.trim().split(/\n\s*\n+/).length;
-      if (res.length) addParsed(res);
-      $('bulk-feedback').textContent = res.length + ' question(s) imported.' + (total > res.length ? ' ' + (total - res.length) + ' skipped.' : '');
-      renderManage(); refreshHome();
-    };
-    reader.readAsText(file); e.target.value = '';
+    const f = e.target.files[0]; if (!f) return;
+    const rd = new FileReader();
+    rd.onload = () => { const r = parseQuestionsFromText(rd.result); if (r.length) addMine(r); $('bulk-feedback').textContent = r.length + ' question(s) imported.'; };
+    rd.readAsText(f); e.target.value = '';
   };
-
-  $('clear-added').onclick = () => {
-    const n = qs().length; if (!n) return;
-    if (confirm('Remove ALL ' + n + ' questions from ' + allData[currentSubject].name + '? This cannot be undone.')) {
-      allData[currentSubject].questions = []; allData[currentSubject].seen = [];
-      saveAllData(); renderManage(); refreshHome();
-    }
+  $('export-added').onclick = () => {
+    const t = bank[cur].questions.map(x => x.q + '\n' + x.choices.map((c, i) => LETTERS[i] + '. ' + c).join('\n') + '\nAnswer: ' + LETTERS[x.answer]).join('\n\n') + '\n';
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([t], { type: 'text/plain' })); a.download = cur + '-questions.txt';
+    document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(a.href);
   };
 }
 
-loadAllData().then(() => { init(); refreshHome(); });
+(async function () {
+  loadState();
+  const r = await Promise.all(SUBS.map(k => loadFile(SUBJECTS[k].file))), failed = [];
+  SUBS.forEach((k, i) => { fileQ[k] = r[i] || []; if (!r[i] || !r[i].length) failed.push(SUBJECTS[k].short); rebuild(k); });
+  init(); refreshHome();
+  if (failed.length) $('load-status').textContent = 'Could not load: ' + failed.join(', ') + '. Serve the page over http(s) with a questions/ folder beside it.';
+})();
 </script>
 </body>
 </html>
