@@ -49,7 +49,7 @@ body{position:relative;overflow-x:hidden}
 .form-panel{display:flex;flex-direction:column;gap:16px}
 .field{display:flex;flex-direction:column;gap:6px}
 .field-label{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted)}
-select,input[type=number],textarea,input[type=text]{font-family:var(--font-mono);background:var(--ink);border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:3px;font-size:14px;width:100%}
+select,input[type=number],textarea,input[type=text],input[type=password]{font-family:var(--font-mono);background:var(--ink);border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:3px;font-size:14px;width:100%}
 select:focus,input:focus,textarea:focus,button:focus-visible{outline:2px solid var(--brass-light);outline-offset:1px}
 .exam-bar{display:flex;align-items:center;gap:12px;margin-bottom:22px}
 .progress-track{flex:1;height:6px;background:var(--line-soft);border-radius:4px;overflow:hidden}
@@ -117,6 +117,17 @@ select:focus,input:focus,textarea:focus,button:focus-visible{outline:2px solid v
 .bar{height:8px;background:var(--line-soft);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--correct)}
 .trend{display:flex;align-items:flex-end;gap:6px;height:110px}.trend div{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;font-size:10px;font-family:var(--font-mono);color:var(--text-muted)}.trend i{display:block;width:100%;background:var(--brass);border-radius:2px 2px 0 0}
 .take-row{display:flex;justify-content:space-between;align-items:center;width:100%;gap:10px;margin-bottom:8px;padding:12px 14px;background:var(--panel);border:1px solid var(--line);border-radius:3px;color:var(--text);font-family:var(--font-body);font-size:14px;text-align:left;cursor:pointer}.take-row:hover{border-color:var(--brass)}
+[hidden]{display:none!important}
+.btn-sm{padding:6px 12px;font-size:12px}
+.ov{position:fixed;inset:0;z-index:50;background:rgba(5,12,24,.82);display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:20px 12px}
+.ov.open{display:flex}
+.ov-box{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:20px;width:100%;max-width:640px;margin:auto 0}
+.stack{display:flex;flex-direction:column;gap:12px}
+.ov-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.ov-actions .btn{flex:1;min-width:110px;padding:12px 14px}
+#ed-q{resize:vertical}
+.pub-note{color:var(--incorrect);font-size:12px;flex-basis:100%}
+@media (max-width:480px){.ov{padding:10px 8px}.ov-box{padding:16px 14px}}
 </style>
 </head>
 <body>
@@ -146,9 +157,11 @@ select:focus,input:focus,textarea:focus,button:focus-visible{outline:2px solid v
     <button class="btn btn-primary" id="go-setup">Start Exam →</button>
     <button class="btn btn-ghost" id="go-stats">Statistics</button>
     <button class="btn btn-ghost" id="go-add-questions">My Own Questions</button>
+    <button class="btn btn-ghost pub-open" hidden>⬆ Publish changes (0)</button>
     <button class="btn btn-ghost" id="reset-progress">Reset Progress</button>
   </div>
   <p class="hint" id="load-status" style="margin-top:14px;text-align:center"></p>
+  <p style="text-align:center;margin:6px 0 0"><button class="btn-back" id="admin-btn">Admin: connect GitHub</button></p>
 </section>
 
 <section id="screen-setup" class="screen">
@@ -191,6 +204,8 @@ select:focus,input:focus,textarea:focus,button:focus-visible{outline:2px solid v
   <div class="exam-tools">
     <button class="btn btn-ghost" id="mark-q">⚑ Mark for review</button>
     <button class="btn btn-ghost" id="toggle-map">▦ Question map</button>
+    <button class="btn btn-ghost" id="edit-q" hidden>✎ Edit question</button>
+    <button class="btn btn-ghost pub-open" hidden>⬆ Publish changes (0)</button>
   </div>
   <div class="qmap" id="qmap"></div>
   <div class="paper">
@@ -292,6 +307,37 @@ select:focus,input:focus,textarea:focus,button:focus-visible{outline:2px solid v
 </section>
 
 </div>
+
+<div class="ov" id="ed-ov"><div class="ov-box">
+  <h3 class="panel-title">Edit question · <span id="ed-sub"></span></h3>
+  <div class="stack">
+    <div class="editor-field"><label for="ed-q">Question</label><textarea id="ed-q" rows="3"></textarea></div>
+    <div class="editor-field"><label for="ed-a">Choice A</label><input type="text" id="ed-a"></div>
+    <div class="editor-field"><label for="ed-b">Choice B</label><input type="text" id="ed-b"></div>
+    <div class="editor-field"><label for="ed-c">Choice C</label><input type="text" id="ed-c"></div>
+    <div class="editor-field"><label for="ed-d">Choice D</label><input type="text" id="ed-d"></div>
+    <div class="editor-field"><label for="ed-ans">Correct answer</label>
+      <select id="ed-ans"><option value="0">A</option><option value="1">B</option><option value="2">C</option><option value="3">D</option></select></div>
+  </div>
+  <div class="ov-actions">
+    <button class="btn btn-primary" id="ed-save">Save edit</button>
+    <button class="btn btn-ghost" id="ed-cancel">Cancel</button>
+    <button class="btn btn-danger" id="ed-del">Delete</button>
+  </div>
+  <p class="parse-feedback" id="ed-status" style="margin:10px 0 0"></p>
+</div></div>
+
+<div class="ov" id="pub-ov"><div class="ov-box">
+  <h3 class="panel-title">Publish changes</h3>
+  <p class="hint">Edits are applied here right away. Publishing writes them to the question files on GitHub, one commit per subject.</p>
+  <div id="pub-list" class="added-list" style="max-height:300px"></div>
+  <div class="editor-field" style="margin-top:14px"><label for="pub-pw">Password</label><input type="password" id="pub-pw" autocomplete="current-password"></div>
+  <div class="ov-actions">
+    <button class="btn btn-primary" id="pub-go">Publish</button>
+    <button class="btn btn-ghost" id="pub-close">Close</button>
+  </div>
+  <p class="parse-feedback" id="pub-status" style="margin:10px 0 0"></p>
+</div></div>
 <script>
 const SUBJECTS = {
   pipe:   { name: 'Power and Industrial Plant Engineering', short: 'PIPE', file: 'questions/pipe.txt' },
@@ -299,6 +345,7 @@ const SUBJECTS = {
   meebes: { name: 'Mathematics, Engineering Economics, and Basic Engineering Sciences', short: 'MEEBES', file: 'questions/meebes.txt' }
 };
 const SUBS = Object.keys(SUBJECTS), LETTERS = ['A', 'B', 'C', 'D'], KEY = 'reviewer_state_v1';
+const GH = { user: 'jpb111723-cmyk', repo: 'engineering-reviewer', branch: 'main', tk: 'reviewer_gh_token' };
 const $ = id => document.getElementById(id);
 const esc = s => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
@@ -330,10 +377,10 @@ function parseQuestionsFromText(text) {
 }
 
 // ---------- State (progress lives in this browser; the question files are read fresh every visit) ----------
-let S = { custom: {}, stats: {}, history: [] }, bank = {}, fileQ = {}, byId = {}, cur = 'pipe';
+let S = { custom: {}, stats: {}, history: [], pending: {} }, bank = {}, fileQ = {}, byId = {}, cur = 'pipe';
 function loadState() {
   try { const s = JSON.parse(localStorage.getItem(KEY)); if (s) S = Object.assign(S, s); localStorage.removeItem('reviewer_data_v2'); localStorage.removeItem('reviewer_data_v3'); } catch (e) {}
-  SUBS.forEach(k => S.custom[k] = S.custom[k] || []);
+  SUBS.forEach(k => { S.custom[k] = S.custom[k] || []; S.pending = S.pending || {}; S.pending[k] = Array.isArray(S.pending[k]) ? S.pending[k] : []; });
 }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 
@@ -351,12 +398,234 @@ function rebuild(k) {
 }
 async function loadFile(path) {
   try {
-    const r = await fetch(new URL(path, document.baseURI).href);
+    const r = await fetch(new URL(path, document.baseURI).href, { cache: 'no-store' });
     if (!r.ok) throw new Error('HTTP ' + r.status);
     return parseQuestionsFromText(await r.text());
   } catch (e) { console.warn('Could not load', path, e.message); return null; }
 }
 const stOf = id => { const s = S.stats[id]; return !s || s.ok == null ? 'new' : s.ok ? 'ok' : 'miss'; };
+
+// ---------- Admin: edit the question banks, queue edits locally, publish to GitHub ----------
+const sameQ = (a, b) => a.q === b.q && a.choices.join('\u0001') === b.choices.join('\u0001');
+const sameFull = (a, b) => sameQ(a, b) && a.answer === b.answer;
+const qBlock = x => x.q + '\n' + x.choices.map((c, i) => LETTERS[i] + '. ' + c).join('\n') + '\nAnswer: ' + LETTERS[x.answer];
+const cq = x => ({ q: x.q, choices: x.choices.slice(), answer: x.answer });
+const tokRec = () => { try { const r = JSON.parse(localStorage.getItem(GH.tk)); return r && r.s && r.i && r.c ? r : null; } catch (e) { return null; } };
+const isAdmin = () => !!tokRec();
+const b64e = u8 => { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); };
+const b64d = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+const pendCount = () => SUBS.reduce((n, k) => n + S.pending[k].filter(e => !e.pub).length, 0);
+let ed = null, takeIdx = -1;
+
+async function pwKey(pw, salt) {
+  const km = await crypto.subtle.importKey('raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveKey']);
+  return crypto.subtle.deriveKey({ name: 'PBKDF2', salt, iterations: 250000, hash: 'SHA-256' }, km, { name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']);
+}
+async function lockToken(token, pw) {
+  const salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));
+  const c = new Uint8Array(await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, await pwKey(pw, salt), new TextEncoder().encode(token)));
+  localStorage.setItem(GH.tk, JSON.stringify({ s: b64e(salt), i: b64e(iv), c: b64e(c) }));
+}
+async function unlockToken(pw) {
+  const r = tokRec(); if (!r) throw new Error('Not connected. Use "Admin: connect GitHub" first.');
+  if (!(window.crypto && crypto.subtle)) throw new Error('This needs a secure (https) page.');
+  try { return new TextDecoder().decode(await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64d(r.i) }, await pwKey(pw, b64d(r.s)), b64d(r.c))); }
+  catch (e) { throw new Error('Wrong password'); }
+}
+function ghErr(st) {
+  if (st === 409 || st === 422) return 'File changed on GitHub, try again';
+  if (st === 401) return 'GitHub rejected the token (expired or revoked). Reconnect with a new one.';
+  if (st === 403 || st === 404) return 'The token cannot read/write this repo or file (check its Contents permission).';
+  return 'GitHub error ' + st;
+}
+
+function updatePub() {
+  const n = pendCount(), show = isAdmin() || n > 0;
+  document.querySelectorAll('.pub-open').forEach(b => { b.hidden = !show; b.textContent = '⬆ Publish changes (' + n + ')'; });
+  $('edit-q').hidden = !isAdmin();
+  $('admin-btn').textContent = isAdmin() ? 'Admin: disconnect GitHub' : 'Admin: connect GitHub';
+}
+
+// Apply an edit (nu) or delete (nu = null) of question x to the loaded file data, and queue it
+function applyLocal(x, nu) {
+  const k = x.sub, arr = fileQ[k], i = arr.findIndex(z => sameQ(z, x));
+  if (i < 0) throw new Error('This question was not found in the loaded file.');
+  const o = cq(x), oldId = x.id, P = S.pending[k];
+  let e = P.find(p => !p.pub && p.n && sameFull(p.n, o));
+  if (e) e.n = nu ? cq(nu) : null; else { e = { o, n: nu ? cq(nu) : null }; P.push(e); }
+  if (e.n && sameFull(e.o, e.n)) P.splice(P.indexOf(e), 1);
+  if (nu) arr[i] = cq(nu); else arr.splice(i, 1);
+  rebuild(k);
+  if (nu) {
+    const newId = bank[k].questions[i].id;
+    if (newId !== oldId) {
+      const a = S.stats[oldId], b = S.stats[newId];
+      if (a) { if (!b) S.stats[newId] = a; else { b.a += a.a; b.c += a.c; b.ms += a.ms; b.t = Math.max(b.t, a.t); } delete S.stats[oldId]; }
+      S.history.forEach(h => h.it.forEach(r => { if (r[0] === oldId) r[0] = newId; }));
+    }
+    if (nu.answer !== o.answer && S.stats[newId]) S.stats[newId].ok = null;
+    examQ.forEach(it => {
+      if (it.id !== oldId) return;
+      it.id = newId; it.q = nu.q;
+      it.ch = it.ch.map(c => ({ text: nu.choices[c.o], o: c.o }));
+      it.ci = it.ch.findIndex(c => c.o === nu.answer);
+    });
+  }
+  save(); refreshHome();
+}
+
+// Re-apply queued edits on top of the freshly fetched file
+function applyPending(k) {
+  const arr = fileQ[k], now = Date.now(), keep = [];
+  S.pending[k].forEach(e => {
+    if (e.pub) {
+      const live = e.n ? arr.some(z => sameFull(z, e.n)) : arr.findIndex(z => sameQ(z, e.o)) < 0;
+      if (live || now - e.pub > 3600000) return;
+    }
+    const i = arr.findIndex(z => sameQ(z, e.o));
+    if (i < 0) { if (!e.pub) e.stale = true; }
+    else if (e.n) arr[i] = cq(e.n); else arr.splice(i, 1);
+    keep.push(e);
+  });
+  S.pending[k] = keep;
+}
+
+// ----- Editor -----
+function openEditor(id, ctx) {
+  const x = byId[id];
+  if (!x) return alert('This question is no longer in the bank.');
+  if (x.custom) return alert('This is a question saved in this browser, not one from the repo files. Use "Remove" in My Own Questions to change it.');
+  if (ctx === 'exam') leave();
+  ed = { id, ctx };
+  $('ed-sub').textContent = SUBJECTS[x.sub].short;
+  $('ed-q').value = x.q;
+  ['a', 'b', 'c', 'd'].forEach((l, i) => $('ed-' + l).value = x.choices[i]);
+  $('ed-ans').value = String(x.answer);
+  $('ed-status').textContent = '';
+  $('ed-ov').classList.add('open');
+}
+function closeEditor() {
+  $('ed-ov').classList.remove('open');
+  if (ed && ed.ctx === 'exam' && $('screen-exam').classList.contains('active')) enter();
+  ed = null;
+}
+function refreshViews() {
+  const on = id => $(id).classList.contains('active');
+  if (on('screen-exam')) render();
+  if (on('screen-results')) $('review-list').innerHTML = reviewHTML(resultRows(), 'all');
+  if (on('screen-take')) refreshTake();
+}
+function saveEdit() {
+  const st = $('ed-status'), x = ed && byId[ed.id]; if (!x) return;
+  const f = id => $(id).value.replace(/\s*[\r\n]+\s*/g, ' ').trim();
+  const nu = { q: f('ed-q'), choices: ['a', 'b', 'c', 'd'].map(l => f('ed-' + l)), answer: parseInt($('ed-ans').value, 10) };
+  if (!nu.q || nu.choices.some(c => !c)) return st.textContent = 'Fill in the question and all four choices.';
+  const p = parseQuestionsFromText(qBlock(nu));
+  if (p.length !== 1 || !sameFull(p[0], nu)) return st.textContent = 'This text cannot be written to the file format. Avoid lines that look like "Answer: X".';
+  if (sameFull(x, nu)) return st.textContent = 'No changes.';
+  try { applyLocal(x, nu); } catch (e) { return st.textContent = e.message; }
+  closeEditor(); refreshViews();
+}
+function delEdit() {
+  const x = ed && byId[ed.id]; if (!x) return;
+  if (!confirm('Delete this question from the bank? It leaves the file when you publish.')) return;
+  try { applyLocal(x, null); } catch (e) { return $('ed-status').textContent = e.message; }
+  closeEditor(); refreshViews();
+}
+
+// ----- Publisher -----
+function renderPubList() {
+  let h = '';
+  SUBS.forEach(k => S.pending[k].forEach((e, i) => {
+    if (e.pub) return;
+    const q = (e.n || e.o).q;
+    h += '<div class="added-item" style="flex-wrap:wrap"><span class="added-item-text"><span class="added-item-tag">' + SUBJECTS[k].short + '</span><span class="added-item-tag">' + (e.n ? 'Edit' : 'Delete') + '</span>' +
+      esc(q.length > 80 ? q.slice(0, 80) + '…' : q) + '</span>' +
+      (e.stale ? '<div class="pub-note">⚠ The original was not found in the file on GitHub, so this will be skipped. <button class="added-item-del pub-forget" data-k="' + k + '" data-i="' + i + '">Forget</button></div>' : '') + '</div>';
+  }));
+  $('pub-list').innerHTML = h || '<p class="empty-note">Nothing waiting to be published.</p>';
+}
+function openPub() { renderPubList(); $('pub-status').textContent = ''; $('pub-ov').classList.add('open'); }
+
+async function publish(pw) {
+  const token = await unlockToken(pw);
+  let done = 0, skipped = 0;
+  const hdr = { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
+  for (const k of SUBS) {
+    const ents = S.pending[k].filter(e => !e.pub && !e.stale);
+    if (!ents.length) continue;
+    const url = 'https://api.github.com/repos/' + GH.user + '/' + GH.repo + '/contents/' + SUBJECTS[k].file;
+    const g = await fetch(url + '?ref=' + encodeURIComponent(GH.branch), { headers: hdr, cache: 'no-store' });
+    if (!g.ok) throw new Error(ghErr(g.status));
+    const meta = await g.json();
+    if (!meta.content || meta.encoding !== 'base64') throw new Error(SUBJECTS[k].short + ' file is too large for this method.');
+    const text = new TextDecoder().decode(b64d(meta.content)).replace(/\r\n?/g, '\n');
+    const parts = text.split(/(\n\s*\n+)/), items = [];
+    for (let j = 0; j < parts.length; j += 2) items.push({ b: parts[j], s: parts[j + 1] || '', gone: false, p: undefined });
+    const getP = it => { if (it.p === undefined) it.p = parseQuestionsFromText(it.b)[0] || null; return it.p; };
+    const applied = []; let nE = 0, nD = 0;
+    ents.forEach(e => {
+      const it = items.find(z => !z.gone && getP(z) && sameQ(getP(z), e.o));
+      if (!it) { e.stale = true; skipped++; return; }
+      if (e.n) {
+        const lead = it.b.match(/^\s*/)[0], trail = it.b.match(/\s*$/)[0];
+        // keep any extra lines after the Answer line (e.g. "Why:") when the answer itself is unchanged
+        const lines = it.b.trim().split('\n'), ai = lines.findIndex(l => /^\s*(?:answer|ans)\s*[:.]\s*[A-Da-d]\s*$/i.test(l));
+        const tail = e.n.answer === e.o.answer && ai >= 0 && ai < lines.length - 1 ? '\n' + lines.slice(ai + 1).join('\n') : '';
+        it.b = lead + qBlock(e.n) + tail + trail; it.p = cq(e.n); nE++;
+      } else { it.gone = true; nD++; }
+      applied.push(e);
+    });
+    if (!applied.length) { save(); continue; }
+    const kept = items.filter(z => !z.gone);
+    let out = kept.map((z, j) => z.b + (j < kept.length - 1 ? z.s : '')).join('');
+    if (!out.endsWith('\n')) out += '\n';
+    const body = { message: 'Update ' + SUBJECTS[k].short + ': ' + nE + ' edited, ' + nD + ' deleted (via reviewer)', content: b64e(new TextEncoder().encode(out)), sha: meta.sha, branch: GH.branch };
+    const pr = await fetch(url, { method: 'PUT', headers: Object.assign({ 'Content-Type': 'application/json' }, hdr), body: JSON.stringify(body) });
+    if (!pr.ok) { save(); throw new Error(ghErr(pr.status)); }
+    const t = Date.now(); applied.forEach(e => e.pub = t); done += applied.length; save();
+  }
+  save();
+  return { done, skipped };
+}
+async function doPublish() {
+  const st = $('pub-status'), btn = $('pub-go'), pw = $('pub-pw').value;
+  if (!pendCount()) return st.textContent = 'Nothing to publish.';
+  if (!pw) return st.textContent = 'Enter your password.';
+  btn.disabled = true; st.textContent = 'Publishing…';
+  try {
+    const r = await publish(pw); $('pub-pw').value = '';
+    st.textContent = (r.done ? 'Published ' + r.done + ' change(s). Live in a minute or two.' : 'Nothing was published.') + (r.skipped ? ' ' + r.skipped + ' skipped: original not found in the file on GitHub.' : '');
+  } catch (e) { st.textContent = e.message || String(e); }
+  btn.disabled = false; renderPubList(); updatePub();
+}
+async function adminToggle() {
+  if (isAdmin()) {
+    if (confirm('Disconnect GitHub on this device? Unpublished edits stay in the queue.')) { localStorage.removeItem(GH.tk); location.reload(); }
+    return;
+  }
+  if (!(window.crypto && crypto.subtle)) return alert('Connecting needs a secure (https) page.');
+  const t = prompt('Paste your GitHub fine-grained token (Contents: read/write on ' + GH.user + '/' + GH.repo + '):');
+  if (!t || !t.trim()) return;
+  const p = prompt('Choose a password to lock the token on this device (8+ characters):');
+  if (!p) return;
+  if (p.length < 8) return alert('Use at least 8 characters.');
+  try { await lockToken(t.trim(), p); location.reload(); } catch (e) { alert('Could not store the token: ' + e.message); }
+}
+function initAdmin() {
+  $('edit-q').onclick = () => { const it = examQ[idx]; if (it) openEditor(it.id, 'exam'); };
+  document.querySelectorAll('.pub-open').forEach(b => b.onclick = openPub);
+  document.addEventListener('click', e => { const b = e.target.closest('.rv-edit'); if (b) openEditor(b.dataset.id, 'other'); });
+  $('ed-save').onclick = saveEdit; $('ed-cancel').onclick = closeEditor; $('ed-del').onclick = delEdit;
+  $('pub-go').onclick = doPublish; $('pub-close').onclick = () => $('pub-ov').classList.remove('open');
+  $('pub-pw').onkeydown = e => { if (e.key === 'Enter') doPublish(); };
+  $('pub-list').onclick = e => {
+    const b = e.target.closest('.pub-forget'); if (!b) return;
+    if (!confirm('Forget this edit? It will not be published.')) return;
+    S.pending[b.dataset.k].splice(+b.dataset.i, 1); save(); renderPubList(); updatePub();
+  };
+  $('admin-btn').onclick = adminToggle;
+}
 
 // ---------- Home ----------
 function showScreen(id) { document.querySelectorAll('.screen').forEach(s => s.classList.remove('active')); $(id).classList.add('active'); window.scrollTo(0, 0); }
@@ -373,6 +642,7 @@ function refreshHome() {
   $('subject-title').innerHTML = d.short + '<br>REVIEWER';
   $('subject-subhead').textContent = 'Recall exam for ' + d.name + '.';
   $('add-subject-name').textContent = d.name;
+  updatePub();
 }
 
 // ---------- Setup ----------
@@ -462,6 +732,7 @@ function render() {
   $('mark-q').classList.toggle('on', marked[idx]);
   $('mark-q').textContent = marked[idx] ? '⚑ Marked for review' : '⚑ Mark for review';
   if ($('qmap').classList.contains('open')) drawMap();
+  updatePub();
 }
 function drawMap() {
   const m = $('qmap'); m.innerHTML = '';
@@ -506,11 +777,12 @@ function finishExam() {
   fill.style.strokeDashoffset = 314 - 314 * p / 100;
   fill.style.stroke = p >= 75 ? 'var(--correct)' : p >= 50 ? '#c98a3d' : 'var(--incorrect)';
   needle.style.transform = 'rotate(' + (-90 + p * 1.8) + 'deg)';
-  $('review-list').innerHTML = reviewHTML(examQ.map((x, i) => ({ q: x.q, ch: x.ch.map(c => c.text), ci: x.ci, p: examA[i], ms: qms[i] })), 'all');
+  $('review-list').innerHTML = reviewHTML(resultRows(), 'all');
   $('review-list').classList.remove('open'); $('toggle-review').textContent = 'Review Answers';
   showScreen('screen-results');
 }
 
+const resultRows = () => examQ.map((x, i) => ({ id: x.id, q: x.q, ch: x.ch.map(c => c.text), ci: x.ci, p: examA[i], ms: qms[i] }));
 function reviewHTML(rows, f) {
   return rows.map((r, i) => {
     const ok = r.p !== null && r.p === r.ci;
@@ -522,6 +794,7 @@ function reviewHTML(rows, f) {
       h += '<div class="review-choice' + cls + '">' + LETTERS[k] + '. ' + esc(c) + (k === r.ci ? '  ✓' : k === r.p ? '  ✕ (your answer)' : '') + '</div>';
     });
     if (r.p === null) h += '<div class="review-choice was-picked-wrong">— not answered —</div>';
+    if (r.id && isAdmin()) h += '<div style="margin-top:8px"><button class="btn btn-ghost btn-sm rv-edit" data-id="' + esc(r.id) + '">✎ Edit</button></div>';
     return h + '</div>';
   }).join('') || '<p class="empty-note">Nothing to show.</p>';
 }
@@ -555,14 +828,24 @@ function tabTakes() {
   document.querySelectorAll('.take-row').forEach(b => b.onclick = () => openTake(+b.dataset.i));
 }
 let takeRows = [];
+function takeRowsFor(i) {
+  return S.history[i].it.map(r => {
+    const x = byId[r[0]];
+    return x ? { id: x.id, q: x.q, ch: x.choices, ci: x.answer, p: r[1] < 0 ? null : r[1], ms: r[3] } : { q: '(this question is no longer in the bank)', ch: [], ci: -1, p: null, ms: r[3] };
+  });
+}
+function refreshTake() {
+  if (takeIdx < 0 || !S.history[takeIdx]) return;
+  takeRows = takeRowsFor(takeIdx);
+  const f = document.querySelector('#take-filter .btn.on');
+  $('take-list').innerHTML = reviewHTML(takeRows, f ? f.dataset.f : 'all');
+}
 function openTake(i) {
+  takeIdx = i;
   const h = S.history[i];
   $('take-title').textContent = (h.src === 'mix' ? 'MIXED' : SUBJECTS[h.src].short) + ' · ' + pct(h.c, h.n) + '%';
   $('take-meta').textContent = fmtD(h.t) + ' · ' + (h.mode === 'study' ? 'Study' : 'Exam') + ' · ' + h.c + ' of ' + h.n + ' correct · ' + h.an + ' answered · ' + fmtT(h.ms);
-  takeRows = h.it.map(r => {
-    const x = byId[r[0]];
-    return x ? { q: x.q, ch: x.choices, ci: x.answer, p: r[1] < 0 ? null : r[1], ms: r[3] } : { q: '(this question is no longer in the bank)', ch: [], ci: -1, p: null, ms: r[3] };
-  });
+  takeRows = takeRowsFor(i);
   document.querySelectorAll('#take-filter .btn').forEach(b => b.classList.toggle('on', b.dataset.f === 'all'));
   $('take-list').innerHTML = reviewHTML(takeRows, 'all'); showScreen('screen-take');
 }
@@ -622,6 +905,7 @@ function addMine(list) { S.custom[cur] = S.custom[cur].concat(list); save(); reb
 
 // ---------- Events ----------
 function init() {
+  initAdmin();
   document.querySelectorAll('.subject-btn').forEach(b => b.onclick = () => { cur = b.dataset.subject; refreshHome(); });
   document.querySelectorAll('.btn-back[data-target]').forEach(b => b.onclick = () => showScreen(b.dataset.target));
   const toSetup = () => { hint(); showScreen('screen-setup'); };
@@ -683,8 +967,8 @@ function init() {
 (async function () {
   loadState();
   const r = await Promise.all(SUBS.map(k => loadFile(SUBJECTS[k].file))), failed = [];
-  SUBS.forEach((k, i) => { fileQ[k] = r[i] || []; if (!r[i] || !r[i].length) failed.push(SUBJECTS[k].short); rebuild(k); });
-  init(); refreshHome();
+  SUBS.forEach((k, i) => { fileQ[k] = r[i] || []; if (!r[i] || !r[i].length) failed.push(SUBJECTS[k].short); else applyPending(k); rebuild(k); });
+  save(); init(); refreshHome();
   if (failed.length) $('load-status').textContent = 'Could not load: ' + failed.join(', ') + '. Serve the page over http(s) with a questions/ folder beside it.';
 })();
 </script>
