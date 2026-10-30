@@ -5045,7 +5045,7 @@ C. P1,339.12
 D. P1,669.12
 Answer: A
 
-Cleofas borrowed P2,000.00 from a bank and agreed to pay the loan at the end of one year. The bank discounted the loan and gave him P1950 in cash. Determine the rate of discount.
+Cleo borrowed P2,000.00 from a bank and agreed to pay the loan at the end of one year. The bank discounted the loan and gave him P1950 in cash. Determine the rate of discount.
 A. 3.75%
 B. 3.12%
 C. 2.5%
@@ -15606,7 +15606,7 @@ A. Insufficient data
 B. False
 C. Partly true
 D. True
-Answer: B
+Answer: D
 
 The velocity (in m/s) of a falling ball is described by the equation v = 32 + t + 6t². What is the acceleration at time t = 2s?
 A. 25 m/s²
