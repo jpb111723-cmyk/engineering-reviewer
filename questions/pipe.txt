@@ -9110,3 +9110,4154 @@ B. 61.3 Btu/lb
 C. 169.1 Btu/lb
 D. 117.8 Btu/lb
 Answer: A
+
+A reversed Carnot cycle is used for refrigeration and rejects 1,000 kW of heat at 340 K while receiving heat at 250 K. Determine (a) the COP, (b) the power required, and (c) the refrigerating effect.
+A. (a) 2.445; (b) 296.5 kW; (c) 683.8 kW
+B. (a) 2.778; (b) 264.7 kW; (c) 735.3 kW
+C. (a) 3.195; (b) 227.6 kW; (c) 808.8 kW
+D. (a) 2.167; (b) 330.9 kW; (c) 661.8 kW
+Answer: B
+
+A reversed Carnot cycle has a refrigerating COP of 4. (a) What is the ratio Tmax/Tmin? (b) If the work input is 6 kW, what will be the maximum refrigerating effect, kJ/min and tons.
+A. (a) 1.25; (b) 1440 kJ/min and 6.826 TR
+B. (a) 1.40; (b) 1339 kJ/min and 6.348 TR
+C. (a) 1.07; (b) 1584 kJ/min and 7.509 TR
+D. (a) 1.56; (b) 1296 kJ/min and 6.143 TR
+Answer: A
+
+A reversed Carnot engine removes 40,000 kW from a heat sink. The temperature of the heat sink is 260 K and the temperature of the heat reservoir is 320 K. Determine the power required of the engine.
+A. 8584.6 kW
+B. 10153.9 kW
+C. 8307.7 kW
+D. 9230.8 kW
+Answer: D
+
+An ammonia vapor refrigeration cycle operates at an evaporator temperature of –16 C and a condensing temperature of 32 C. Determine the coefficient of performance (a) for an ideal saturation cycle, (b) for wet compression with saturated vapor leaving the compressor, and (c) if the vapor at suction to the compressor is superheated 6 degrees.
+A. (a) 5.07; (b) 4.23; (c) 4.72
+B. (a) 3.97; (b) 5.64; (c) 3.95
+C. (a) 4.41; (b) 4.70; (c) 4.29
+D. (a) 5.73; (b) 3.85; (c) 5.06
+Answer: C
+
+A standard vapor compression system produces 20 tons of refrigeration using R-12 as a refrigerant while operating between a condenser temperature of 42 C and an evaporator temperature of –25 C. Determine (a) the refrigerating effect in kJ/kg, (b) the circulating rate in kg/s, (c) the power supplied, (d) the COP, (e) the heat rejected in kW, and (f) the volume flow rate in L/s.
+A. (a) 89.8 kJ/kg; (b) 0.7751 kg/s; (c) 24.50 kW; (d) 2.40; (e) 107.63 kW; (f) 86.0 L/s
+B. (a) 99.8 kJ/kg; (b) 0.7046 kg/s; (c) 25.79 kW; (d) 2.73; (e) 96.10 kW; (f) 92.5 L/s
+C. (a) 119.8 kJ/kg; (b) 0.6482 kg/s; (c) 27.85 kW; (d) 3.14; (e) 82.65 kW; (f) 101.8 L/s
+D. (a) 81.8 kJ/kg; (b) 0.8314 kg/s; (c) 21.92 kW; (d) 2.13; (e) 120.12 kW; (f) 83.2 L/s
+Answer: B
+
+An ammonia simple saturation cycle operates between evaporator and condenser temperatures of –20 C and 35 C, respectively. The system is to be used in producing 5000 kg of ice at –12 C from water at 29 C in 20 hrs. Assuming losses to be 20 percent of the heat to be absorbed from the water, determine (a) the mass flow rate, (b) the heat rejected in the condenser, and (c) the power required by the compression.
+A. (a) 0.03747 kg/s; (b) 51.29 kW; (c) 11.16 kW
+B. (a) 0.04122 kg/s; (b) 48.73 kW; (c) 9.82 kW
+C. (a) 0.03447 kg/s; (b) 55.39 kW; (c) 12.83 kW
+D. (a) 0.04421 kg/s; (b) 43.60 kW; (c) 8.70 kW
+Answer: A
+
+A 15-ton refrigeration system is used to make ice. The water is available at 20 C. Refrigerant 12 is used with saturated temperature limits of –25 C and 54 C. Determine (a) the COP, (b) the refrigerant flow rate, (c) the temperature at discharge of the compressor, (d) the volume flow rate, and (e) the maximum kg of ice manufactured per day.
+A. (a) 1.99; (b) 0.5341 kg/s; (c) 73 C; (d) 74.1 L/s; (e) 12,510 kg
+B. (a) 2.26; (b) 0.6979 kg/s; (c) 56 C; (d) 87.7 L/s; (e) 9,790 kg
+C. (a) 1.78; (b) 0.4734 kg/s; (c) 81 C; (d) 71.7 L/s; (e) 14,141 kg
+D. (a) 2.09; (b) 0.6069 kg/s; (c) 65 C; (d) 79.7 L/s; (e) 10,878 kg
+Answer: D
+
+An R-12 standard refrigeration cycle operates at an evaporating pressure of 386 kPa and a condensing pressure of 1009 kPa. Show the effects of decreasing the vaporizing pressure to 270 kPa on the following: For a unit mass, (a) refrigerating effect, (b) COP, and (c) work. For a refrigerating capacity of 1 kW, (d) power, (e) mass flow rate, (f) heat rejected, and (g) volume flow rate.
+A. (a) 96.1 kJ/kg; (b) 5.272; (c) 21.6 kJ/kg; (d) 0.25 kW; (e) 0.0083 kg/s; (f) 1.34 kW; (g) 0.55 L/s
+B. (a) 125.6 kJ/kg; (b) 4.048; (c) 25.5 kJ/kg; (d) 0.20 kW; (e) 0.0110 kg/s; (f) 1.12 kW; (g) 0.63 L/s
+C. (a) 109.2 kJ/kg; (b) 4.707; (c) 23.2 kJ/kg; (d) 0.22 kW; (e) 0.0092 kg/s; (f) 1.22 kW; (g) 0.58 L/s
+D. (a) 85.2 kJ/kg; (b) 5.884; (c) 20.9 kJ/kg; (d) 0.29 kW; (e) 0.0075 kg/s; (f) 1.44 kW; (g) 0.49 L/s
+Answer: C
+
+An industrial plant has available a 4-cylinder, 76-mm bore by 102-mm stroke, 800 rpm, single-acting compressor for use with refrigerant 12. Proposed operating conditions for the compressor are 38 C condensing temperature and 5 C evaporating temperature. It is estimated that the refrigerant will enter the expansion valve as a saturated liquid that the vapor will leave the evaporator at a temperature of 7 C, and will enter the compressor at a temperature of 13 C. Assume a compressor volumetric efficiency of 70%. Assume frictionless flow. Calculate the refrigerating capacity in kW for a system equipped with this compressor.
+A. 45.88 kW
+B. 40.96 kW
+C. 35.23 kW
+D. 51.20 kW
+Answer: B
+
+A Refrigerant 12 refrigeration system requires a load of 54 kW at an evaporator pressure of 270 kPa and a condenser pressure of 1009 kPa. The refrigerant is subcooled 10 degrees before entering the expansion valve and vapor is superheated 14 degrees before entering the compressor. A twin-cylinder compressor with stroke equal to 1.25 times the bore is to be used at a speed of 27 r/s. The volumetric efficiency is 84 percent. Determine (a) the quantity of cooling water in the condenser for an 11-degree increase in temperature, (b) the bore and stroke, and (c) the compressor power.
+A. (a) 1.40 kg/s; (b) bore 8.7 cm, stroke 10.9 cm; (c) 10.6 kW
+B. (a) 1.30 kg/s; (b) bore 10.0 cm, stroke 12.5 cm; (c) 9.5 kW
+C. (a) 1.54 kg/s; (b) bore 7.8 cm, stroke 9.8 cm; (c) 12.7 kW
+D. (a) 1.26 kg/s; (b) bore 11.3 cm, stroke 14.2 cm; (c) 8.7 kW
+Answer: A
+
+A refrigerant 22 refrigeration system carries a load of 82 kW at an evaporator pressure of 354 kPa and a condenser pressure of 1460 kPa. The liquid refrigerant is subcooled by 4 degrees before entering the expansion valve and the vapor is superheated by 5 degrees before entering the compressor. The compressor operates at 28 r/s. The stroke-to-bore ratio of the twin-cylinder compressor is 82%. Determine (a) mass flow rate of refrigerant, (b) mass flow rate of cooling water in the condenser for a 7-degree change in temperature, and (c) the bore and stroke.
+A. (a) 0.5779 kg/s; (b) 3.02 kg/s; (c) bore 10.1 cm, stroke 12.1 cm
+B. (a) 0.4522 kg/s; (b) 4.03 kg/s; (c) bore 8.5 cm, stroke 10.1 cm
+C. (a) 0.6532 kg/s; (b) 2.76 kg/s; (c) bore 10.9 cm, stroke 13.0 cm
+D. (a) 0.5025 kg/s; (b) 3.36 kg/s; (c) bore 9.2 cm, stroke 11.0 cm
+Answer: D
+
+A refrigerant 22 refrigerating system is operating with a condenser temperature of 42 C and an evaporating temperature of 0 C. (a) If the liquid line from the condenser is soldered to the suction line from the evaporator to form a simple heat exchanger and if as a result of this saturated vapor leaving the evaporator is superheated 10 degrees, how many degrees will the saturated liquid leaving the condenser be subcooled? Determine (b) the volume flow rate, and (c) the compressor work.
+A. (a) 4 C; (b) 1.21 L/s per TR; (c) 0.64 kW per TR
+B. (a) 6 C; (b) 1.01 L/s per TR; (c) 0.72 kW per TR
+C. (a) 5 C; (b) 1.10 L/s per TR; (c) 0.67 kW per TR
+D. (a) 4 C; (b) 1.30 L/s per TR; (c) 0.57 kW per TR
+Answer: C
+
+A Freon 12 refrigeration system, with a 10-TR capacity and a coefficient of performance of 3.23, operates with a condenser pressure of 984.5 kPa and an evaporator pressure of 150.8 kPa. The temperature entering and leaving the compressor are –10 C and 80 C, respectively. The temperature entering the expansion valve is 34 C. The compressor is water jacketed and operated with unknown pressure drops through the valves. Compute (a) the mass flow rate per minute, (b) the indicated work, and (c) the heat removed by the jacket water.
+A. (a) 20.02 kg/min; (b) 10.35 kW; (c) 3.3 kW
+B. (a) 18.20 kg/min; (b) 10.89 kW; (c) cannot be determined because the data are inconsistent (compression work is less than the enthalpy rise)
+C. (a) 16.74 kg/min; (b) 11.76 kW; (c) 4.0 kW
+D. (a) 21.48 kg/min; (b) 9.26 kW; (c) 3.2 kW
+Answer: B
+
+A test of a 10-TR ammonia vapor compression refrigeration system gave the following results: condenser pressure 1600 kPa; evaporator pressure 191 kPa; temperature leaving evaporator coils -10 C; temperature entering compressor 0 C; temperature leaving compressor 100 C; temperature entering condenser 80 C; temperature leaving condenser 35 C; coefficient of performance 3.1. (A) Find heat lost or gained, (a) between evaporator coils and compressor, (b) between compressor and condenser, and (c) to condenser water. (B) Find, (a) temperature in the evaporator coils in saturated state, and (b) quantity of the vapor in the evaporator coils following expansion through valve. (C) Find, (a) the work, and (b) the heat absorbed by jacket water.
+A. (a) 40.32 kJ/min; (b) 113.3 kJ/min; (c) 2377 kJ/min; (d) -20 C; (e) 19.38 %; (f) 11.34 kW; (g) 5.58 kW
+B. (a) 38.30 kJ/min; (b) 99.7 kJ/min; (c) 2662 kJ/min; (d) -22 C; (e) 22.29 %; (f) 10.21 kW; (g) 6.14 kW
+C. (a) 43.55 kJ/min; (b) 130.3 kJ/min; (c) 2044 kJ/min; (d) -18 C; (e) 17.44 %; (f) 13.61 kW; (g) 5.13 kW
+D. (a) 34.27 kJ/min; (b) 88.4 kJ/min; (c) 2971 kJ/min; (d) -22 C; (e) 25.19 %; (f) 9.30 kW; (g) 6.58 kW
+Answer: A
+
+A refrigerant 12 refrigerating system operates with a condensing temperature of 38 C and an evaporating temperature of –12 C. The refrigerant leaves the evaporator and enters the compressor at –2 C. The compressor is a 4-cylinder, V-arrangement single-acting type, direct driven by an electric motor at 875 rpm. The clearance is 5 percent, the capacity is 40 tons, bore-to-stroke ratio is 1.25 and the compression is polytropic with n = 1.275. Determine (a) the bore and stroke, (b) the piston speed, and (c) the indicated hp of the compressor.
+A. (a) bore 14.1 cm, stroke 11.26 cm; (b) 251 m/min; (c) 48.0 hp
+B. (a) bore 18.4 cm, stroke 14.72 cm; (b) 193 m/min; (c) 56.8 hp
+C. (a) bore 12.5 cm, stroke 9.98 cm; (b) 280 m/min; (c) 46.4 hp
+D. (a) bore 16.0 cm, stroke 12.80 cm; (b) 224 m/min; (c) 51.6 hp
+Answer: D
+
+A food freezing requires 20 tons of refrigeration at an evaporator temperature of –30 C and a condenser temperature of 35 C. The refrigerant Freon 22 is subcooled 4 C before entering the expansion valve and the vapor is superheated 5 C before leaving the evaporator. The clearance is 4%, the suction and discharge valve pressure drops are 35 kPa and 50 kPa, respectively. Compression is polytropic with n = 1.08. The mechanical efficiency is 75%. An 11.5 x 11.5 – cm, six cylinder single acting compressor running at 1000 rpm is used. Determine (a) clearance volumetric efficiency, (b) piston displacement, (c) total volumetric efficiency, (d) theoretical hp, (e) actual hp, (f) heat rejected to condenser cooling water, and (h) quantity of cooling water in the condenser if the temperature rise is 6 C.
+A. (a) 75.51 %; (b) 6.44 m3/min; (c) 74.90 %; (d) 31.61 hp; (e) 51.51 hp; (f) 85.4 kW; (g) 188.9 kg/min
+B. (a) 57.98 %; (b) 7.62 m3/min; (c) 58.62 %; (d) 42.14 hp; (e) 43.08 hp; (f) 97.1 kW; (g) 246.9 kg/min
+C. (a) 67.42 %; (b) 6.93 m3/min; (c) 65.13 %; (d) 35.12 hp; (e) 46.83 hp; (f) 89.9 kW; (g) 214.7 kg/min
+D. (a) 84.28 %; (b) 6.24 m3/min; (c) 84.67 %; (d) 28.80 hp; (e) 55.26 hp; (f) 76.4 kW; (g) 167.5 kg/min
+Answer: C
+
+In an ammonia refrigeration system, the capacity is 210 kW at a temperature of –20 C. The vapor from the evaporator is pumped by one compressor to the condensing pressure of 1431 kPa. Later, the system was revised to a two-stage compression operating on the cycle shown below with intercooling but no removal of flash at 555 kPa. (a) Calculate the power required by the single compressor in the original system. (b) Calculate the total power required by the two compressors in the revised system.
+A. (a) 55.70 kW; (b) 65.34 kW
+B. (a) 59.89 kW; (b) 56.82 kW
+C. (a) 65.88 kW; (b) 51.14 kW
+D. (a) 53.90 kW; (b) 73.87 kW
+Answer: B
+
+An ammonia refrigeration system has a capacity of 210 kW at an evaporating temperature of –20 C when the condensing pressure is 1431 kPa. (a) Compute the power requirement for a system with a single compression. (b) Compute the total power required by the two compressors in the system shown below where there is no intercooling but there is flash-gas removal.
+A. (a) 59.89 kW; (b) 55.98 kW
+B. (a) 68.87 kW; (b) 50.38 kW
+C. (a) 53.90 kW; (b) 67.18 kW
+D. (a) 77.86 kW; (b) 45.90 kW
+Answer: A
+
+A two-stage cascade refrigeration system uses ammonia as the working substance. The evaporator is at –35 C and the high-pressure condenser is at 1514.2 kPa. The cascade condenser is a direct contact type. The refrigeration load is 90 tons. Determine (a) the mass flow rate in the lower pressure loop, (b) the mass flow rate in the high-pressure loop, (c) the power required, (d) the COP, and (e) the quantity of the fluid entering the evaporator.
+A. (a) 0.231 kg/s; (b) 0.376 kg/s; (c) 116.5 kW; (d) 2.27; (e) 11.60 %
+B. (a) 0.308 kg/s; (b) 0.315 kg/s; (c) 132.4 kW; (d) 2.97; (e) 8.91 %
+C. (a) 0.211 kg/s; (b) 0.404 kg/s; (c) 104.2 kW; (d) 2.01; (e) 12.95 %
+D. (a) 0.257 kg/s; (b) 0.342 kg/s; (c) 122.6 kW; (d) 2.58; (e) 10.36 %
+Answer: D
+
+A two-stage cascade refrigeration system uses ammonia as the refrigerant. The mass flow rate in the high-pressure loop is 0.10 kg/s. The condenser saturated temperature is 38 C and the evaporator temperature is – 40 C. The cascade condenser is a direct contact type. Determine (a) the refrigerating effect in tons, (b) the power required, and (c) the COP.
+A. (a) 28.72 tons; (b) 36.6 kW; (c) 2.09
+B. (a) 24.02 tons; (b) 41.6 kW; (c) 2.74
+C. (a) 26.11 tons; (b) 38.5 kW; (c) 2.38
+D. (a) 30.81 tons; (b) 32.7 kW; (c) 1.86
+Answer: C
+
+An open air refrigeration system carries a load of 35 kW with a suction pressure of 103 kPa and a discharge pressure of 690 kPa. The temperature leaving the refrigerator is 5 C and that leaving the cooler is 30 C. The compression is polytropic with n = 1.33 and the expansion is also polytropic but with n = 1.35. Determine the power required and the COP.
+A. (a) 22.63 kW; (b) 1.29
+B. (a) 23.82 kW; (b) 1.47
+C. (a) 25.73 kW; (b) 1.69
+D. (a) 20.25 kW; (b) 1.15
+Answer: B
+
+An air refrigeration system is required to produce 52.5 kW of refrigeration with a cooler pressure of 1448 kPa and a refrigerator pressure of 207 kPa. Leaving air temperatures are 29 C for cooler and 5 C for refrigerator. Expansion is isentropic and compression is polytropic with n = 1.34. Determine the COP.
+A. 1.47
+B. 1.29
+C. 1.69
+D. 1.15
+Answer: A
+
+There are removed 3.06 m3/s of vapor from the water evaporator of a vacuum refrigeration system; the warm water enters the evaporator at 18 C and chilled water leaves at 10 C; make-up water enters at 29 C. Determine the refrigerating capacity.
+A. 77.24 kW
+B. 59.31 kW
+C. 86.20 kW
+D. 68.96 kW
+Answer: D
+
+In a steam jet refrigeration system, the evaporator is maintained at 6 C. The chilled water leaves at the same temperature and warms to 11 C as it absorbs the load. Make-up water is available at 25 C. For a capacity of 50 tons, determine (a) the quantity of chilled water required, and (b) the volume of vapor removed.
+A. (a) 7.778 kg/s; (b) 11.67 m3/s
+B. (a) 9.199 kg/s; (b) 9.13 m3/s
+C. (a) 8.363 kg/s; (b) 10.15 m3/s
+D. (a) 7.527 kg/s; (b) 13.20 m3/s
+Answer: C
+
+Calculate the specific volume of an air-vapor mixture in cubic meters per kilogram of dry air at the following conditions: t = 32 C, W = 0.016 kg/kg, pt = 100 kPa.
+A. 1.034 m3/kg
+B. 0.899 m3/kg
+C. 0.809 m3/kg
+D. 1.169 m3/kg
+Answer: B
+
+Moist air at a dry bulb temperature of 25 C has a relative humidity of 50% when the barometric pressure is 101.4 kPa. Determine (a) the partial pressures of water vapor and dry air, (b) the dew point temperature, (c) the specific humidity, (d) the specific volume, and (e) the enthalpy.
+A. (a) 1.5845 kPa and 99.82 kPa; (b) 13.7 C; (c) 0.00987 kg/kg; (d) 0.857 m3/kg; (e) 50.14 kJ/kg
+B. (a) 1.4261 kPa and 89.84 kPa; (b) 15.1 C; (c) 0.00938 kg/kg; (d) 0.754 m3/kg; (e) 56.16 kJ/kg
+C. (a) 1.9014 kPa and 119.78 kPa; (b) 12.6 C; (c) 0.01066 kg/kg; (d) 0.986 m3/kg; (e) 43.12 kJ/kg
+D. (a) 1.2993 kPa and 81.85 kPa; (b) 16.2 C; (c) 0.00839 kg/kg; (d) 0.668 m3/kg; (e) 62.67 kJ/kg
+Answer: A
+
+Air at a temperature of 33 C has a relative humidity of 50%. Determine (a) the wet bulb temperature, (b) the dew point temperature, (c) the humidity ratio, (d) the enthalpy, and (e) the specific volume.
+A. (a) 27.0 C; (b) 20.1 C; (c) 0.0139 kg/kg; (d) 82.7 kJ/kg; (e) 0.827 m3/kg
+B. (a) 22.5 C; (b) 22.9 C; (c) 0.0182 kg/kg; (d) 63.5 kJ/kg; (e) 0.978 m3/kg
+C. (a) 28.9 C; (b) 18.0 C; (c) 0.0123 kg/kg; (d) 92.2 kJ/kg; (e) 0.800 m3/kg
+D. (a) 24.5 C; (b) 21.2 C; (c) 0.0158 kg/kg; (d) 73.8 kJ/kg; (e) 0.889 m3/kg
+Answer: D
+
+How much heat is required to raise the temperature of 0.50 m3/s of air from 19 C dry bulb and 15 C wet bulb to 36 C? What is the final dew point temperature?
+A. (a) 9.9 kW; (b) 11.0 C
+B. (a) 11.2 kW; (b) 14.4 C
+C. (a) 10.4 kW; (b) 12.5 C
+D. (a) 8.8 kW; (b) 9.8 C
+Answer: C
+
+How much heat must be removed to cool 30 cu m per minute of air from 34 C dry bulb and 18 C dew point to a wet bulb temperature of 19 C? What is the final relative humidity?
+A. (a) 6.6 kW; (b) 92 %
+B. (a) 7.5 kW; (b) 82 %
+C. (a) 8.6 kW; (b) 71 %
+D. (a) 5.9 kW; (b) 66 %
+Answer: B
+
+How much heat and moisture must be added to 5 m3/minute of air at 21 C dry bulb and 30% relative humidity to raise it to 37 C and 40% relative humidity?
+A. (a) 13.41 kW; (b) 0.00334 kg/s
+B. (a) 15.02 kW; (b) 0.00311 kg/s
+C. (a) 11.53 kW; (b) 0.00367 kg/s
+D. (a) 16.76 kW; (b) 0.00301 kg/s
+Answer: A
+
+How much heat must be removed to cool 50 m3/min of air at 29 C dry bulb and 21 C wet bulb temperatures to 16 C dry bulb and 14 C wet bulb temperatures? How much moisture was removed?
+A. (a) 19.01 kW; (b) 0.00352 kg/s
+B. (a) 22.48 kW; (b) 0.00275 kg/s
+C. (a) 18.40 kW; (b) 0.00398 kg/s
+D. (a) 20.44 kW; (b) 0.00306 kg/s
+Answer: D
+
+Air at 32 C and 20 percent relative humidity is cooled and humidified by means of an air washer until the relative humidity becomes 90%. How much moisture was added per kg of dry air. What was the air washer efficiency and the dew point temperature of the leaving air?
+A. (a) 0.0066 kg/kg; (b) 84.0 %; (c) 18.0 C
+B. (a) 0.0051 kg/kg; (b) 77.8 %; (c) 15.1 C
+C. (a) 0.0057 kg/kg; (b) 93.3 %; (c) 16.4 C
+D. (a) 0.0074 kg/kg; (b) 76.5 %; (c) 19.4 C
+Answer: C
+
+A stream of outdoor air is mixed with a stream of return air in an air conditioning system that operates at 101 kPa pressure. The flow rate of outdoor air is 2 kg/s, and its condition is 35 C dry bulb temperature and 25 C wet bulb temperature. The flow rate of return air is 3 kg/s, and its condition is 24 C and 50 percent relative humidity. Determine (a) the enthalpy of the mixture, (b) the humidity ratio of the mixture, and (c) the dry bulb temperature of the mixture.
+A. (a) 53.1 kJ/kg; (b) 0.0131 kg/kg; (c) 27.0 C
+B. (a) 59.0 kJ/kg; (b) 0.0119 kg/kg; (c) 28.4 C
+C. (a) 70.8 kJ/kg; (b) 0.0109 kg/kg; (c) 30.7 C
+D. (a) 48.4 kJ/kg; (b) 0.0140 kg/kg; (c) 24.1 C
+Answer: B
+
+An auditorium is to be maintained at 25 C dry bulb temperature and 50% relative humidity. The supply air enters the auditorium at 17 C. The sensible and latent heat loads are 150 kW and 61 kW, respectively. Determine the wet bulb temperature, relative humidity, and volume flow rate of the supply air.
+A. (a) 13.9 C; (b) 71.5 %; (c) 15.53 m3/s
+B. (a) 15.3 C; (b) 67.9 %; (c) 13.67 m3/s
+C. (a) 12.8 C; (b) 77.2 %; (c) 17.86 m3/s
+D. (a) 16.4 C; (b) 60.8 %; (c) 12.11 m3/s
+Answer: A
+
+In a certain space to be air conditioned the sensible and latent heat loads are 20.60 kW and 6.78 kW, respectively. Outside air is at 33 C dry bulb and 24 C wet bulb temperatures. The space is to be maintained at 25 C with a relative humidity not exceeding 50%. All outside air is supplied with reheater. The conditioned air enters at 18 C. Determine (a) the refrigeration load required, (b) the capacity of the supply fan, and (c) the heat supplied in the reheater.
+A. (a) 102.2 kW; (b) 2.16 m3/s; (c) 19.01 kW
+B. (a) 116.2 kW; (b) 2.82 m3/s; (c) 14.59 kW
+C. (a) 91.5 kW; (b) 1.91 m3/s; (c) 21.21 kW
+D. (a) 107.6 kW; (b) 2.45 m3/s; (c) 16.97 kW
+Answer: D
+
+An air conditioned auditorium with a capacity of 1000 persons is to be maintained at 24 C dry bulb temperature and 55% relative humidity. The sensible and latent heat loads are 115 kW and 42 kW, respectively. The conditioned air enters the auditorium at 17 C. For proper ventilation, 40% of the supply air is fresh air and the rest is recirculated air. Outside air is at 34 C and 50% relative humidity. Determine (a) the volume flow rate of recirculated air, (b) the apparatus dew point, and (c) the refrigeration load.
+A. (a) 7.38 m3/s; (b) 14.1 C; (c) 378.1 kW
+B. (a) 9.65 m3/s; (b) 10.8 C; (c) 447.3 kW
+C. (a) 8.39 m3/s; (b) 12.6 C; (c) 406.6 kW
+D. (a) 6.54 m3/s; (b) 15.8 C; (c) 365.9 kW
+Answer: C
+
+A store to be maintained at 25 C and 50% relative humidity has a sensible heat load of 18.90 kW and a latent heat load of 6.30 kW. Outside air is at 32 C dry bulb and 23 C wet bulb temperatures. The conditioned air enters at 17 C. If 30% of the supply air is fresh air and the bypass system is used, determine (a) the refrigeration required, and (b) the volume of the bypass air at supply condition.
+A. (a) 41.2 kW; (b) 0.759 m3/s
+B. (a) 36.8 kW; (b) 0.816 m3/s
+C. (a) 31.6 kW; (b) 0.898 m3/s
+D. (a) 46.0 kW; (b) 0.734 m3/s
+Answer: B
+
+A mechanical-draft cooling tower receives 115 m3 per second of atmospheric air at 103 kPa, 32 C dry bulb temperature, 55% RH and discharges the air saturated at 36 C. If the tower receives 200 kg/s of water at 40 C, what will be the exit temperature of the cooled water?
+A. 31.9 C
+B. 29.7 C
+C. 35.1 C
+D. 28.7 C
+Answer: A
+
+In a cooling tower water enters at 52 C and leaves at 27 C. Air at 29 C and 47% RH also enters the cooling tower and leaves at 46 C fully saturated with moisture. It is desired to determine (a) the volume and mass of air necessary to cool 1 kg of water, and (b) the quantity of water that can be cooled with 142 cu m per minute of atmospheric air.
+A. (a) 0.6565 m3 of air and 0.752 kg of air; (b) 223.8 kg/min
+B. (a) 0.5138 m3 of air and 0.589 kg of air; (b) 298.4 kg/min
+C. (a) 0.7422 m3 of air and 0.850 kg of air; (b) 203.9 kg/min
+D. (a) 0.5709 m3 of air and 0.654 kg of air; (b) 248.7 kg/min
+Answer: D
+
+A cooling tower receives 6 kg/s of water of 60 C. Air enters the tower at 32 C dry bulb and 27 C wet bulb temperatures and leaves at 50 C and 90% relative humidity. The cooling efficiency is 60.6%. Determine (a) the mass flow rate of air entering, and (b) the quantity of make-up water required.
+A. (a) 2.920 kg/s; (b) 0.1991 kg/s
+B. (a) 3.893 kg/s; (b) 0.1665 kg/s
+C. (a) 3.244 kg/s; (b) 0.1810 kg/s
+D. (a) 2.660 kg/s; (b) 0.2136 kg/s
+Answer: C
+
+Tobacco in a warehouse, held at 30 C and 40% relative humidity, is placed in a room at 32 C and 70% relative humidity preparatory to being worked on. For each 50 kg of tobacco moved from the warehouse, what is the bone-dry weight? What is the actual weight of this quantity of tobacco after staying in the working room?
+A. (a) 48.54 kg; (b) 52.40 kg
+B. (a) 44.13 kg; (b) 55.16 kg
+C. (a) 40.60 kg; (b) 59.57 kg
+D. (a) 52.07 kg; (b) 46.89 kg
+Answer: B
+
+Air enters an adiabatic drier at 6 m/s through a 2-m diameter duct at 29 C dry bulb and 22 C wet bulb temperatures. It is heated to 80 C before reaching the material to be dried and leaves the drier at 44 C and 80% RH. The material enters the drier with a moisture content of 24%, and leaves with a moisture content of 8%. Determine (a) the mass of water removed per kg of dry air, (b) the volume flow of air entering the reheater, (c) the kg of water evaporated per second, (d) the mass flow rate of material leaving the drier, and (e) the heat requirement of drier per kg of water evaporated.
+A. (a) 0.0346 kg/kg; (b) 18.85 m3/s; (c) 0.746 kg/s; (d) 3.552 kg/s; (e) 1525 kJ/kg
+B. (a) 0.0329 kg/kg; (b) 16.59 m3/s; (c) 0.836 kg/s; (d) 3.303 kg/s; (e) 1754 kJ/kg
+C. (a) 0.0374 kg/kg; (b) 21.68 m3/s; (c) 0.642 kg/s; (d) 3.907 kg/s; (e) 1372 kJ/kg
+D. (a) 0.0294 kg/kg; (b) 14.70 m3/s; (c) 0.932 kg/s; (d) 3.197 kg/s; (e) 1982 kJ/kg
+Answer: A
+
+A drier is to be designed to reduce the water content of a certain material from 55% to 10%. Air at 29 C dry bulb temperature and with a humidity ratio of 0.005 kg/kg is heated to 50 C in a reheater before entering the drier. The air leaves the drier at 38 C with 70% relative humidity. On the basis of 1000 kg of product per hour, calculate (a) the volume flow rate of air entering the reheater, and (b) the heat supplied in the reheater.
+A. (a) 8.49 m3/s; (b) 269.7 kW
+B. (a) 11.10 m3/s; (b) 207.1 kW
+C. (a) 7.53 m3/s; (b) 301.0 kW
+D. (a) 9.65 m3/s; (b) 240.8 kW
+Answer: D
+
+A dryer is to deliver 1000 kg/hr of palay with final moisture content in the feed is 15% at atmospheric condition with 32 C dry bulb and 21 C wet bulb. The dryer is maintained at 45 C while the relative humidity of the hot humid air from the dryer is 80%. If the steam pressure supplied to the heater is 2 MPa, determine the following: (a) Palay supplied to the dryer in kg/h. (b) Temperature of the hot humid air from the dryer in C. (c) Air supplied to dryer in cu m/h. (d) Heat supplied by the heater in kW. (e) Steam supplied to heater in kg/h.
+A. (a) 1185.9 kg/h; (b) 42 C; (c) 1558.0 m3/h; (d) 5.28 kW; (e) 12.30 kg/h
+B. (a) 910.6 kg/h; (b) 50 C; (c) 1219.3 m3/h; (d) 7.04 kW; (e) 10.29 kg/h
+C. (a) 1058.8 kg/h; (b) 45 C; (c) 1354.8 m3/h; (d) 5.87 kW; (e) 11.18 kg/h
+D. (a) 1323.5 kg/h; (b) 40 C; (c) 1761.2 m3/h; (d) 4.81 kW; (e) 13.19 kg/h
+Answer: C
+
+Ten thousand kilograms of dressed poultry are blast frozen on hand trucks each day (24 h) in a freezing tunnel. The poultry is precooled to 7 C before entering the freezer where it is frozen and its temperature lowered to –20 C for storage. The hand trucks carrying the poultry total 700 kg per day and have a specific heat of 0.47 kJ/kg.C. The specific heat of poultry above and below freezing are 3.18 kJ/kg.C and 1.55 kJ/kg.C, respectively, the latent heat is 246 kJ/kg and the freezing temperature is –2.75 C. Determine the product load.
+A. 35.8 kW
+B. 38.5 kW
+C. 42.4 kW
+D. 34.6 kW
+Answer: B
+
+Twenty three hundred liters of partially frozen ice cream at –4 C enter a hardening room each day. Hardening is completed and the temperature of the ice cream is lowered to –28 C in 10 hrs. The average density of ice cream is 0.60 kg/L, the average latent heat per kg is 233 kJ. Determine the product load.
+A. 10.66 kW
+B. 12.26 kW
+C. 9.59 kW
+D. 13.86 kW
+Answer: A
+
+Which of the following factors does bursting pressure of Boiler doesn’t depend?
+A. Tensile strength of the shell
+B. Thickness of the shell
+C. Diameter of the shell
+D. Shear strength of shell material
+Answer: D
+
+Which of the following factors does working pressure of boiler doesn’t depend?
+A. Tensile strength of shell
+B. Thickness of shell
+C. Factor of safety
+D. Type of fuel being fired
+Answer: D
+
+What is the average fuel – oil temperature range of the oil in the discharge line to the boiler?
+A. 180 – 200 °F
+B. 240 – 260 °F
+C. 160 – 180 °F
+D. 140 – 160 °F
+Answer: A
+
+The lowest permissible water level of a boiler without internal furnace is _____the height of the shell.
+A. 1/2
+B. 1/3
+C. 1/4
+D. 1/5
+Answer: B
+
+The term V²/2Cp responds to the temperature rise during such a process and is called the
+A. Kinetic temperature
+B. High temperature
+C. Dynamic temperature
+D. Elevation temperature
+Answer: C
+
+An increase in stagnation pressure will increase the mass flux through the:
+A. Diverging nozzle
+B. Converging nozzle
+C. Converging – diverging nozzle
+D. None of these
+Answer: B
+
+A converging – diverging nozzle is the standard equipment in:
+A. Subsonic aircraft
+B. Supersonic aircraft
+C. Hypersonic aircraft
+D. Trisonic aircraft
+Answer: B
+
+For back pressure valves, abrupt changes in fluid properties occur in a very thin section of converging – diverging nozzle under supersonic flow conditions, creating
+A. Sound wave
+B. Tidal wave
+C. Shock wave
+D. None of these
+Answer: C
+
+Is the locus of states which have the same value of stagnation enthalpy and mass flux are called:
+A. Fanno line
+B. Straight line
+C. Willans line
+D. Cross cut line
+Answer: A
+
+Combination of mass and momentum equations into a single equation and plotted in h-s plane yield a curve called:
+A. Fanno line
+B. Freh line
+C. Cutting line
+D. Rayleigh line
+Answer: D
+
+Which of the following shows the relationship of the steam consumption and the load of steam turbine generator?
+A. Dalton’s line
+B. Willans line
+C. Jonval’s line
+D. Rankine line
+Answer: B
+
+A change in the efficiency of combustion in a boiler can usually be determined by comparing the previously recorded readings with the current readings of the _________.
+A. Stack temperature and CO
+B. Over the fire draft and CO
+C. Ringelmann chart and CO2
+D. Stack temperature and CO2
+Answer: D
+
+The most economical and low maintenance cost condenser.
+A. Water – cooled
+B. Air – cooled
+C. Evaporative
+D. Sub – cooled
+Answer: B
+
+What is the result when the fluid’s kinetic energy during a stagnation process is transformed to enthalpy?
+A. Decrease in fluids volume
+B. Rise in the temp. and pressure of the fluid
+C. Rise in fluid’s volume
+D. Decrease in the temp. and pressure of fluid
+Answer: B
+
+A rock – forming crystalline mixed silicate which constitute about 60% of the earth’s surface.
+A. Soil
+B. Feldspar
+C. Flux
+D. Flint
+Answer: B
+
+The statement that the product of the error in the measured determination of a particle’s position and its momentum is of the order of Planck’s constant h is known as:
+A. Bohr’s theory
+B. D’Alembert’s paradox
+C. The Heisenberg uncertainty principle
+D. Planck’s law
+Answer: C
+
+Rocks having excessive internal stresses may produce spalling. These rocks are called as ____
+A. Stratified rocks
+B. Popping rocks
+C. Crushed rocks
+D. Swelling rocks
+Answer: A
+
+Solar energy arrives at the outside of the earth’s atmosphere at an average rate of ________.
+A. 1.354 kW/m²
+B. 1.543 kW/m²
+C. 2.354 kW/m²
+D. 2.543 kW/m²
+Answer: A
+
+A binary cycle using a separate heat transfer fluid if the temperature of the hot water is between approximately _________.
+A. 165 C and 120 C
+B. 200 C and 150 C
+C. 225 C and 175 C
+D. 300 C and higher
+Answer: A
+
+For every kilometer of depth, the temperature of the earth’s crust increase by:
+A. 30 F
+B. 40 F
+C. 50 F
+D. 20 F
+Answer: A
+
+The process in which a nucleus splits into smaller fragments.
+A. Fusion
+B. Fission
+C. Photoelectric effect
+D. Compton’s effect
+Answer: B
+
+The ability of a substance to absorb neutrons is dependent upon which parameter?
+A. Absorption cross section
+B. Scattering cross section
+C. Total cross section
+D. Atomic number
+Answer: A
+
+Particles that are easily stopped within a few millimeter because their double charges generate path ionization and because they are susceptible to electrostatic interaction are:
+A. Alpha neutrons
+B. Alpha radiations
+C. Beta radiations
+D. Gamma radiations
+Answer: B
+
+Radiation consisting of singly charged particles that generate to intermediate distances are called:
+A. Fast neutrons
+B. Alpha radiations
+C. Beta radiations
+D. Gamma radiations
+Answer: C
+
+The amount of a radiation shield’s dimensional geometry that reduces radiation to half of its original value is called the _________.
+A. Half-value mass
+B. Half-value thickness
+C. Semi-cross section
+D. Logarithmic decrement
+Answer: B
+
+The amount of a radiation shield’s density that reduces radiation to half of its original value is called the _____________.
+A. Half-value mass
+B. Half-value thickness
+C. Semi-cross section
+D. Logarithmic decrement
+Answer: A
+
+Radiation exposure, the measure of gamma radiation at the surface of an object is measured in:
+A. Rems
+B. Rads
+C. Roentgens
+D. Roentgens per second
+Answer: C
+
+Radiation exposure rate, the rate of gamma radiation at the surface of an object is measured in
+A. Rems
+B. Rads
+C. Roentgens
+D. Roentgens per second
+Answer: D
+
+All of the following are practical applications of Einstein’s principle of special relativity except _____.
+A. Mass increase
+B. Length contraction
+C. Time dilation
+D. Space warping
+Answer: D
+
+The postulate that no signal or energy can be transmitted with a speed greater than the speed of light is consistent with _________.
+A. The Heisenberg uncertainty principle
+B. The Compton effect
+C. Einstein’s law
+D. Newton’s second law
+Answer: C
+
+The total energy of an electron in the same shell is defined by the _________.
+A. Principal quantum number
+B. Azimuthal quantum number
+C. Magnetic quantum number
+D. Hund rule
+Answer: A
+
+The direction of an electron’s angular momentum vector is defined by the
+A. Principal quantum number
+B. Azimuthal quantum number
+C. Magnetic quantum number
+D. Electron spin quantum number
+Answer: C
+
+The electron’s spin angular momentum vector is defined by the
+A. Azimuthal quantum number
+B. Magnetic quantum number
+C. Electron spin quantum number
+D. Hund rule
+Answer: C
+
+The magnitude of an electron’s angular momentum vector is defined by the
+A. Principal quantum number
+B. Azimuthal quantum number
+C. Electron spin quantum number
+D. Hund rule
+Answer: B
+
+When electrons are shared equally( e.g. when the atoms are the same as in diatomic gases) the bonding is called:
+A. Ionic bonding
+B. Polar covalent bonding
+C. Non-polar covalent bonding
+D. Resonance bonding
+Answer: C
+
+Einstein reasoned there was a discrete amount of energy needed to remove an electron from a surface, with the rest of the incident photon’s energy contributing to the kinetic energy of the photon, the amount of energy is called:
+A. Binding energy
+B. Work function
+C. Coulomb energy
+D. Fermi energy
+Answer: B
+
+Which of the following is not a postulate of Bohr’s theory of the hydrogen atom?
+A. Electron orbits are discrete and non-radiating and an electron may not remain between these orbits
+B. The energy change experienced by an electron changing from one orbit to another is quantized
+C. Light waves exist simultaneously as high frequency electrical and magnetic waves
+D. Angular momentum is quantized
+Answer: C
+
+A _________boiler has heat and gases of combustion that pass through tubes surrounded by water
+A. Fire tube
+B. Cast iron sectional
+C. Water tube
+D. Straight tube
+Answer: A
+
+A ________boiler has water in the tubes and heat gases of combustion passing around the tubes.
+A. Fire tube
+B. Cast iron sectional
+C. Water tube
+D. Firebox
+Answer: C
+
+The three basic type of low pressure heating boilers are _______, _______ and _______.
+A. Firebox; vertical; locomotive
+B. Scotch marine; wet-top; dry top
+C. Straight-tube; bent tube; multiple pass
+D. Fire-tube; water tube; cast iron sectional
+Answer: D
+
+In the _________air mixes with the fuel and burns.
+A. Fire tubes
+B. Combustion chamber
+C. Water tubes
+D. Breeching
+Answer: B
+
+The function of the steam boiler is to ______.
+A. Produce condensate
+B. Create heat
+C. Produce steam
+D. Burn fuel
+Answer: C
+
+The _________forms a vacuum that draws out of the condensate return line and into the vacuum tank.
+A. Suction line
+B. Main header
+C. Vacuum pump
+D. Heating equipment
+Answer: C
+
+At what temperature will water normally turns to steam?
+A. 100 °F
+B. 200 °F
+C. 150 °F
+D. 212 °F
+Answer: D
+
+The MAWP on a low pressure steam boiler is _______ psi.
+A. 10
+B. 20
+C. 15
+D. 30
+Answer: C
+
+The ASME code states that boilers with over _______square feet heating surface must have two or more safety valve.
+A. 200
+B. 300
+C. 400
+D. 500
+Answer: D
+
+The area of a safety valve 4” in diameter is how many square inches?
+A. 2.3562
+B. 6.2832
+C. 3.1416
+D. 12.5664
+Answer: D
+
+The range of the pressure gauge should be _____times the MAWP of the boiler.
+A. 1 to 2
+B. 2 to 3
+C. 1 ½ to 2
+D. 2 ½ to 3
+Answer: C
+
+The ASME code only allows _____safety valve on boiler.
+A. Deadweight
+B. Spring-loaded pop-type
+C. Lever
+D. None of the above
+Answer: B
+
+Live steam is prevented from entering the Bourdon tube of the pressure gauge by which of the following?
+A. Automatic nonreturn valve
+B. Os&y valve
+C. Inspector’s test cock
+D. Siphon
+Answer: D
+
+The water column is located at the NOWL so the lowest visible part of the gauge glass is _____above the highest surface.
+A. 2” to 3”
+B. Just
+C. 4” to 5”
+D. Never
+Answer: A
+
+The boiler bottom blowdown line should discharge to a(n)_________.
+A. Sewer
+B. Atmospheric tank
+C. Blowdown tank
+D. Return tank or open sump
+Answer: C
+
+If the desired cut-in pressure of the boiler is 6 psi and the desired cut-out pressure is 10 psi, the differential pressure setting must be _____psi.
+A. 2
+B. 6
+C. 4
+D. 8
+Answer: C
+
+Impurities that build up on the surface of the water in the boiler prevent _____from breaking through the surface of the water.
+A. Air
+B. Carbon dioxide
+C. Oxygen
+D. Steam
+Answer: D
+
+To prevent air pressure from building up in the boiler when filling the boiler with water, the ____ must be open.
+A. Safety valve
+B. Boiler vent
+C. Main steam stop valve
+D. Manhole cover
+Answer: B
+
+The operating range of the boiler is controlled by:
+A. Aquastat
+B. Pressure control
+C. Vaporstat
+D. Modulating pressure control
+Answer: B
+
+The level of the water in the _____ indicates the water level in the boiler.
+A. Condensate return tank
+B. Gauge glass
+C. Try cocks
+D. Blowdown tank
+Answer: B
+
+When blowing down a boiler, the quick-opening valve should always be opened ______and closed ______.
+A. First; first
+B. Last; first
+C. First; last
+D. Last; last
+Answer: C
+
+A ______valve is installed before the _____ to allow the steam pressure gauge to be changed if a malfunction occurs.
+A. Globe; safety valve
+B. Globe; U-tube siphon
+C. Gate; siphon
+D. Globe; pigtail siphon
+Answer: C
+
+After the total force of the steam has lifted the safety valve off its seat, the steam enters the ______.
+A. Huddling chamber
+B. Steam holding tank
+C. Combustion chamber
+D. Main steam line
+Answer: A
+
+On a pressure control, _______ pressure plus ______pressure equals _______ pressure.
+A. Differential; cut-out; cut-in
+B. Cut-in; cut-out; differential
+C. Cut-in; differential; cut-out
+D. Cut-in pressures equals cut-out pressure
+Answer: C
+
+A ________ pump discharges the return water back to the boiler.
+A. Feed
+B. Gear
+C. Return
+D. Vacuum
+Answer: D
+
+The feedwater _____ valve should be located as close to the shell of the boiler as practical.
+A. Check
+B. Nonreturn
+C. Stop
+D. Regulating
+Answer: C
+
+A _________ after each radiator allows _____ to pass through to the return line.
+A. Steam tarp; steam
+B. Water trap; steam
+C. Steam trap; condensate
+D. Water trap; condensate
+Answer: C
+
+The range of pressure on the vacuum switch is usually:
+A. 2 to 6 psi
+B. 2” to 8”
+C. 6 to 12 psi
+D. 8” to 12”
+Answer: B
+
+To test the vacuum pump, the operator puts the selector switch in the _____ position.
+A. Float
+B. Float or vacuum
+C. Vacuum
+D. Continuous
+Answer: D
+
+Water added to the boiler to replace water lost due to leaks and blowing down is known as _____ water.
+A. Extra
+B. Boiler
+C. Makeup
+D. Feed
+Answer: C
+
+Excessive use of cold city water makeup reduces overall efficiency because the water must be ______ before use in the boiler.
+A. Vented
+B. Filtered
+C. Heated
+D. Recirculated
+Answer: C
+
+The burner should be _____ when the low water fuel cut-off is blown down.
+A. Off
+B. Tagged out
+C. Firing
+D. Tested
+Answer: C
+
+Gate valves should always be _____ or _____ closed.
+A. Partially open; completely
+B. Completely open; completely
+C. Wide open; partly
+D. Throttled; completely
+Answer: B
+
+Steam header valves should be _____ valves.
+A. Globe
+B. Check
+C. Gate
+D. Os&y gate
+Answer: C
+
+When open os&y valve offers ______ to the flow of steam.
+A. No resistance
+B. Velocity
+C. Throttling action
+D. Full resistance
+Answer: A
+
+Steam traps are _____ devices.
+A. Manual
+B. Automatic
+C. Electrical
+D. Semiautomatic
+Answer: B
+
+Steam traps removed ______ and _____ from the steam lines.
+A. Air; water
+B. Water; oil
+C. Air; oil
+D. Air; steam
+Answer: A
+
+Two types of steam traps are the _____ steam trap and the _____ steam trap.
+A. Return; float
+B. Nonreturn; thermostatic
+C. Return; nonreturn
+D. Nonreturn; float
+Answer: C
+
+The _______ steam trap is the most common steam trap used.
+A. Thermostatic
+B. Inverted bucket
+C. Return
+D. Nonreturn; float
+Answer: A
+
+Steam strainers should be located on the line _____ the steam trap.
+A. In front of
+B. Above
+C. After
+D. Along sides of
+Answer: A
+
+When a steam trap is functioning properly there is a _______ difference in temperature between the trap inlet and discharge.
+A. 5 °F to 10 °F
+B. 20 °F to 30 °F
+C. 10 °F to 20 °F
+D. No
+Answer: C
+
+When cleaning the fuel oil strainers the _____ must be carefully replaced to prevent ______ from getting into the system.
+A. Gaskets; fuel oil
+B. Cover; water
+C. Gaskets; air
+D. Cover; fuel oil
+Answer: C
+
+A high vacuum on the fuel oil suction gauge normally indicates either _____ or ______.
+A. Low viscosity; a clogged vent
+B. A closed discharged valve; hot fuel oil
+C. Cold fuel oil; a dirty suction strainer
+D. Water in the fuel oil; a warm pump
+Answer: C
+
+The rotary cup burner uses ______ and _____ to atomize the fuel oil.
+A. High temperature; pressure
+B. High temperature; air
+C. High pressure; steam
+D. A spinning cup; high velocity air
+Answer: D
+
+Regardless of the type of fuel oil used the fuel oil must be _____ before it enters the boilers furnace.
+A. Pressurized
+B. Treated
+C. Atomized
+D. Measured
+Answer: C
+
+In a low pressure gas system when the vaporstat proves gas pressure up to the zero- reducing governor the ______ starts up.
+A. Induced draft fan
+B. Pressure
+C. Forced draft blower
+D. Gas pump
+Answer: C
+
+The butterfly on the low pressure gas system is a ________ valve.
+A. Slow-opening
+B. Screw
+C. Quick-opening
+D. Globe
+Answer: A
+
+If low water develops in the boiler having a low pressure gas system the ______ will secure the gas to the burner.
+A. Whistle valve
+B. Manual reset valve
+C. Vaporstat
+D. Main gas solenoid
+Answer: D
+
+Soft coal; known as _____, has a _______ content.
+A. Bituminous; high carbon
+B. Anthracite; high volatile
+C. Bituminous; high volatile
+D. Anthracite; high carbon
+Answer: C
+
+Boilers using soft coal must have ______ furnace volume to reduce the danger of _____.
+A. Small; overfiring
+B. Large; smoking
+C. Small; smoking
+D. Large; overfiring
+Answer: B
+
+When burning soft coal, if the volatile gases reach the heating surface before they have burned completely _____ and ______ develop.
+A. Smoke; soot
+B. Clinkers; ash
+C. Uneven heat; ash
+D. High temperature; smoke
+Answer: A
+
+The _____ of fuels oil is the lowest temperature at which it will flow as a liquid.
+A. Fire point
+B. Pour point
+C. Flash point
+D. Viscosity
+Answer: B
+
+The _____ is the temperature at which fuel oil gives off vapor that flashes when exposed to an open flame.
+A. Fire point
+B. Pour point
+C. Flash point
+D. Viscosity
+Answer: C
+
+The _____ is the temperature at which fuel oil will burn continuously when exposed to an open flame.
+A. Fire point
+B. Pour point
+C. Flash point
+D. Viscosity
+Answer: A
+
+In the event of an obstruction clogging the feed screw a _____ is used to prevent damage to transmission.
+A. Slip clutch
+B. Shear pin or key
+C. Fuse
+D. None of the above
+Answer: B
+
+In order to bank the stoker it is necessary to secure the _____ while the _____ continuous to operate.
+A. Combination fan; coal feeder
+B. Coal feeder; forced draft fan
+C. Feedwater; induced draft fan
+D. Boiler stop valve; coal feeder
+Answer: B
+
+To prevent smoke and to aid in complete combustion in the screw-feed stoker, _______ is provided using a separate damper control.
+A. Underfire air
+B. Retort air
+C. Overfire air
+D. Grate zone air
+Answer: C
+
+The purpose of automatic combustion controls is to control ______ and _______.
+A. High fire; low fire
+B. Stoker firing; fuel rate
+C. Overfire air; fuel mixture
+D. Proper air to fuel mixture; firing rate
+Answer: D
+
+At 0 psig, how many BTU are necessary to change 1 lb of water at 212 °F of steam?
+A. 144
+B. 970
+C. 180
+D. 1190
+Answer: B
+
+Steam at 100 psi and 400 °F is:
+A. Saturated
+B. Superheated
+C. Wet
+D. None of the above
+Answer: B
+
+What is required to raise the temperature of 1 lb of water from 32 ° to 212 °F?
+A. 144 Btu
+B. 970.3 Btu
+C. 180 Btu
+D. Saturated heat
+Answer: C
+
+Increasing the pressure has what effect of the boiling point of water?
+A. No change
+B. Temperature will be raised
+C. Temperature will be lowered
+D. Temperature will increase 2 °F for every psi
+Answer: B
+
+In turbine installation, the air is removed from the condenser by ________.
+A. Air pump
+B. Air injector
+C. Air ejector
+D. Air jet
+Answer: C
+
+A vena contracta in a fluid jet issuing through a hole in a plate is located approximately:
+A. 10 diameters downstream of the hole
+B. At jet’s minimum diameter
+C. At the orifice minimum diameter
+D. At the orifice maximum diameter
+Answer: B
+
+The fact that a fluid’s velocity increases as the cross sectional area of the pipe through which it flow decreases is due to:
+A. Bernoulli’s equation
+B. The continuity equation
+C. The momentum equation
+D. The perfect gas law
+Answer: B
+
+In the absence of any heat and work interactions and any changes in potential energy, the stagnation enthalpy of a fluid remains constant during _______.
+A. Unsteady flow
+B. Steady flow
+C. Turbulent flow
+D. Variable flow
+Answer: B
+
+When a falling object reaches a speed at which the drag force equals its weight, it has achieved:
+A. Mach one
+B. A laminar boundary layer
+C. A turbulent boundary layer
+D. Terminal velocity
+Answer: C
+
+The coefficient of contraction is the ratio of the:
+A. Area of vena contracta to the orifice area
+B. Actual discharge to the theoretical discharge
+C. Actual velocity to the theoretical velocity
+D. Effective head to the actual head
+Answer: A
+
+The coefficient of discharge is the ratio of the:
+A. Area of vena contracta to the orifice area
+B. Actual discharge to the theoretical discharge
+C. Actual velocity to the theoretical velocity
+D. Effective head to the actual head
+Answer: B
+
+The following are examples of indirect (secondary) measurements to measure flow rates using obstruction meters except:
+A. Variable area meters
+B. Venturi meters
+C. Volume tanks
+D. Flow nozzles
+Answer: C
+
+The following are examples of indirect (secondary) measurements to measure flow rates using obstruction meters except:
+A. Pitot static meters
+B. Static pressure probes
+C. Weight and mass scales
+D. Direction-sensing probes
+Answer: C
+
+Venturi meters, pitot static gauges, orifice meters, flow nozzles, and differential manometers all depend upon the relationship between:
+A. Flow velocity and friction
+B. Flow velocity and pressure
+C. Friction and pressure
+D. Pressure and mass flow
+Answer: B
+
+Expansion factors take into account the:
+A. Area of the vena contracta
+B. Small effect of friction and turbulence of the orifice
+C. Changes in diameters of a converging pipe
+D. Effects of compressibility
+Answer: D
+
+The matching of scale model and full- scale results for a fluid dynamic phenomena with a free surface requires equality of:
+A. Reynolds number
+B. Weber number
+C. Froude number
+D. Cauchy number
+Answer: C
+
+The fact that there is no resistance to bodies moving through an ideal (non- viscous) fluids is known as:
+A. Reynolds’ analogy
+B. D’Alembert’s paradox
+C. Newton’s second law
+D. The second law of thermodynamics
+Answer: B
+
+One could expect the possibility of Reynolds’ number similarity in all of the following cases except:
+A. Submarines
+B. Torpedoes
+C. Seaplane hulls
+D. Supersonic aircraft
+Answer: C
+
+The coefficient of velocity is the ratio of the:
+A. Area of vena contracta to the orifice area
+B. Actual discharge to the theoretical discharge
+C. Actual discharge velocity to the theoretical discharge velocity
+D. Effective head to the actual head
+Answer: C
+
+Which of the following is a type of water turbine?
+A. Parson
+B. Hero
+C. Pelton
+D. Banki
+Answer: C
+
+In the deep well installation or operation, the difference between static water level and operating water level is known as _______.
+A. Suction lift
+B. Drawdown
+C. Priming level
+D. Clogging
+Answer: B
+
+Which of the following is a characteristic of an impulse turbine?
+A. Steam striking blades on angle
+B. No steam reaction to velocity
+C. Steam striking blades at zero angle
+D. Steam reversing direction
+Answer: C
+
+In a hydro-electric plant using a Francis turbine with medium head, the speed can be regulated using the
+A. Deflector gate
+B. Nozzle
+C. Wicket gate
+D. Weir
+Answer: C
+
+In the deep well installation or operation, the difference between static water level and operating water level is called ________.
+A. Suction lift
+B. Drawdown
+C. Priming level
+D. Clogging
+Answer: B
+
+Which of the following is a characteristic of an impulse turbine?
+A. Steam striking blades of angle
+B. No steam reaction to velocity
+C. Steam striking blades to zero angle
+D. Steam reversing direction
+Answer: C
+
+Hydraulic jump is used to:
+A. Increase the flow rate
+B. Reduce the flow rate
+C. Reduce the velocity of flow
+D. Reduce the energy of flow
+Answer: D
+
+The locus of elevations to which water will rise in the piezometer tube is termed:
+A. Energy gradient
+B. Friction head
+C. Hydraulic gradient
+D. Critical path
+Answer: C
+
+In turbine installation, the air is removed from the condenser by:
+A. Air pump
+B. Air injector
+C. Air ejector
+D. Air jet
+Answer: C
+
+One could expect the possibility of Froude number similarity in all of the following cases except:
+A. Surface ships
+B. Surface wave motion
+C. Flow over weirs
+D. Closed-pipe turbulent pipe flow
+Answer: D
+
+In the absence of any heat and work interactions and any changes in potential energy, the stagnation enthalpy of a fluid remains constant during:
+A. Unsteady flow
+B. Steady flow
+C. Turbulent flow
+D. Variable flow
+Answer: B
+
+Which of the following is not a similarity between a submerged culvert and a siphon?
+A. They both operate full
+B. Torricelli’s equation holds
+C. Both can experience entrance and exit losses
+D. In both, the water flows downhill
+Answer: B
+
+In parallel pipe system originating and terminating in common junctions:
+A. Mass flows through each branch are equal
+B. Pressure drops through each branch are equal
+C. Lengths of each branch are equal
+D. Flow areas of each branch are equal
+Answer: B
+
+Flows through multi-loop systems may be computed by:
+A. Any closed-form solution of simultaneous equations
+B. The Hardy-Cross method
+C. Trial and error
+D. All of the above
+Answer: D
+
+Flow measuring devices include all of the following except
+A. Venturi meters
+B. Static pressure probes
+C. Turbine and propeller meters
+D. Magnetic dynamometers
+Answer: D
+
+Flow measuring devices include all of the following except:
+A. Orifice plat meters
+B. Hot-wire anemometers
+C. Magnetic flow meters
+D. Mercury barometers
+Answer: D
+
+Flow measuring devices include all of the following except:
+A. Flow nozzles
+B. Venturi area meters
+C. Pitot tubes
+D. Precision tachometers
+Answer: D
+
+In series pipe systems, all of the following parameters vary from section to section except:
+A. Pressure drop
+B. Friction loss
+C. Head loss
+D. Mass flow
+Answer: D
+
+The coefficient of velocity, C_v accounts for the:
+A. Effects on the flow area of contraction, friction and turbulence
+B. Small effect of friction and turbulence of the orifice
+C. Changes in diameter of a converging pipe
+D. Effects of compressibility
+Answer: B
+
+Expansion factors take into account the:
+A. Area of the vena contracta
+B. Small effect of friction and turbulence of the orifice
+C. Changes in diameter of a converging pipe
+D. Effects of compressibility
+Answer: D
+
+The matching of scale model and full- scale results for a fluid dynamic phenomena involving compressible fluids requires equality of:
+A. Reynolds number
+B. Froude number
+C. Cauchy number
+D. Mach number
+Answer: D
+
+The matching of scale model and full- scale prototype results for a fluid dynamic phenomena involving surface tension requires equality of:
+A. Reynolds number
+B. Weber number
+C. Froude number
+D. Cauchy number
+Answer: B
+
+The matching of scale model and full-scale prototype results for a fluid dynamic phenomena involving a fully submerged body requires equality of:
+A. Reynolds number
+B. Weber number
+C. Froude number
+D. Mach number
+Answer: A
+
+All of the following are forms of drag on a body moving through a fluid except:
+A. Skin friction
+B. Wake drag
+C. Profile drag
+D. D’Alembert’s paradox drag
+Answer: D
+
+The fact that there is no resistance to bodies moving through an ideal (non-viscous) fluids is known as:
+A. Reynolds’ analogy
+B. D’Alembert’s paradox
+C. Newton’s second law
+D. The second law of thermodynamics
+Answer: B
+
+One could expect the possibility of Reynolds number similarity in all of the following cases except:
+A. Submarines
+B. Torpedoes
+C. Seaplane hulls
+D. Supersonic aircraft
+Answer: C
+
+The function of a turbine is to:
+A. Transfer heat from one liquid to another
+B. Increase the total energy content of the flow
+C. Extract energy from the flow
+D. Exchange heat to increase energy to the flow
+Answer: C
+
+Pitot tube is use to measure the:
+A. Velocity of mass
+B. Velocity of pipe
+C. Flow
+D. Velocity of flow
+Answer: D
+
+Orifice coefficients are used to determine
+A. Energy losses
+B. Energy gains
+C. Mass losses
+D. Energy losses and mass gains
+Answer: A
+
+The volume flow passes through a venturimeter is:
+A. Increasing
+B. Decreasing
+C. Constant
+D. Varying
+Answer: C
+
+Which of the following devices used to measure the discharge of outflow from a vessel?
+A. Pitot tube
+B. Orifice
+C. Pump head
+D. Obstruction meter
+Answer: B
+
+The maximum continuous power available from a hydro-electric power plant under the most adverse hydraulic conditions is called _______.
+A. Base power
+B. Firm power
+C. Primary power
+D. Secondary power
+Answer: B
+
+What is the reverse capacity of a plant?
+A. Maximum demand – average demand
+B. Plant capacity – maximum demand
+C. Plant capacity – average demand
+D. Plant capacity x (1 – load factor)
+Answer: B
+
+The ratio of maximum load to the rated plant capacity is called ________.
+A. Load factor
+B. Utilization factor
+C. Maximum load factor
+D. Capacity
+Answer: B
+
+The ratio between the actual power and the apparent power in any circuit is known as the ______ of that circuit.
+A. Measured power
+B. Capacity
+C. Power factor
+D. KVAR
+Answer: C
+
+Peak load for a period of time divided by installed capacity is _______.
+A. Capacity factor
+B. Demand factor
+C. Utilization factor
+D. Load factor
+Answer: C
+
+The ratio between the actual power and the apparent power in any circuit is known as the _______ of that circuit.
+A. Measured power
+B. Capacity
+C. Power factor
+D. KVAR
+Answer: C
+
+Heavy water is:
+A. B2O
+B. H2O
+C. W2O
+D. D2O
+Answer: D
+
+The fact that the amount of slightly soluble gas absorbed in a liquid is proportional to the partial pressure of the gas is known as:
+A. Dalton’s law
+B. Henry’s law
+C. Raoult’s law
+D. Boyle’s law
+Answer: B
+
+The velocity of radiations (v) and the frequency of radiations (f) are related to the wavelength of radiations by:
+A. v/f
+B. f/v
+C. vf
+D. v^2f
+Answer: A
+
+Aeration of water is done for all of the following purposes except for:
+A. Removal of CO2
+B. Removal of bad taste
+C. Increasing the amount of oxygen in water
+D. Removal of temporary hardness
+Answer: D
+
+Per capita consumption of water is generally taken as:
+A. 50 – 100 liters
+B. 150 – 300 liters
+C. 400 – 500 liters
+D. 750 – 1000 liters
+Answer: B
+
+The part per million is identical to:
+A. Grains per gallon
+B. Pounds per cubic foot
+C. Milligrams per kg
+D. Tons per acre foot
+Answer: C
+
+The effective size of a target atom that interacts with a moving particle is called its _______.
+A. Length
+B. Width
+C. Cross section
+D. Pseudo-area
+Answer: C
+
+Is the subjective method in which the smoke density is visually compared to five standardized white- black grids.
+A. Ringelmann scale
+B. Dalton scale
+C. Smoke spot scale
+D. Dew point scale
+Answer: A
+
+A type of polymer used for detergents, milk bottles, oil containers and toys.
+A. Polyvinyl chloride (PVC)
+B. Polystyrene (PS)
+C. High density polyethylene (HDPE)
+D. Polypropylene (PP)
+Answer: C
+
+A type of polymer used for grocery bags a food wraps.
+A. Polyvinyl chloride (PVC)
+B. Polystyrene (PS)
+C. Low density polyethylene (LDPE)
+D. Polypropylene (PP)
+Answer: C
+
+Consists of ground – level ozone and peroxyacyl nitrates (PAN)
+A. Smog
+B. Spills
+C. Sulfur oxide
+D. Smoke
+Answer: A
+
+The burning of low – sulfur fuel is known as:
+A. Fuel switching
+B. Fuel adding
+C. Fuel binding
+D. Fuel swapping
+Answer: A
+
+The drop in a solvent’s vapor pressure and the increase in mole fraction as solute is added is described by:
+A. Dalton’s law
+B. Henry’s law
+C. Raoult’s law
+D. Boyle’s law
+Answer: C
+
+All of the following statements are characteristics of bases except ________.
+A. They conduct electricity in aqueous solutions
+B. They turn red litmus paper blue
+C. They have a pH between 0 to 7
+D. They neutralize acids forming salts and water
+Answer: C
+
+All of the following statements about conjugate acids and bases are true except _______.
+A. A conjugate acid results when a base accept a proton
+B. A conjugate base results when a base accepts a proton
+C. Strong acids tend to give weak conjugate bases
+D. The Bronsted – Lowry theory defines bases as proton acceptors
+Answer: B
+
+Equipment leaks from plant equipment are known as ________.
+A. Fugitive leaks
+B. Fugitive dusts
+C. Fugitive exhausts
+D. Fugitive emissions
+Answer: D
+
+Is a soluble compound that reduces a liquid’s surface tension or reduces the interfacial tension between a liquid and a solid.
+A. Surface – acting agent or surfactant
+B. Humectant
+C. Oxygenated fuel
+D. CFC
+Answer: A
+
+Generally refers to sulfur trioxide SO_3 in the flue gas.
+A. Acid rain
+B. Acid gas
+C. Hydrochloric acids
+D. Stack gas
+Answer: B
+
+“Particulate matter” is defined as all particles that are emitted by a combustion source. What is another term for particulate matter?
+A. Dust
+B. Aerosol
+C. Biosolids
+D. Sediments
+Answer: B
+
+A type of polymer used for Styrofoam cups and “clam shell” food containers.
+A. Polyvinyl chloride (PVC)
+B. Polystyrene (PS)
+C. Low density polyethylene (LDPE)
+D. Polypropylene (PP)
+Answer: B
+
+A type of polymer used for labels, bottles and housewares.
+A. Polyvinyl chloride (PVC)
+B. Polystyrene (PS)
+C. Low density polyethylene (LDPE)
+D. Polypropylene (PP)
+Answer: D
+
+A type of polymer used for clear bottles.
+A. Polyvinyl chloride (PVC)
+B. Polystyrene (PS)
+C. Low density polyethylene (LDPE)
+D. Polypropylene (PP)
+Answer: A
+
+Refers to the high – temperature removal of tarry substances from the interior of the carbon granule, leaving a highly porous structure.
+A. Absorbent
+B. Activated
+C. Breakthrough
+D. Adsorbent
+Answer: B
+
+A substance with high surface area per unit weight, and intricate pore structure, and a hydrophobic surface.
+A. Adsorbent substance
+B. Absorbent substance
+C. Homogenous substance
+D. Activated substance
+Answer: A
+
+Is a high – temperature process that turns incinerator ash into a safe glass-like material.
+A. Advance oxidation
+B. Biofiltration
+C. Vitrification
+D. Bioventing
+Answer: C
+
+All of the following occur during oxidation of a substance except __________.
+A. Oxidation state increases
+B. Loss of electrons
+C. The substance becomes less negative
+D. Oxidation of the oxidizing agent
+Answer: D
+
+All of the following occur during reduction of a substance except __________.
+A. An increase in negative charge
+B. Loss of electrons
+C. An oxidation state decrease
+D. Reduction of the oxidizing agent
+Answer: B
+
+The equilibrium constant for weak solution is known as
+A. Ionization constant
+B. Arrhenius exponent
+C. Solubility product
+D. La Chatelier’s constant
+Answer: A
+
+What do you call the mixture if the solute particles of solid suspended in a liquid are larger than the molecules?
+A. Solution
+B. Suspension
+C. Hydration
+D. Saturated solution
+Answer: B
+
+The equilibrium constant for weak solution is known as:
+A. Ionization constant
+B. Arrhenius exponent
+C. Solubility product
+D. La Chatelier’s constant
+Answer: A
+
+When excess solute in a solution settles to the bottom of the container, the process is called:
+A. Solvation
+B. Deemulsification
+C. Precipitation
+D. Equation
+Answer: C
+
+The desirable temperature inside an air conditioned auditorium is:
+A. 0 °C
+B. 5 °C
+C. 10 °C
+D. 20 °C
+Answer: D
+
+The absorption of water by a desiccant often demonstrates:
+A. Heat of fusion
+B. Heat of vaporization
+C. Endothermic heat of solution
+D. Exothermic heat of solution
+Answer: D
+
+Which of the following contribute to the deterioration of the Earth’s ozone layer?
+A. Carbon monoxide
+B. Chlorofluorocarbons
+C. Carbon dioxide
+D. Refrigerants
+Answer: B
+
+Le Chatelier’s principle predicts the direction of a state of chemical equilibrium based on all of the following factors except:
+A. Temperature
+B. Specific volume
+C. Pressure
+D. Concentration
+Answer: B
+
+The amount of energy necessary to cause a reaction to occur is called the _______.
+A. Heat of formation
+B. Heat of solution
+C. Activation of energy
+D. Heat of fusion
+Answer: C
+
+The equilibrium constant for weak solutions is known as ________.
+A. The ionization constant
+B. The Arrhenius exponent
+C. The solubility product
+D. Le Chatelier’s principle
+Answer: A
+
+The speed at which a reaction proceeds to equilibrium is the purview of _________.
+A. Reaction kinetics
+B. Le Chatelier’s principle
+C. Neutralization
+D. Ionization
+Answer: A
+
+The total cross section of a target atom is made up of ___________.
+A. The absorption cross section
+B. The scattering cross section
+C. The absorption and scattering cross sections
+D. The reflection and absorption cross sections
+Answer: C
+
+The reduction of nuclear radiation intensity (called attenuation) is accomplished by:
+A. Matter
+B. Antimatter
+C. Shielding
+D. Neutrons
+Answer: C
+
+The ability of substance to absorb neutrons depends upon its _________.
+A. Absorption cross section
+B. Scattering cross section
+C. Total cross section
+D. Atomic number
+Answer: A
+
+If the energy of the incident photon is less than the work function:
+A. An electron will be ejected
+B. More than one electron will be ejected
+C. An electron will not be ejected
+D. Less than one electron will be ejected
+Answer: C
+
+For supersonic flow, the pressure of fluid must decrease as the fluid flow area of the duct.
+A. Increases
+B. Decreases
+C. Remain the same
+D. None of these
+Answer: A
+
+Density in term of viscosity is:
+A. Kinematic viscosity / dynamic viscosity
+B. Dynamic viscosity / kinematic viscosity
+C. Kinematic viscosity x dynamic viscosity
+D. None of the above
+Answer: B
+
+Liquids and gases take the following characteristic(s) of their contents.
+A. Volume
+B. Shape
+C. Shape and volume
+D. Neither shape nor volume
+Answer: B
+
+Alcohol finds use in manometers as:
+A. It provides a suitable meniscus for the inclined tube
+B. Its density being less can provide longer length for a pressure difference, thus more accuracy can be obtained
+C. A and B above are correct
+D. Cheap and easily available
+Answer: C
+
+Which of the following statements about a Newtonian fluid is most accurate?
+A. Shear stress is proportional to strain
+B. Viscosity is zero
+C. Shear stress is multi – valued
+D. Shear stress is proportional to rate of strain
+Answer: D
+
+The normal stress is the same in all directions at a point in fluid:
+A. Independent of the motion of one fluid layer relative to an adjacent layer
+B. When there is no motion of one fluid layer relative to an adjacent layer
+C. Only if the fluid is frictionless
+D. Only if fluid is frictionless and incompressible
+Answer: B
+
+Which of the following is not a characteristic of fluid pressure?
+A. It is the same in all directions at a point in the fluid
+B. Its acts normal to a surface
+C. It is a shear stress
+D. It is linear with depth
+Answer: C
+
+The length of mercury column at a place at an altitude will change with respect to that at ground in:
+A. A linear relation
+B. A parabolic relation
+C. Will remain constant
+D. First slowly and then steeply
+Answer: D
+
+All of the following dimensionless parameters are applicable to fluid flow problems except the _______.
+A. Reynolds number
+B. Froude number
+C. Mach number
+D. Biot number
+Answer: D
+
+Mass density of liquid (ρ) is given by which of the following?
+A. ρ = Mass / volume
+B. ρ = metric slug / m³
+C. ρ = kg-sec² / m⁴
+D. all of the above
+Answer: D
+
+the speed of sound in all fluid is most closely related to all of the following properties except________.
+A. Compressibility
+B. Density
+C. Bulk module
+D. Thermal conductivity
+Answer: D
+
+Under which condition, the specific weight of water is 1000 kg/m3?
+A. At normal pressure of 760 mm
+B. At 4 °C temperature
+C. At mean sea level
+D. All of the above
+Answer: D
+
+All of the following can be characteristics of fluids except_________.
+A. kinematic viscosity
+B. surface tension
+C. bulk modulus
+D. hysteresis
+Answer: D
+
+Which of the following can be used to measure the flow of water in a pipe of diameter 3000 mm?
+A. Venturimeter
+B. Rotameter
+C. Nozzle
+D. Pitot tube
+Answer: D
+
+The pressure at a given depth due to several immiscible liquids is:
+A. The average of the individual pressures
+B. The sum of the individual pressures
+C. Independent of the individual pressures
+D. Unknown
+Answer: B
+
+The equation of continuity of flow is applicable if:
+A. The flow is one dimensional
+B. The flow is steady
+C. The velocity is uniform over the cross – section
+D. All of the above conditions are together
+Answer: D
+
+Uniform flow takes place when:
+A. Conditions remain unchanged with time at any point
+B. Rate of change of velocity of fluid is zero
+C. At every point the velocity vector is identical in magnitude and direction for any given instant
+D. The change in transverse direction is zero
+Answer: C
+
+The continuity equation of an ideal fluid flow.
+A. States that the net rate in – flow into any small volume must be zero
+B. Applies to irrotational flow only
+C. States that the energy remains constant along streamline
+D. States that energy is constant everywhere in the fluid
+Answer: D
+
+A Pitot tube can be used to measure fluid velocity as described by the Bernoulli’s equation and the relationship between:
+A. Kinetic energy and static pressure
+B. Fluid pressure and height of the fluid
+C. Fluid pressure and impact energy
+D. Pressure and momentum
+Answer: A
+
+In order to avoid vaporization in the pipe line, the pipe line over the ridge is laid in such a way that it is not more than:
+A. 2.4m above the hydraulic gradient
+B. 6.4m above the hydraulic gradient
+C. 10m above the hydraulic gradient
+D. 5m above the hydraulic gradient
+Answer: A
+
+The stream function is a useful parameter in describing_____________.
+A. The conservation of mass
+B. The conservation of momentum
+C. The conservation of energy
+D. The equation of state
+Answer: A
+
+For high speed flows, the potential energy of fluids are:
+A. Positive
+B. Negative
+C. Negligible
+D. None of these
+Answer: C
+
+McLeod gauge used for low pressure measurement operates on the principle of _________.
+A. Gas law
+B. Boyle’s law
+C. Charles law
+D. Pascal’s law
+Answer: B
+
+Kaplan turbine is
+A. A high head mixed flow turbine
+B. An impulse turbine, inward flow
+C. A reaction turbine, outward flow
+D. Low head axial flow turbine
+Answer: D
+
+The most common method for calculating frictional energy loss for laminar flowing fluids in noncircular pipe is:
+A. The Darcy equation
+B. The Hagen–Poiseuille equation
+C. The Hazen - Williams equation
+D. The Swamee–Jain equation
+Answer: A
+
+The parameter f in the expression for head-loss is
+A. The fraction of flow that is totally turbulent
+B. The Darcy friction factor
+C. The height of roughness scale in turbulent flow
+D. The static coefficient of friction
+Answer: B
+
+Friction factor for both laminar and turbulent flows can be found plotted in a
+A. Steam table
+B. Psychometric chart
+C. Moody diagram
+D. Mollier diagram
+Answer: C
+
+Which of the following is relative velocity?
+A. The difference between two velocities
+B. Average velocity
+C. Sum of two velocities
+D. Vector difference of two velocities
+Answer: D
+
+Which of the following is the highest head?
+A. 33 inch Hg
+B. 31.0 ft. water
+C. 1.013 kg/cm²
+D. 75.0 cm of Hg
+Answer: A
+
+For stable equilibrium of floating body its metacenter should lie:
+A. Below the center of gravity
+B. Below the center of buoyancy
+C. above the center of buoyancy
+D. above the center of gravity
+Answer: D
+
+Center of pressure on an inclined plane lies ___.
+A. At the centroid
+B. Above the centroid
+C. Below the centroid
+D. At metacenter
+Answer: C
+
+The line of action of the buoyant forces always acts through the centroid of the ______.
+A. Submerged body
+B. Volume of the floating body
+C. Volume of the fluid vertically above the body
+D. Displaced volume of the fluid
+Answer: D
+
+The hydraulic grade line of a pipe denotes which of the following?
+A. Total energy
+B. Pressure energy
+C. Potential energy
+D. The sum of pressure energy and potential energy
+Answer: D
+
+The energy grade line of a pipeline denotes which of the following?
+A. Total energy
+B. Pressure energy
+C. Potential energy
+D. The sum of pressure energy and potential energy
+Answer: A
+
+The presence of friction in the energy grade line will always cause the line to slope
+A. Down in the direction of the flow
+B. Upward in the direction of the flow
+C. Level (no slope)
+D. There is no effect of friction on the energy grade line
+Answer: A
+
+The Pitot tube is a device used for measurement of
+A. Pressure
+B. Flow
+C. Velocity
+D. Discharge
+Answer: C
+
+Hydrometer is used to find out
+A. Specific gravity liquids
+B. Specific gravity solids
+C. Specific gravity gases
+D. Relative humidity
+Answer: A
+
+The fluid forces taken into consideration in the Navier Stokes equation are:
+A. Gravity, pressure and viscous
+B. Gravity, pressure and turbulent
+C. Pressure, viscous and turbulent
+D. Gravity, viscous and turbulent
+Answer: A
+
+Permissible velocity of water flowing through concrete tunnel, is generally
+A. 4-5 m/s
+B. 10-12 m/s
+C. 13-16 m/s
+D. 20 m/s
+Answer: A
+
+Orifice refers to an opening
+A. With closed perimeter and of regular form through which water flows
+B. With prolonged sides having length of 2 to 3 diameters of opening in thick wall
+C. With partially full flow
+D. In hydraulic structure with regulation provision
+Answer: D
+
+The value of coefficient of discharge in comparison to coefficient of velocity is found to be_______.
+A. More
+B. Less
+C. Same
+D. More/less depending on flow
+Answer: B
+
+Weir refers to an opening
+A. Having closed perimeter and of regular form through which water flows
+B. Having prolonged sides with length of 2 to 3 diameters of opening in thick wall
+C. Having partially full flow
+D. In hydraulic structures with regulation provision
+Answer: C
+
+Which of the following parameters determine the friction factor of turbulent flow in a rough pipe?
+A. Froude number and relative roughness
+B. Froude number and Mach number
+C. Reynolds number and relative roughness
+D. Mach number and relative roughness
+Answer: C
+
+Power transmitted through a pipe is maximum when the loss of head due to friction is:
+A. One-half of the total head supplied
+B. One-third of the total head supplied
+C. One-fourth of the total head supplied
+D. Equal to the total head supplied
+Answer: B
+
+In a nozzle if back pressure is same as inlet pressure; then_______________.
+A. No flow takes place
+B. Maximum flow takes place
+C. Flow becomes subsonic in diverging section
+D. Flow becomes supersonic in converging as well as supersonic section
+Answer: A
+
+The flow on two sides of a normal shock wave is called___________.
+A. Sonic
+B. Sub-sonic
+C. Supersonic
+D. Supersonic on one side and sub- sonic on the other side
+Answer: D
+
+Which of the following is the basic of Bernoulli’s law for fluid flow?
+A. Continuity equation
+B. Principle of conservation of energy
+C. Fourier’s law
+D. Principle of conservation of mass
+Answer: B
+
+Which of the following is NOT a characteristic of fluid pressure?
+A. It is a shear stress
+B. It is the same in all directions at a point in the fluid
+C. It acts normal to a surface
+D. It is linear with depth
+Answer: A
+
+Refers to the compressibility of a fluid, the fractional change in fluid volume per unit change in fluid.
+A. Viscosity
+B. Bulk modulus
+C. Density
+D. Pressure
+Answer: D
+
+A Pitot tube can be used to measure fluid velocity as described by the Bernoulli’s equation and the relationship between:
+A. Kinetic energy and static pressure
+B. Fluid pressure and static pressure
+C. Fluid pressure and impact energy
+D. Pressure and momentum
+Answer: A
+
+The ratio of the area to the wetted perimeter is known as __________.
+A. Flow factor
+B. Hydraulic radius
+C. Kutter’s C
+D. Value of k in Darcy - Weisbach formula
+Answer: B
+
+What is the coefficient of contraction?
+A. The ratio of the area of vena contracta to the area of the orifice
+B. The ration of actual discharge to the theoretical discharge
+C. The ratio of the actual velocity to the theoretical velocity
+D. The ratio of the effective head to the actual head
+Answer: A
+
+Where is vena contracta most likely located?
+A. At the orifice
+B. At a distance approximately ½ the diameter of the orifice
+C. At a distance approximately equal to the diameter of the orifice
+D. At a distance approximately twice the diameter of the orifice
+Answer: B
+
+A substance that is able to flow and yields to any force tending to change its shape without changing its volume such as water and air.
+A. Fluid
+B. Flux
+C. Gas oil
+D. Water gas
+Answer: A
+
+The velocity of a fluid particle at the center of the pipe section is______.
+A. Maximum
+B. Minimum
+C. Average
+D. Logarithmic average
+Answer: B
+
+For supersonic flow, the pressure of fluid must increase as the fluid flow area of the duct:
+A. Increases
+B. Decreases
+C. Constant
+D. None of these
+Answer: B
+
+Which is incorrect statement regarding apparent shear forces.
+A. It can never be found in frictionless fluid regardless of its motion
+B. It can never be found when the fluid is at rest
+C. It depends upon cohesive forces
+D. It may occur owing to cohesion when the fluid is at rest
+Answer: D
+
+The time required for half a quantity of radioactive particles to decay (disintegrate) is called its_____________.
+A. Average life
+B. Median life
+C. Time constant
+D. Half time
+Answer: D
+
+SI unit of viscosity is:
+A. 10 times poise
+B. 9.81 times poise
+C. 1/9.81 time poise
+D. 1/10 times poise
+Answer: A
+
+For computation convenience, fluids are usually classed as:
+A. Rotational or irrotational
+B. Real or ideal
+C. Laminar or turbulent
+D. Newtonian or non-newtonian
+Answer: B
+
+Which of the following is not a dimensionless parameter?
+A. Kinematic viscosity
+B. Weber number
+C. Darcy Weisbach friction factor
+D. Froude number
+Answer: A
+
+Which of the following is not a characteristic of real fluids?
+A. Finite viscosity
+B. Non-uniform velocity distributions
+C. Compressibility
+D. Experience of eddy current and turbulence
+Answer: D
+
+Which of the following is not the mass density of water?
+A. 62.5 lbm/ft3
+B. 100 kg/m3
+C. 1 g/cm3
+D. 1 kg/L
+Answer: B
+
+The upper critical Reynolds number for pipe flow is:
+A. Of no practical importance to designers
+B. Always used to design pipes for strength
+C. The number at which turbulent flow changes over to laminar flow
+D. The number at which laminar flow changes into turbulent flow
+Answer: A
+
+Which of the following statements about gauge pressure is most correct? Gauge pressure are measured relative to _________.
+A. Atmospheric pressure
+B. A vacuum
+C. Each other
+D. The surface
+Answer: A
+
+The volumetric change of the fluid caused by a resistance is called ________.
+A. Volumetric strain
+B. Volumetric index
+C. Compressibility
+D. Adhesion
+Answer: D
+
+Compressibility of a fluid relates the fractional change in fluid volume per unit change in fluid.
+A. Temperature
+B. Density
+C. Pressure
+D. Viscosity
+Answer: C
+
+Property of a fluid whereby its own molecules are attracted is known as ________.
+A. Adhesion
+B. Cohesion
+C. Surface tension
+D. Viscosity
+Answer: B
+
+The term subsonic flow refers to a flowing gas with a speed:
+A. Less than the local speed of sound
+B. Equal to the speed of sound
+C. Greater than the speed of sound
+D. Much greater than the speed of sound
+Answer: A
+
+The pressure at a point in a fluid will not be same in all the directions if the fluid is:
+A. Viscous
+B. Viscous and static
+C. Inviscid and in motion
+D. Viscous and is in motion
+Answer: D
+
+The statement that “the hydrostatic pressure a fluid exerts on an immersed object or on container walls is a function only of fluid depth” is
+A. The perfect gas law
+B. D’Alembert’s paradox
+C. The hydrostatic paradox
+D. Boyle’s law
+Answer: C
+
+Bernoulli’s equation is a/an ___________.
+A. Momentum equation
+B. Conservation of energy equation
+C. Conservation of mass equation
+D. Equation of state
+Answer: B
+
+An ideal fluid is one that:
+A. Is very viscous
+B. Obeys Newton’s law of viscosity
+C. Is assumed in problems in conduit flow
+D. Is frictionless and incompressible
+Answer: D
+
+The relationship between pressure and altitude in the atmosphere is given by the:
+A. Perfect gas law
+B. Conservation of mass
+C. Barometric height relationship
+D. First law of thermodynamics
+Answer: C
+
+The fact the buoyant force on a floating object equal to the weight of the water displaced is:
+A. Bernoulli’s law
+B. Archimedes’ principle
+C. The law of diminishing returns
+D. The conservation of mass
+Answer: B
+
+Which of the following terms does not appear in the steady flow energy equation (the extended Bernoulli’s equation)?
+A. Kinetic energy
+B. Potential energy
+C. Friction losses
+D. Hysteresis losses
+Answer: D
+
+Neglecting the forces due to inertia, gravity and frictional resistance, the design of a channel can be made by comparing
+A. Weber number
+B. Reynolds number
+C. Froude’s number
+D. Prandtl number
+Answer: C
+
+The difference between stagnation pressure and total pressure is:
+A. Due to height difference
+B. Due to fluid kinetic energy
+C. None of the terms are interchangeable
+D. Important only in supersonic flow
+Answer: C
+
+Fully turbulent flow in a pipe is characterized by all of the following except:
+A. A parabolic velocity profile
+B. A momentum exchange due to fluid masses rather than molecules
+C. A maximum velocity at the fluid center line
+D. A 1/7 velocity profile
+Answer: A
+
+The laminar friction factor of fluid flowing through a pipe is a function of all of the following except:
+A. Fluid velocity
+B. Pipe diameter
+C. Pipe roughness
+D. Reynolds number
+Answer: C
+
+The continuity equation is applicable to:
+A. Viscous and inviscid fluid
+B. Compressibility of fluids
+C. Conservation of mass
+D. Steady unsteady flow
+Answer: C
+
+The rise or fall of head ‘h’ in a capillary tube of diameter ‘d’ and liquid surface tension ‘s’ and specific weight ‘w’ is given by:
+A. 4s/wd
+B. 4ds/w
+C. 4wd/s
+D. 4ws/d
+Answer: A
+
+The study of the practical laws of fluid flow and the resistance of open pipes and channels.
+A. Fluid mechanics
+B. Hydraulics
+C. Aerodynamics
+D. Thermodynamics
+Answer: B
+
+Which of the following turbine is different from the others?
+A. Fourneyron turbine
+B. Francis turbine
+C. Kaplan turbine
+D. Pelton wheel
+Answer: D
+
+Running away speed of a Pelton wheel gives:
+A. Actual operating speed
+B. No load speed
+C. Full load speed
+D. No load speed when governor mechanism fails
+Answer: D
+
+Which of the following turbine is different from the others?
+A. Pelton wheel
+B. Banki turbine
+C. Jonval turbine
+D. Kaplan turbine
+Answer: D
+
+The characteristic length of the Reynolds’ number used to calculate the friction in noncircular full running pipes is based on the __________.
+A. Run length
+B. Pipe length
+C. Hydraulic diameter (the equivalent diameter)
+D. Wetted circumference
+Answer: C
+
+The hydraulic radius of noncircular pipe is:
+A. The square root of the flow area
+B. The ratio of the area to the wetted perimeter
+C. The radius of a pipe of equivalent area
+D. None of the above
+Answer: B
+
+The Darcy equation can be used for all liquids and flows except:
+A. Water
+B. Alcohol
+C. Gasoline
+D. Air flowing supersonically
+Answer: D
+
+The Hazen – Williams formula for head loss due to friction is based upon:
+A. Rigorous mathematical derivation
+B. Empirical data
+C. Semi-empirical analysis
+D. Serendipity
+Answer: B
+
+The extended Bernoulli equation includes all of the following terms except:
+A. Potential energy
+B. Kinetic energy
+C. Nuclear energy
+D. Friction losses
+Answer: C
+
+An equipotential line is one that:
+A. Has no velocity component tangent to it
+B. Has uniformly varying dynamic pressure
+C. Has no velocity component normal to it
+D. Exists in case of rotational flow
+Answer: A
+
+What do you call the lowest portion to storage basin from where the water is not drawn?
+A. Bottom storage
+B. Sub soil storage
+C. Spring reserve
+D. Dead storage
+Answer: D
+
+The presence of friction in the hydraulic grade line will always cause the line to slope:
+A. Down in the direction of the flow
+B. Upward in the direction of the flow
+C. Level (no slope)
+D. There is no effect of friction on the energy grade line
+Answer: A
+
+The presence of a minor loss in the energy grade line will cause the line to slope:
+A. Down in the direction of the flow
+B. Upward in the direction of the flow
+C. Vertically downward
+D. There is no effect of friction on the energy grade line
+Answer: A
+
+What do you call the pressure which the fluid exerts on an immersed object or container walls?
+A. Normal pressure
+B. Standard liquid pressure
+C. Hydrostatic pressure
+D. Gage pressure
+Answer: C
+
+Viscosity for a fluid is defined as the constant of proportionality between shear stress and what other variable?
+A. The spatial derivative of velocity
+B. The time derivative of pressure
+C. The time derivative of density
+D. The spatial derivative of density
+Answer: A
+
+What is the classification of the fluid flow if the fluid travels parallel to the adjacent layers and the paths of the individual particles do not cross each other?
+A. Steady flow
+B. Laminar flow
+C. Uniform flow
+D. Turbulent flow
+Answer: B
+
+Which of the following refers to the measure of a fluid’s sensitivity to changes in viscosity with changes in temperature?
+A. Viscosity index
+B. Coefficient of viscosity
+C. Viscosity ratio
+D. Viscosity factor
+Answer: A
+
+If the Mach number is greater than 1 but lesser than 5, what is the standard classification of the travel?
+A. Transonic travel
+B. Subsonic travel
+C. Hypersonic travel
+D. Supersonic travel
+Answer: D
+
+What is measured by a Pitot tube?
+A. Volumetric discharge
+B. Mass flow
+C. Pressure
+D. Velocity
+Answer: D
+
+What is the difference between the energy grade line and the hydraulic grade line?
+A. Potential energy
+B. Pressure energy
+C. Kinetic energy
+D. Friction losses
+Answer: C
+
+Kinetic energy is not neglected in calculations of:
+A. High speed flow
+B. Low speed flow
+C. Steady flow
+D. Equilibrium flow
+Answer: A
+
+Discharge losses through orifice are due to:
+A. Friction losses
+B. Minor losses
+C. Both friction and minor losses
+D. Pressure losses
+Answer: C
+
+Which of the following is considered as an important parameter in the study of compressible flow?
+A. Speed of fluid
+B. Speed of sound
+C. Speed of light
+D. Speed of fluid flow
+Answer: B
+
+Is the velocity at which an infinitesimal small pressure wave travels through a medium.
+A. Subsonic velocity
+B. Hypersonic velocity
+C. Sonic velocity
+D. Monatomic velocity
+Answer: C
+
+It is the ratio of the actual velocity of the fluid to the velocity of sound.
+A. Mach number
+B. Froude number
+C. Sonic number
+D. Euler number
+Answer: A
+
+The flow is called sonic when Mach number is:
+A. Equal to 1
+B. Less than 1
+C. More than 1
+D. None of these
+Answer: A
+
+The following flow is sub-sonic when Mach no. is:
+A. Greater than 1
+B. Less than 1
+C. More than 1
+D. None of these
+Answer: B
+
+The flow is supersonic when Mach no. is:
+A. Greater than zero
+B. Less than 1
+C. Greater than 1
+D. None of these
+Answer: C
+
+The flow is transonic when
+A. M = 0
+B. M < 1
+C. M > 1
+D. M = 1
+Answer: D
+
+The pressure decreases as the temperature and velocity increases while the fluid velocity and Mach number:
+A. Increases
+B. Decreases
+C. Remains constant
+D. None of these
+Answer: A
+
+The Mach number is unity or one at the location of smallest flow area, called the:
+A. Decreasing area
+B. Throat
+C. Increasing area
+D. None of these
+Answer: B
+
+What happens to the velocity of fluid after passing the throat although the flow area
+A. Increases rapidly
+B. Decreases rapidly
+C. Remains constant
+D. None of these
+Answer: A
+
+Which of the following is an example of Newtonian fluid?
+A. Motor oils
+B. Gas
+C. Paints
+D. Clay slurries
+Answer: B
+
+What is the critical pressure of water?
+A. 150 kg/cm3
+B. Less than 200 kg/cm2
+C. More than 200 kg/cm2
+D. 100 kg/cm2
+Answer: C
+
+The volumetric change of the fluid caused by a resistance is called:
+A. Volumetric change
+B. Volumetric index
+C. Compressibility
+D. Adhesion
+Answer: D
+
+The energy of a fluid flowing at any section in a pipeline is a function of:
+A. Velocity of flow only
+B. Pressure only
+C. Height above a chosen datum, density, internal energy, pressure and velocity of flow
+D. Pressure, height above a chosen datum, velocity of flow, density of fluid
+Answer: C
+
+If the fluid travels parallel to the adjacent layers and the paths of individual particles do not cross, the fluid is said to be:
+A. Turbulent
+B. Critical
+C. Dynamic
+D. Laminar
+Answer: D
+
+Center of pressure on an inclined plane lies:
+A. At the centroid
+B. Above the centroid
+C. Below the centroid
+D. At the metacenter
+Answer: C
+
+At any instant, if the number of particles passing every cross-section of the stream is the same, the flow is said to be:
+A. Steady flow
+B. Uniform flow
+C. Continuous flow
+D. Laminar flow
+Answer: A
+
+The ratio of cross-sectional area of flow to the wetted perimeter is:
+A. Hydraulic lead
+B. Hydraulic section
+C. Hydraulic mean depth
+D. Hydraulic gradient
+Answer: C
+
+If A is the cross-sectional area of the flow and Pw is the wetted perimeter of a pipe, then what is the hydraulic depth,Hd?
+A. Pw – A
+B. Pw / A
+C. A / Pw
+D. Pw x A
+Answer: C
+
+If Q is the volume in gallon; D is height or elevation in ft. and m is weight in lbs. per gallon, what is the desired energy to lift the water from lower to higher elevation?
+A. E = mD/Q
+B. E = mDQ
+C. E = mQ/D
+D. E = QD/m
+Answer: B
+
+The flow of the convergent section of a nozzle is always subsonic. If the flow is subsonic then the Mach number is:
+A. Greater than unity
+B. Less than unity
+C. Near unity
+D. Unity
+Answer: B
+
+In case of axial flow compressors for minimum fluid friction and blade tip clearance losses, the blades of an axial flow compressor are designed for____.
+A. 80% reaction
+B. 85% reaction
+C. 60% reaction
+D. 53% reaction
+Answer: D
+
+Centrifugal blowers can supply.
+A. Large volumes of air at low pressures
+B. Small volumes of air at high pressures
+C. Large volumes of air at high pressures
+D. Small volumes of air at low pressures
+Answer: A
+
+Which of the following is a safety device on a compressor?
+A. Relief valve
+B. Strainer
+C. Over speed shut down
+D. Over pressure shut down
+Answer: A
+
+For a six compression of air set, the minimum work conditions are:
+A. Pressure rise per stage will be equal
+B. Work done in successive stages will be in geometrical progression
+C. Cylinder volumes will be same
+D. Temperature rise in the cylinders will be the same
+Answer: D
+
+In air compressor performance curve a surge line represents what?
+A. Limit of compressor efficiency
+B. Limit of compressor discharge
+C. Limit of stable operation
+D. Lower critical speed of shaft
+Answer: C
+
+Which of the following is a displacement compressor?
+A. Reciprocating air compressor
+B. Vane blower
+C. Centrifugal blower
+D. Axial flow compressors
+Answer: B
+
+Stalling of the blades of axial flow compressor is:
+A. An unsteady periodic and reversal of flow
+B. The fixed mass flow rate irrespective of pressure ratio
+C. The reduction in lift force at higher angle of incidence
+D. All of the above
+Answer: C
+
+Surging is ____.
+A. An unsteady, periodic and reversal of flow in the compressor
+B. The fixed mass flow rate irrespective of pressure ratio
+C. The reduction in lift force at higher angle of incidence
+D. None of the above
+Answer: A
+
+In an axial flow compressor, the pressure rise takes place in:
+A. Fixed blades only
+B. Moving blades only
+C. Both fixed and moving blades
+D. None of the above
+Answer: C
+
+An axial flow compressor is suitable for:
+A. High volume flow rates with small pressure rise
+B. Low volume flow rates with low pressure rise
+C. High volume flow rates with high pressure rise
+D. Low volume flow rates with high pressure rise
+Answer: A
+
+Which of the following is a positive displacement rotary compressor?
+A. Roots blower
+B. Centrifugal compressor
+C. Axial flow compressor
+D. None of the above
+Answer: A
+
+Choking is
+A. Change of mass flow rate in proportion to pressure ratio
+B. Change of mass flow rate in inverse proportion to pressure ratio
+C. Fixed mass flow rate irrespective of pressure
+D. All of the above
+Answer: C
+
+Crankshaft of a reciprocating compressor is basically made of what?
+A. Semi-steel
+B. Aluminum alloy
+C. Steel forging
+D. Cast iron
+Answer: D
+
+Most plant air systems to operate the tools and machines which require 70 to 90 psig are maintained at_______.
+A. 90 to 110 psig
+B. 110 to 130 psig
+C. 130 to 150 psig
+D. 70 to 90 psig
+Answer: B
+
+The power of portable air compressors used for construction, mining, road building, and painting ranges from:
+A. 1 hp to 500 hp
+B. ½ hp to 500 hp
+C. 1 hp to 1000 hp
+D. ½ hp to 1000 hp
+Answer: B
+
+Most permanent installations use piston compressors available as stock items of what pressure?
+A. 150 psi
+B. 200 psi
+C. 250 psi
+D. 300 psi
+Answer: A
+
+When the piston is top center of the cylinder in a double-acting reciprocating compressor:
+A. All suction valves are open and all discharge valves are closed
+B. All suction valves are closed and all discharge valves are closed
+C. All suction valves are closed and all discharge valves are open
+D. All suction valves are open and all discharge valves are open
+Answer: B
+
+Pump used to increase air pressure above normal, air is then used as a motive power.
+A. Air cooled engine
+B. Air compressor
+C. Air condenser
+D. Air injection
+Answer: B
+
+A device used for raising fluids from a lower to higher level.
+A. Compressor
+B. Pump
+C. Turbine
+D. Blowers
+Answer: B
+
+When a pump is opening at a vacuum of 4 in Hg, which of the following is not correct?
+A. The pressure is 25.92 in Hg
+B. The pressure is 10.721 psia
+C. The pressure is 158.4 torr
+D. The pressure is 0.8663 atm
+Answer: C
+
+The amount of energy actually entering the fluid from a pump is the
+A. Brake horsepower
+B. Hydraulic horsepower
+C. Theoretical horsepower
+D. Hydraulic, theoretical, or water horsepower
+Answer: D
+
+Primary purpose of a pump in a fluid loop is to
+A. Add energy to the flow
+B. Add mass to the flow
+C. Extract energy from the flow
+D. None of the above
+Answer: A
+
+The isentropic efficiency of a pump is given by the
+A. Ratio of actual to ideal energy extracted
+B. Ratio of ideal to actual energy supplied
+C. Ratio of ideal to actual energy extracted
+D. Ratio of actual to ideal energy supplied
+Answer: B
+
+The electrical efficiency of a device is the ratio of the:
+A. Electrical energy output to the electrical energy input
+B. Mechanical energy input to the mechanical energy output of the device
+C. Actual energy extracted to the ideal energy extracted
+D. Actual to the ideal energy input
+Answer: C
+
+The adiabatic pump efficiency is the ratio of the
+A. Electrical energy output to the electrical energy input
+B. Mechanical energy input to the electric energy output of the device
+C. Ideal energy input to the pump to the actual energy input
+D. Actual energy extracted to the ideal energy extracted
+Answer: C
+
+A condenser’s water – circulating pump is belt-driven by an electric motor with an adjustable pitch motor sheave. This sheave
+A. Permits adjustment of pump speed
+B. Prevent overload and/or burnout of the pump and motor
+C. Prevents excessive wear on the belt and motor shaft bearings
+D. Facilitates belt replacement
+Answer: C
+
+The function of a pump or compressor is to
+A. Transfer heat from one fluid to another
+B. Increase the total energy content of the flow
+C. Extract energy from the flow
+D. Exchange heat to increase energy to the flow
+Answer: B
+
+An aftercooler on a reciprocating air compressor is used primarily to:
+A. Cool the lubricating oil
+B. Condense the moisture in the compressed air
+C. Improve compressor efficiency
+D. Increase compressor capacity
+Answer: B
+
+A receiver in an air compression system is used to
+A. Avoid cooling air before using
+B. Increase the air discharge pressure
+C. Collect water and grease suspended in the air
+D. Reduce the work needed during compression
+Answer: C
+
+Crankshaft of reciprocating compressor is basically made of:
+A. Semi-steel
+B. Aluminum alloy
+C. Cast iron
+D. Steel forging
+Answer: C
+
+Cooling water system consists of equipment to dissipate heat absorbed by the engine jacket water, lube oil and the heat to be removed from air intercooler is measurable to keep the engine outlet water temperature constant and the differential of the cooling water at a minimum preferably not to exceed:
+A. 10 to 30 °F
+B. 10 to 50 °F
+C. 10 to 20 °F
+D. 10 to 40 °F
+Answer: C
+
+Which of the following is one of the most popular types of compressor utilized for supercharging engine?
+A. Roots type blower
+B. Pulse turbo charger
+C. Constant pressure turbo charger
+D. Turbo compressor
+Answer: A
+
+The power required to deliver a given quantity of fluid against a given head with no losses in the pump is called:
+A. Wheel power
+B. Brake power
+C. Hydraulic power
+D. Indicated power
+Answer: C
+
+Fluids that are pumped in processing work are frequently more viscous than water. Which of the following statement is correct?
+A. Reynolds number varies directly as the viscosity
+B. Efficiency of a pump increases as the viscosity increases
+C. Increased fluid friction between the pump parts and the passing fluid increased useful work.
+D. Working head increases as the viscosity
+Answer: C
+
+A reciprocating pump is considered positive displacement pump because
+A. Displacement of the liquid is affected by the displacement of the piston
+B. Positive pressure is given to the liquid
+C. Liquid is discharge with positive pressure
+D. Liquid is lifted due to the vacuum created inside the cylinder
+Answer: A
+
+To protect adequately the engine bearings, what type and better arrangement of lubricating oil filter is most practical?
+A. Full-flow type filter installed between the lubricating oil pump and the bearings
+B. Duplex filter installed before the lubricating pump
+C. Bypass filter with cleanable and replaceable elements
+D. Splash lubricating system in the crank case
+Answer: A
+
+Medium pressure when applied to valves and fittings are suitable for a working pressure of:
+A. 862 to 1200 kPa
+B. 758 to 1000 kPa
+C. 500 to 1000 kPa
+D. 658 to 1050 kPa
+Answer: A
+
+The function of an unloader on an electric motor-driven compressor is to:
+A. Reduce the speed of the motor when the maximum pressure is reached
+B. Drain the condensate from the cylinder
+C. Release the pressure in the cylinder in order to reduce the starting load
+D. Prevent excess pressure in the receiver
+Answer: C
+
+An unloader is used on air compressor to:
+A. Relieve air pressure
+B. Start easier
+C. Stop easier
+D. Run faster
+Answer: A
+
+The performance of a reciprocating compressor is expressed as:
+A. Adiabatic work divided by adiabatic input
+B. Adiabatic work divided by indicated work
+C. Isothermal work divided by indicated work
+D. Isothermal work divided by adiabatic work
+Answer: B
+
+In order that cavitation will not take place in the suction line of a pump, what should be the sum of the velocity head and pressure head at suction compared to the vapor pressure of the liquid?
+A. sufficiently lower
+B. constant
+C. adequately greater
+D. Equal
+Answer: C
+
+Which of the following components of a pump converts mechanical energy to pressure energy?
+A. Impeller
+B. Valve
+C. Shaft
+D. Delivery pipe
+Answer: A
+
+Mr. De La Cruz wanted to buy a pump for his farm. What is suitable for deep well?
+A. Reciprocating
+B. Airlift
+C. Hand lift
+D. Centrifugal
+Answer: D
+
+A tank contains H2O. what is the intensity of pressure at a depth of 6 meters?
+A. 68 kPa
+B. 58.8 kPa
+C. 78.0 kPa
+D. 48.7 kPa
+Answer: B
+
+In order to avoid cavitation the NPSH of an installation should be:
+A. At least equal or greater than the NPSH of the pump
+B. At least equal or less than the NPSH of the pump
+C. Equal to the NPSH of the pump only
+D. Greater than the NPSH of the pump only
+Answer: A
+
+The actual head, neglecting the kinetic energy in which the pump work against.
+A. Delivery head
+B. Pressure head
+C. Velocity head
+D. Suction head
+Answer: B
+
+Flow of water in a pipe have a velocity at 10 meters per second. Determine the velocity head of the water
+A. 50.1 meters
+B. 5.1 meters
+C. 8.2 meters
+D. 100 meters
+Answer: B
+
+Find the velocity head for a velocity of 18 m/s
+A. 33.0 m
+B. 0.92 m
+C. 1.8 m
+D. 16.5 m
+Answer: D
+
+The size of a steam reciprocating pumps is generally designated by a three- digit number size
+A. Stroke of the pump in inches
+B. Inside diameter of the steam cylinder measured in inches
+C. Percent clearance
+D. Number of cylinders
+Answer: B
+
+A pump in which the pressure is developed principally by the action of centrifugal force
+A. Centrifugal pump
+B. End suction pump
+C. In line pump
+D. Horizontal pump
+Answer: A
+
+A single suction pump having its suction nozzle on the opposite side of the casing from the stuffing box and having the face of the suction nozzle perpendicular to the longitudinal axis of the shaft.
+A. Centrifugal pump
+B. End suction pump
+C. In line pump
+D. Horizontal pump
+Answer: B
+
+A pump with the shaft normally in a horizontal position
+A. Centrifugal pump
+B. End suction pump
+C. In line pump
+D. Horizontal pump
+Answer: D
+
+A centrifugal pump whose drive unit is supported by the pump having its suction and discharge flanges on approximately the same center.
+A. Horizontal split case pump
+B. End suction pump
+C. In line pump
+D. Vertical shaft turbine pump
+Answer: C
+
+A centrifugal pump characterized by a housing which is split parallel to the shaft
+A. Horizontal split case pump
+B. End suction pump
+C. In line pump
+D. Vertical shaft turbine pump
+Answer: A
+
+A centrifugal pump with one or more impellers discharging into one or more bowls and a vertical eductor or column pipe used to connect the bowls to the discharge head on which the pump driver is mounted.
+A. Horizontal split case pump
+B. End suction pump
+C. In line pump
+D. Vertical shaft turbine pump
+Answer: D
+
+A pump that takes suction from a public service main or private use water system for the purpose of increasing the effective water pressure.
+A. Horizontal split case pump
+B. Submersible pump
+C. Booster pump
+D. Vertical shaft turbine pump
+Answer: C
+
+A vertical turbine pump with the pump and motor closed coupled and design to be installed underground, as in the case of a deep well pump.
+A. Horizontal split case pump
+B. Submersible pump
+C. Booster pump
+D. Vertical shaft turbine pump
+Answer: A
+
+An underground formation that contains sufficient saturated permeable material to yield significant quantities of water.
+A. Aquifer
+B. Wet pit
+C. Ground water
+D. Well water
+Answer: A
+
+A timber, concrete or masonry enclosure having a screened inlet kept partially filled with water by an open body of water such as pond, lake, or steams.
+A. Aquifer
+B. Wet pit
+C. Ground water
+D. Well water
+Answer: B
+
+Water which is available from a well, driven into water bearing subsurface strata (aquifer)
+A. Aquifer
+B. Wet pit
+C. Ground water
+D. Well water
+Answer: C
+
+The level with respect to the pump, of the body of water from which it takes suction when the pump is not in operation.
+A. Static water level
+B. Pumping water level
+C. Suction head
+D. Discharge head
+Answer: A
+
+The level with respect to the pump, of the body of water from which it takes suction when the pump is in operation.
+A. Static water level
+B. Pumping water level
+C. Suction head
+D. Drawdown
+Answer: B
+
+The vertical difference between the pumping water level and the static water level.
+A. Static water level
+B. Pumping water level
+C. Suction head
+D. Drawdown
+Answer: D
+
+Imparts velocity to the liquid, resulting from centrifugal force as the impeller is rotated.
+A. Impeller
+B. Casing
+C. Stuffing box
+D. Shaft sleeve
+Answer: A
+
+Gives direction to the flow from the impeller and converts this velocity energy into pressure energy.
+A. Impeller
+B. Casing
+C. Stuffing box
+D. Shaft sleeve
+Answer: B
+
+A means of throttling the leakage which would otherwise occur at the point of entry of the shaft into the casing.
+A. Impeller
+B. Casing
+C. Stuffing box
+D. Shaft sleeve
+Answer: B
+
+Protects the shaft where it passes through the stuffing box.
+A. Impeller
+B. Casing
+C. Stuffing box
+D. Shaft sleeve
+Answer: D
+
+Keeps internal recirculation down to a minimum.
+A. Wearing rings
+B. Bearings
+C. Frame
+D. Coupling
+Answer: A
+
+Accurately locate shaft and carry radial and thrust loads.
+A. Wearing rings
+B. Bearings
+C. Frame
+D. Coupling
+Answer: B
+
+Which of the following is used to mount unit rigidly and support bearings.
+A. Wearing rings
+B. Stuffing box
+C. Frame
+D. Coupling
+Answer: C
+
+Connects the pump to the driver.
+A. Wearing rings
+B. Bearings
+C. Frame
+D. Coupling
+Answer: D
+
+The most common means of throttling the leakage between the inside and outside of the casing.
+A. Packing
+B. Gland
+C. Seal gage
+D. Mechanical seal
+Answer: A
+
+To position and adjust the packing pressure.
+A. Packing
+B. Gland
+C. Seal gage
+D. Mechanical seal
+Answer: B
+
+Provides passage to distribute the sealing medium uniformly around the portion of the shaft that passes through the stuffing box. Also known as water seal of lantern ring.
+A. Packing
+B. Gland
+C. Seal gage
+D. Mechanical seal
+Answer: C
+
+Provides a mechanical sealing arrangement that takes the place of the packing.
+A. Packing
+B. Gland
+C. Seal gage
+D. Mechanical seal
+Answer: D
+
+A positive displacement pump consisting of a fixed casing containing gears, cams, screws, vanes, plungers or similar elements actuated by rotation of the drive shaft.
+A. Rotary pumps
+B. Reciprocating pumps
+C. Deep well pumps
+D. Centrifugal pumps
+Answer: A
+
+A positive displacement unit wherein the pumping action is accomplished by the forward and backward movement of a piston or plunger inside a cylinder usually provided with valves.
+A. Rotary pumps
+B. Reciprocating pumps
+C. Deep well pumps
+D. Centrifugal pumps
+Answer: B
+
+A type of rotary pump consists of an eccentrically bored cam rotated by a shaft concentric in a cylindrically bored casing, with an abutment or follower so arranged that with each rotation of the drive shaft a positive quantity of liquid is displaced from the space between the cam and the pump casing.
+A. Cam and piston pump
+B. Gear pump
+C. Screw pump
+D. Vane pump
+Answer: A
+
+A type of rotary pump consists of two or more gears, operating in closely fitted casing so arranged that when the gear teeth unmesh on one side liquid fills the space between the gear teeth and is carried around in the tooth space to the opposite side and displaced as the teeth mesh again.
+A. Cam and piston pump
+B. Gear pump
+C. Screw pump
+D. Vane pump
+Answer: B
+
+A type of rotary pump consists of two or three screw rotors so arranged that as the rotors turn liquid fills the shape between the screw threads and is displaced axially as the rotor threads mesh.
+A. Cam and piston pump
+B. Gear pump
+C. Screw pump
+D. Vane pump
+Answer: C
+
+A type of rotary pump consists of one rotor in a casing machined eccentrically to the drive shaft. The rotor is fitted with a series of vanes, blades or buckets which follow the bore of the casing thereby displacing the liquid with each revolution of the drive shaft.
+A. Cam and piston pump
+B. Gear pump
+C. Screw pump
+D. Vane pump
+Answer: D
+
+A type reciprocating pump having a steam cylinder with no lap on valves, a water cylinder and a common piston rod.
+A. Direct acting steam pump
+B. Crank and flywheel reciprocating pump
+C. Power driven pump
+D. Piston pump
+Answer: A
+
+A type of reciprocating pump driven by compound, cross compound, or triple expansion steam engines.
+A. Direct acting steam pump
+B. Crank and flywheel reciprocating pump
+C. Power driven pump
+D. Piston pump
+Answer: B
+
+A type of reciprocating pump that receives its forward and backward motion of the piston and plunger from the rotary motion of a revolving crankshaft by means of a crank and connecting rod.
+A. Direct acting steam pump
+B. Crank and flywheel reciprocating pump
+C. Power driven pump
+D. Piston pump
+Answer: C
+
+A type of deep well pump which are refinement of the old hand pump that have played such an important role in country home and small town water supply from wells.
+A. Plunger pump
+B. Turbine pump
+C. Ejector centrifugal pump
+D. Air lift
+Answer: A
+
+A type of deep well pump that represent the application of vertical centrifugal pump to deep well service and are built for heads up to 305 meters and for capacities up to 28,495 liters per minute.
+A. Plunger pump
+B. Turbine pump
+C. Ejector centrifugal pump
+D. Air lift
+Answer: B
+
+A type of deep well pump that has come into wide use for small capacities combines a single stage centrifugal pump at the top of the well and an ejector or jet located down in the water.
+A. Plunger pump
+B. Turbine pump
+C. Ejector centrifugal pump
+D. Air lift
+Answer: C
+
+A type of deep well pump wherein compressed air is admitted to the well to lift water to the surface, for successful operation of the system, the discharge pipe must have its lower end submerged in the well water.
+A. Plunger pump
+B. Turbine pump
+C. Ejector centrifugal pump
+D. Air lift
+Answer: D
+
+One of the reasons for insulating the pipes is:
+A. They may not break under pressure
+B. There is minimum corrosion
+C. Capacity to withstand pressure is increased
+D. Heat loss from the surface is minimized
+Answer: D
+
+The rate of radiant energy, that is emitted by a surface at any temperature and in small wavelengths is found from the known rate of energy that under the same conditions will be emitted from a black surface, by multiplying with the absorptivity. The above enunciation is called:
+A. Lambert’s law
+B. Kirchhoff’s law
+C. Planck’s law
+D. Stefan Boltzmann’s law
+Answer: B
+
+Which of the following is generally used to measure the temperature inside the furnace?
+A. Mercury thermometer
+B. Alcohol thermometer
+C. Ash thermometer
+D. Optical pyrometer
+Answer: D
+
+All heat transfer processes:
+A. Involve transfer of energy
+B. Involve temperature difference between the bodies
+C. Obey first law of thermodynamics
+D. Obey second law of thermodynamics
+Answer: B
+
+What is thermal diffusivity?
+A. A mathematical formula
+B. A physical property of the material
+C. A configuration for heat conduction
+D. A dimensionless parameter
+Answer: B
+
+Which of the following is a unit of thermal diffusivity?
+A. m^2/hr
+B. kcal/m^2hr
+C. kcal/ m^2hr °C
+D. m^2/hr °C
+Answer: A
+
+Non-isotropic conductivity is shown by which of the following?
+A. Brass
+B. Copper
+C. Wood
+D. Steel
+Answer: C
+
+For glass wool thermal conductivity changes from sample to sample due to changes in:
+A. Structure
+B. Density
+C. Composition
+D. All of the above
+Answer: D
+
+Which of the following is the S.I. unit of thermal conductivity?
+A. W/m-hr- °K
+B. W/m °K
+C. KJ/m-hr- °C
+D. W/m-hr- °C
+Answer: B
+
+What is the value of the Prandtl number for air?
+A. 10
+B. 6.7
+C. 67
+D. 0.7
+Answer: D
+
+According to Prevost theory of heat exchange,
+A. It is impossible to transfer heat from low temperature source to high temperature source
+B. Heat transfer by radiation needs no medium
+C. All bodies above absolute zero emit radiation
+D. Heat transfer in most of the cases occurs by combination of conduction, convection and radiation
+Answer: C
+
+Thermal conductivity of wood depends on which of the following?
+A. Moisture
+B. Temperature
+C. Density
+D. All of the above
+Answer: D
+
+A fur coat on an animal will help the animal to remain:
+A. Warm in winter
+B. Cool in winter
+C. Warm in summer
+D. Cool in summer
+Answer: A
+
+The nature of flow of a fluid inside a tube, whether it is turbulent or laminar, can be ascertained by:
+A. Flow velocity
+B. Surface conditions
+C. Viscosity of fluid
+D. Reynolds number
+Answer: D
+
+By which of the following modes of heat transfer is the Stefan-Boltzmann law applicable?
+A. Conduction
+B. Radiation
+C. Conduction and radiation combined
+D. Convection and radiation combined
+Answer: B
+
+At all wave lengths and temperatures the monochromatic emissivity of a white body is equal to:
+A. Zero
+B. 0.5
+C. Unity
+D. 0.1 to 0.5
+Answer: A
+
+The radiation from flames is having
+A. Continuous radiation from burning soot particles of microscopic and submicroscopic dimensions
+B. Radiation from suspended larger particles of coal, coke, or ash contributing to flame luminosity
+C. Infared radiation from water vapor and carbon dioxide
+D. All of the above
+Answer: D
+
+The statement that the emissivity and absorptivity of a surface is surrounded by its own temperature are the same for both monochromatic and total radiation is called:
+A. Lambert’s law
+B. Kirchhoff’s law
+C. D’Alembert’s
+D. Law of emissivity
+Answer: B
+
+A reservoir that supplies energy in the form of heat is called:
+A. Source
+B. Sink
+C. Cold reservoir
+D. Heat reservoir
+Answer: A
+
+In regenerator type heat exchanger, heat transfer occurs by:
+A. Direct mixing of hot and cold fluids
+B. A complete separation between hot and cold fluids
+C. Flow of hot and cold fluids alternately over a surface
+D. Generation of heat again and again
+Answer: C
+
+Least value of Prandtl number can be expected in case of ____________.
+A. Liquid metals
+B. Sugar solution
+C. Salt solution
+D. Water
+Answer: A
+
+“The boiling point of a solution is a linear function of water at the same pressure.” The above statement is called ___________.
+A. Dühring’s rule
+B. Petit and Dulong’s law
+C. Fick’s rule
+D. Reynolds law
+Answer: A
+
+Floating heads are provided in heat exchangers to
+A. Increase the pressure drop
+B. Decrease the pressure drop
+C. Facilitate maintenance
+D. Avoid deformation of tubes because of thermal expansion
+Answer: D
+
+What do you call the first stage of crystal formation?
+A. Nucleation
+B. Foaming
+C. Separation
+D. Vortexing
+Answer: A
+
+In heat exchanger design, one transfer unit implies:
+A. One fluid which is exchanging with another fluid of the same chemical composition
+B. The section of heat exchanger which will cause temperature drop of one degree centigrade
+C. The section of heat exchanger where heat transfer surface area has been one square meter
+D. Condition when the change in temperature of one steam is numerically equal to the average driving force
+Answer: D
+
+Dittus-Boelter equation can be applied in case of fluids flowing in:
+A. Transition region
+B. Turbulent region
+C. Laminar region
+D. Any of the above
+Answer: B
+
+In sugar mills, cane juice is evaporated in:
+A. Zigzag tube evaporators
+B. Long vertical tube evaporators
+C. Short vertical tube evaporators
+D. Horizontal tube evaporators
+Answer: B
+
+A 1-2 heat exchanger refers to which of the following?
+A. Single pass on shell side and double pass on tube side
+B. Single pass on tube side and double pass on shell side
+C. Single liquid cools two liquids at different temperature
+D. Two tubes of cold fluid pass through one tube of hot fluid
+Answer: A
+
+A correction of LMTD is essential in case of:
+A. Parallel flow heat exchanger
+B. Counter current heat exchanger
+C. Cross flow heat exchanger
+D. None of the above
+Answer: C
+
+Which of the following is used as entrainer in acetic acid – water separation?
+A. Methyl alcohol
+B. Phosphorus
+C. Butyl acetate
+D. Hexane
+Answer: C
+
+An electrically charged atom or radical which carries electricity through an electrolyte is called:
+A. Ion
+B. Isotope
+C. Molecule
+D. Hole
+Answer: A
+
+The energy of a body that can be transmitted in the form of heat.
+A. Heat energy
+B. Thermal energy
+C. Entropy
+D. Internal energy
+Answer: B
+
+In an isometric process, the heat transferred is equal to:
+A. Change in enthalpy
+B. Change in entropy
+C. Change in internal energy
+D. Work nonflow
+Answer: C
+
+A substance that is able to absorb liquids or gases and is used for removing them from a given medium or region.
+A. Absorbent
+B. Cohesive
+C. Adsorbent
+D. Adhesive
+Answer: A
+
+Radiant heat transfer is described by:
+A. Newton’s law
+B. Fourier’s law
+C. The logarithmic mean temperature
+D. Kirchhoff’s law
+Answer: D
+
+A reservoir that absorbs energy in the form of heat is called __________.
+A. Source
+B. Sink
+C. Cold reservoir
+D. Heat reservoir
+Answer: B
+
+When the entire heat exchanger is selected as control volume, heat becomes __________.
+A. Unity
+B. Zero
+C. Undefined
+D. Indeterminate
+Answer: B
+
+Heat is conducted in the direction of:
+A. Increasing temperature
+B. Decreasing temperature
+C. Increasing and decreasing temperature
+D. Constant temperature
+Answer: B
+
+The heat transfer term in the first law of thermodynamics may be due to any of the following except:
+A. Conduction
+B. Convection
+C. Radiation
+D. Internal heat generation (e.g., chemical reaction)
+Answer: D
+
+All heat transfer processes require a medium of energy exchange except:
+A. Conduction
+B. Natural convection
+C. Forced convection
+D. Radiation
+Answer: D
+
+Thermal conduction is described by:
+A. Newton’s law
+B. The logarithmic mean temperature difference
+C. The Stefan-Boltzmann law
+D. Fourier’s law
+Answer: D
+
+Convection is described by which of the following laws?
+A. Newton’s law
+B. The logarithmic mean temperature difference
+C. The Stefan-Boltzmann law
+D. Fourier’s law
+Answer: A
+
+Radiation heat transfer is described by
+A. Newton’s law
+B. The logarithmic mean temperature difference
+C. Fourier’s law
+D. Kirchhoff's law
+Answer: D
+
+The equivalent of ratio of emissive power to absorptivity for bodies in thermal equilibrium is described by:
+A. Newton’s law
+B. The logarithmic mean temperature difference
+C. Fourier’s law
+D. Kirchhoff's law
+Answer: D
+
+The temperature potential between temperature at the two ends of a heat exchanger are given by:
+A. The logarithmic mean temperature difference
+B. The Stefan-Boltzmann law
+C. Fourier’s law
+D. Kirchhoff’s law
+Answer: A
+
+The function of a heat exchanger is to:
+A. Increase the water temperature entering the boiler and decrease combustion requirements
+B. Transfer heat from one fluid to another
+C. Increase the total energy content of the flow
+D. Exchange heat to increase energy to the flow
+Answer: B
+
+The function of a superheater is to:
+A. Increase the water temperature entering the boiler and decrease combustion requirements
+B. Transfer heat from one fluid to another
+C. Increase the total energy content of the flow
+D. Exchange heat to increase energy to the flow
+Answer: D
+
+What is the series of processes that eventually bring the system back to its original condition?
+A. Reversible process
+B. Irreversible process
+C. Cycle
+D. Isentropic process
+Answer: C
+
+A theoretical body which when heated to incandescence would emit a continuous light-ray spectrum.
+A. Black body radiation
+B. Black body
+C. Blue body
+D. White body
+Answer: B
+
+Which of the following is the reason for insulating the pipes?
+A. They may not break under pressure
+B. There is minimum corrosion
+C. Capacity to withstand pressure
+D. Heat loss from the surface is minimized
+Answer: D
+
+Heat transfer due to density differential
+A. Convection
+B. Nuclear
+C. Conduction
+D. Radiation
+Answer: A
+
+The term “exposure” in radiological effects is used as a measure of a gamma ray or an X-ray field in the surface of an exposed object. Since this radiation produces ionization of the air surrounding the object, the exposure is obtained as
+A. Number of ions produced per mass of air x coulombs per kg
+B. Mass of air x surface area of an exposed object
+C. Mass of air over surface area of an exposed object
+D. Number of ions produced per mass of air + coulombs per kg
+Answer: A
+
+The passing of heat energy from molecule to molecule through a substance
+A. Conduction
+B. Radiation
+C. Conservation
+D. Convection
+Answer: A
+
+The radiant heat transfer depends on:
+A. Temperature
+B. Heat rays
+C. Heat flow from cold to hot
+D. Humidity
+Answer: A
+
+What kind of heat exchanger where water is heated to a point that dissolved gases are liberated?
+A. Evaporator
+B. Condenser
+C. Intercooler
+D. Deaerator
+Answer: D
+
+Heat transfer processes which include a change of phase of a fluid are considered __________.
+A. Convection
+B. Thermal radiation
+C. Conduction
+D. Radiation
+Answer: A
+
+A hot block is cooled by blowing cool air over its top surface. The heat that is first transferred to the air layer close to the block is by conduction. It is eventually carried away from the surface by ___________.
+A. Convection
+B. Radiation
+C. Conduction
+D. Thermal radiation
+Answer: A
+
+A body that is hot compared to its surroundings illuminates more energy than it receives, while its surrounding absorbs more energy than they give. The heat is transferred from one to another by energy wave motion. What is this mode of heat transfer?
+A. Radiation
+B. Conduction
+C. Convection
+D. Condensation
+Answer: A
+
+What is the heat transfer due to density differential?
+A. Convection
+B. Conduction
+C. Nuclear
+D. Radiation
+Answer: A
+
+What do you call the passing of heat energy from molecule to molecule through a substance?
+A. Conduction
+B. Conservation
+C. Radiation
+D. Convection
+Answer: A
+
+The transmission of heat from one place to another by fluid circulation between the spots of different temperature is called _______.
+A. Convection
+B. Conservation
+C. Radiation
+D. Conduction
+Answer: A
+
+Which of the following requires the greatest amount of heat per kilogram for a given increase in temperature?
+A. Ice
+B. Water
+C. Steam
+D. Copper
+Answer: B
+
+What do you call the effectiveness of a body as a thermal radiator at a given temperature?
+A. Absorptivity
+B. Conductivity
+C. Emissivity
+D. Reflectivity
+Answer: C
+
+The natural direction of the heat flow between two reservoirs is dependent on which of the following?
+A. Their temperature difference
+B. Their internal energy
+C. Their pressures
+D. Their states, whether solid, liquid and gas
+Answer: A
+
+Why are metals good conductors of heat?
+A. Because they contain free electrons
+B. Because their atoms are relatively far apart
+C. Because their atoms collide infrequently
+D. Because they have reflecting surfaces
+Answer: A
+
+In natural convection a heated portion of a fluids moves because:
+A. Its molecular motions become aligned
+B. Of molecular collisions within it
+C. Its density is less than that of the surrounding fluid
+D. Of currents in surrounding fluid
+Answer: C
+
+In order to emit electromagnetic radiation, an object must be at a temperature:
+A. Above 0 K
+B. Above 0 °C
+C. Above that of its surrounding
+D. High enough for it to glow
+Answer: A
+
+The rate at which an object radiates electromagnetic energy does not depend on its:
+A. Surface area
+B. Mass
+C. Temperature
+D. Ability to absorb radiation
+Answer: B
+
+Sublimation refers to:
+A. The vaporization of solid without first becoming liquid
+B. The melting of a solid
+C. The vaporization of a liquid
+D. The condensation of a gas into liquid
+Answer: A
+
+In the process of freeze drying, ice goes directly into water vapor. What is the temperature at which this process can take place?
+A. Below the triple point of water
+B. At the triple point of water
+C. Above the triple point of water
+D. Any of the above, depending on the pressure
+Answer: A
+
+What usually happen when a vapor condenses into a liquid?
+A. It evolves heat
+B. It generates heat
+C. Its temperature increases
+D. It boils with temperature less than 100 °C
+Answer: A
+
+In a cooling tower, the water is cooled mainly by:
+A. Condensation
+B. Convection
+C. Evaporation
+D. Conduction
+Answer: C
+
+How do you classify a body that has an emissivity factor of 0.7?
+A. Gray body
+B. Black body
+C. White body
+D. Theoretical body
+Answer: A
+
+At what particular condition that no more heat can that be removed from a substance and the temperature can no longer be lowered?
+A. Freezing point
+B. Absolute zero
+C. Critical point
+D. Ground zero
+Answer: B
+
+What refers to the heat transfer wherein the heat is transferred from one point to another by actual movement of substance?
+A. Conduction
+B. Radiation
+C. Convection
+D. Absorption
+Answer: C
+
+The ratio of the radiation of actual body to the radiation of a blackbody is known as _______.
+A. Emittance
+B. Reflectance
+C. Absorptance
+D. Transmittance
+Answer: A
+
+Which of the following is the usual geometric view factor for a black body?
+A. Zero
+B. Infinity
+C. One
+D. Indeterminate
+Answer: C
+
+What happens to the heat transferred radially across insulated pipe per unit area?
+A. The heat will flow at constant rate
+B. Decreases with the increase in thermal conductivity
+C. Decrease from pipe wall to insulated surface
+D. Partially increases from pipe wall to insulated surface
+Answer: C
+
+What do you call a change of phase directly from vapor to solid without passing through the liquid state?
+A. Sublimation
+B. Solidification
+C. Vaporization
+D. Deposition
+Answer: D
+
+Which of the following is the Stefan-Boltzmann constant?
+A. 5.77x10^-7 W/m^2K^4
+B. 7.67x10^-4 W/m^2K^4
+C. 4.78x10^-10 W/m^2K^4
+D. 5.67x10^-8 W/m^2K^4
+Answer: D
+
+What is the usual value of transmissivity for opaque materials?
+A. 0
+B. Indeterminate
+C. 1
+D. Infinity
+Answer: A
+
+A body whose emissivity is less than 1 is known as a real body. What is the other term for real body?
+A. Gray body
+B. White body
+C. Black body
+D. Theoretical body
+Answer: A
+
+What refers to an ideal body that absorbs all of the radiant energy that intrudes on it and also emits the maximum possible energy when acting as a source?
+A. White body
+B. Black body
+C. Gray body
+D. Red hot body
+Answer: B
+
+The thermal resistance for one- dimensional steady conduction heat transfer through cylindrical wall in the radial direction is expressed in which of the following functions?
+A. Linear
+B. Exponential
+C. Logarithmic
+D. Trigonometric
+Answer: C
+
+The law which states that “the ratio of the emissive powers to absorptivities are equal when the two bodies are in thermal equilibrium” is known as:
+A. Stefan-Boltzmann law
+B. Newton’s law of convection
+C. Fourier’s law
+D. Kirchhoff’s law of radiation
+Answer: D
+
+It refers to the ratio of the internal thermal resistance of a solid to the boundary layer thermal resistance (or external resistance of the body).
+A. Biot number
+B. Prandtl number
+C. Nusselt number
+D. Reynolds number
+Answer: A
+
+It refers to the ratio at the rate of heat transferred by conduction to the rate of energy stored.
+A. Reynolds number
+B. Fourier number
+C. Biot number
+D. Prandtl number
+Answer: B
+
+A hot block is cooled by blowing cool air over its top surface. The heat that is first transferred to the air layer close to the block is by conduction. It is eventually carried away from the surface by:
+A. Conduction
+B. Radiation
+C. Thermal
+D. Convection
+Answer: D
+
+It is the term used to describe the energy of a body that can be transmitted in the form of heat.
+A. Enthalpy
+B. Thermal energy
+C. Entropy
+D. Internal energy
+Answer: B
+
+Which of the following is the equivalent heat transferred of a gas undergoing isometric process?
+A. Change in enthalpy
+B. Change in entropy
+C. Change in internal energy
+D. Work nonflow
+Answer: C
+
+What do you call a substance that is able to absorb liquids or gases and is usually used for removing liquids (or gases) from a given medium or region?
+A. Absorbent
+B. Liquefier
+C. Adsorbent
+D. Adhesive
+Answer: A
+
+In which direction that heat is transferred through conduction?
+A. Increasing temperature
+B. Decreasing temperature
+C. Increasing and decreasing temperature
+D. Constant temperature
+Answer: B
+
+Which of the following statements is based on Prevost theory of heat exchange?
+A. All bodies above absolute zero emit radiation
+B. The substance moves because of the decrease in its density which is caused by increase in temperature
+C. The substance moves because of the application of mechanical power such as that of a fan
+D. Heat transfer in most of the cases occurs by combination of conduction, convection and radiation
+Answer: A
+
+Which of the following is the emissivity of white body?
+A. Zero
+B. 0.5
+C. 1
+D. 0 < e < 1
+Answer: A
+
+The mechanism of heat transfer in which there is no medium ( i.e. water, air, solid concrete) required for the heat energy to travel is:
+A. Conduction
+B. Radiation
+C. Convection
+D. Diffusion
+Answer: B
+
+The temperature potential between temperature at the two ends of a heat exchanger are given by:
+A. The logarithmic mean temperature difference
+B. The Stefan-Boltzmann law
+C. Fourier’s law
+D. Kirchhoff's law
+Answer: A
+
+Which of the following best describe function of heat exchanger?
+A. Increase the water temperature entering the system
+B. Transfer heat from one fluid to another
+C. Evaluate the total energy of the flow
+D. Exchange heat to increase energy to the flow
+Answer: B
+
+What refers to a form of energy associated with the kinetic random motion of large numbers of molecules?
+A. Heat
+B. Heat of fusion
+C. Entropy
+D. Internal energy
+Answer: A
+
+How much id the part of light that is absorbed by the body that transmits and reflects 80% and 10% respectively?
+A. 10%
+B. 30%
+C. 20%
+D. 5%
+Answer: A
+
+In convection heat transfer, what happens to the heat transfer coefficient if the viscosity of the fluid increases?
+A. The heat transfer coefficient will increase
+B. The heat transfer coefficient will decrease
+C. The heat transfer coefficient remains constant
+D. None of the above
+Answer: B
+
+How do you call a phenomenon wherein the heat is transferred by motion of fluid under the action of mechanical device?
+A. Forced convection
+B. Natural convection
+C. Forced conduction
+D. Thermal radiation
+Answer: A
+
+In conduction heat transfer, what happens to the heat transfer per unit time when the thermal conductivity decreases?
+A. The heat flow will increase
+B. The heat flow remains constant
+C. The heat flow will decrease
+D. The heat flow will partially increase and then will decrease
+Answer: C
+
+Which of the following is the driving force in heat transfer?
+A. Temperature gradient
+B. Thickness gradient
+C. Viscosity gradient
+D. Dielectric gradient
+Answer: A
+
+Which of the following is the measure of the relative effectiveness of momentum and energy transport by diffusion in the velocity and thermal boundary layer?
+A. Nusselt’s number
+B. Prandtl number
+C. Reynolds’ number
+D. Dimensional measurement
+Answer: B
+
+Which of the following is the property of the solid that provides the measure of the rate of heat transfer to the energy storage?
+A. Thermal efficiency
+B. Thermal diffusivity
+C. Thermal conductivity
+D. Thermal radiography
+Answer: B
+
+Two metals were kept together at room temperature and it was found out that one is colder than the other. Which of the following is the best reason why one metal is colder than the other?
+A. The heat transfer coefficient of one metal is of higher
+B. One metal is of lower temperature as compared to the other
+C. One metal is of higher temperature as compared to the other
+D. The thermal conductivity of one metal is high as compared to the other
+Answer: D
+
+In convection heat transfer, what happens to the heat transfer coefficient if the viscosity of the fluid decreases?
+A. The heat transfer coefficient also increases
+B. The heat transfer coefficient will decrease
+C. The heat transfer coefficient remains constant
+D. The heat transfer coefficient partially increases then decreases
+Answer: A
+
+A body that is hot compared to its surroundings illuminates more energy than it receives, while its surrounding absorbs more energy than they give. The heat is transferred from one to another by energy of wave motion. What is this mode of heat transfer?
+A. Radiation
+B. Conduction
+C. Convection
+D. Condensation
+Answer: A
+
+What do you call theoretical body where absorptivity and emissivity are independent of the wavelength over the spectral region of the irradiation and the surface emission?
+A. White body
+B. Opaque body
+C. Black body
+D. Transparent body
+Answer: D
+
+Which of the following is the structure designed to prevent the spread of fire having a fire resistance rating of not less than four hours?
+A. Fire escape
+B. Fire exit
+C. Fire shield
+D. Fire wall
+Answer: D
+
+Which of the following heat exchange device used to provide heat transfer between the exhaust gases and air prior to the entrance of a combustor?
+A. Regenerator
+B. Economizer
+C. Condenser
+D. Reheater
+Answer: A
+
+Which of the following transfer of heat is involved in the changing of boiling water (at 100 °C) to vapor at the same temperature?
+A. Conduction
+B. Convection
+C. Radiation
+D. Evaporation
+Answer: B
+
+Which of the following is the science of low temperatures?
+A. Cryogenics
+B. Thermo-kinetics
+C. Thermodynamics
+D. Ergonomics
+Answer: A
+
+Which of the following thermal state of the body considered as reference to communicate heat to the other bodies?
+A. Temperature
+B. Pressure
+C. Internal energy
+D. Entropy
+Answer: A
+
+The true mean temperature difference is also known as:
+A. The average mean temperature difference
+B. The logarithmic mean temperature difference
+C. The trigonometric mean temperature difference
+D. The exponential temperature difference
+Answer: B
+
+Which of the following can be a geometric view factor of a gray body?
+A. Greater than one
+B. Less than one
+C. Equal to one
+D. Greater than zero but less than one
+Answer: D
+
+The heat transfer by conduction occurs in which of the following?
+A. Only in liquids
+B. Only in solids
+C. Only in liquids and gases
+D. In solids, liquids and gases
+Answer: D
+
+Which of the following reasons why one gram of steam at 100 °C causes more serious burn than one gram of water at 100 °C?
+A. Steam is less dense than boiling water
+B. The steam has higher specific heat
+C. Steam contains more internal energy
+D. Steam is everywhere thus it strikes greater force
+Answer: C
+
+What usually happens when vapor condenses into liquid?
+A. It absorbs heat
+B. It rejects heat
+C. Its temperature increases
+D. Its temperature decreases
+Answer: B
+
+Which of the following has the highest thermal conductivity?
+A. Mercury
+B. Gasoline
+C. Water
+D. Alcohol
+Answer: A
+
+Which of the following is the requirement of the temperature of a body for it to emit radiation?
+A. Above zero Celsius
+B. Above zero Kelvin
+C. Above of the temperature of the surroundings
+D. High enough for it to glow
+Answer: B
+
+Which of the following is the color of iron when it is heated to a highest temperature?
+A. White
+B. Red
+C. Orange
+D. Yellow
+Answer: A
+
+Which of the following is the reason why metals are good conductors of heat?
+A. Metals contain free electrons
+B. Metals have atoms the frequently collide another
+C. Metals have reflecting surfaces
+D. Atoms in metals are very far to each other
+Answer: A
+
+The rate at which heat flows through a slab of some material does not depend on which of the following?
+A. The thickness of the slab
+B. The area of the slab
+C. The temperature difference between two faces
+D. The specific heat of the material
+Answer: D
+
+Which of the following is the primary function of a thermal radiator?
+A. To transferring the heat by using moving fluids
+B. To transfer heat from hot to cold body by using a forced-draft fan
+C. To transfer heat by allowing molecules to vibrate one to another
+D. To transfer heat with or without a medium
+Answer: D
+
+What is the reason why Styrofoam is a good insulating material?
+A. Because it contains many tiny pockets of air
+B. Styrofoam is a white object
+C. The structure of Styrofoam is very unstable and heat cannot flow
+D. Styrofoam structure is very dense
+Answer: A
+
+What usually happens to the surrounding when water vapor condenses?
+A. It warms the surrounding
+B. The surrounding temperature decreases
+C. It neither warm nor cold the surrounding
+D. The surroundings will be dehumidified
+Answer: A
+
+The rate of radiation does not depend on which of the following?
+A. Temperature of the radiating body
+B. The emissivity of the radiation surface
+C. The area of the radiating body
+D. The thickness of the radiating body
+Answer: D
+
+Which of the following is not a good conductor of heat?
+A. Metals
+B. Rocks
+C. Glass
+D. Asbestos
+Answer: D
+
+Which of the following is not a unit of the rate of heat transfer?
+A. Watt
+B. Btu per hour
+C. Cal/s
+D. Btu/Hp-hr
+Answer: D
+
+The thermal conductivity does not depend on which of the following?
+A. Chemical composition
+B. Physical state or texture
+C. Temperature and pressure
+D. Gravitational pull
+Answer: D
+
+In Maxwell’s theory for thermal conductivity of gases and vapors, which of the following is the value of “a” for triatomic gases?
+A. 1.7
+B. 2.4
+C. 1.3
+D. 1.9
+Answer: A
+
+Which of the following conductivities where Sutherland equation is used?
+A. Thermal conductivities of solids
+B. Thermal conductivities of gases
+C. Thermal conductivities of metal
+D. Thermal conductivities of liquids
+Answer: B
+
+For pure metals, what happens to the thermal conductivity if the temperature is extremely high?
+A. Approaches infinity
+B. Decreases except for ferrous metals
+C. Almost constant except for ferromagnetic materials
+D. Increases except for steel
+Answer: C
+
+Which of the following liquids that has the highest thermal conductivity?
+A. Gasoline
+B. Glycerin
+C. Water
+D. Alcohol
+Answer: C
+
+Which of the following is not a heat exchanger?
+A. Condenser
+B. Boilers
+C. Evaporators
+D. Water hammer
+Answer: D
+
+Which of the following heat exchangers where fluid flow in the same direction and both are of changing temperatures?
+A. Parallel flow
+B. Cross flow
+C. Counter flow
+D. Mixed flow
+Answer: A
+
+What happens to the thermal conductivity of diatomic gases if the temperature is increase?
+A. The thermal conductivity will also increase
+B. The thermal conductivity decreases
+C. The thermal conductivity remains constant
+D. The thermal conductivity partially increases then decreases
+Answer: A
+
+What device is used to measure the amount of infrared radiation in each portion of a person’s skin that is emitted?
+A. Thermograph
+B. Thermometer
+C. Pyrometer
+D. Potentiometer
+Answer: A
+
+The heat transfer by convection occurs in which of the following?
+A. Only in gases
+B. Only in liquids
+C. Only in gases and liquids
+D. Only in gases and solids
+Answer: C
+
+In convection heat transfer, what mechanism heat transfer where the fluid moves due to the decrease in its density caused by increase in temperature?
+A. Forced convection
+B. Natural convection
+C. Density convection
+D. Radial convection
+Answer: B
