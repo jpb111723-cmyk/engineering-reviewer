@@ -7843,3 +7843,1270 @@ B. 5 to 15
 C. 2 to 4
 D. Over 15
 Answer: C
+
+In pump installations, what is referred as the vertical distance from the water supply level to the pump cente-rline wherein the pump is above the supply level?
+A. Discharge head
+B. Suction head
+C. Static suction head
+D. Static discharge head
+Answer: C
+
+The 600 kg hammer of a pile drive is lifted 2 m above the piling head. If the hammer is released, what will be its velocity at the instant it strikes the piling? Local g = 9.65 m/s2.
+A. 6.21 m/s
+B. 3.25 m/s
+C. 1.2 m/s
+D. 4.5 m/s
+Answer: A
+
+Which of the following is an extensive property?
+A. mass
+B. pressure
+C. density
+D. all of the above
+Answer: A
+
+Calculate the thermal diffusivity of pure aluminum with density of 2,702 kg/m3, thermal conductivity of 237 W/m.K and specific heat of 0.903 kJ/kg.K.
+A. 97.1 x 10-6 m2/s
+B. 23.25 x 10-6 m2/s
+C. 14.9 x 10-6 m2/s
+D. 34.5 x 10-6 m2/s
+Answer: A
+
+At what temperature wherein an oil of any grade becomes cloudy and it freezes, thus its application is limited.
+A. Cloud point
+B. Pour point
+C. Flash point
+D. Freezing point
+Answer: A
+
+A new temperature scale is to be used where freezing and boiling temperature of water is at 100 deg.N and 400 deg. N respectively. Calculate the absolute zero in degree N.
+A. – 992.6 deg. N
+B. – 932.7 deg. N
+C. – 995.6 deg. N
+D. – 932.4 deg. N
+Answer: A
+
+A closed vessel intended for use in heating water or for application of heat to generate steam.
+A. Intercooler
+B. Water heater
+C. Sink
+D. Boiler
+Answer: D
+
+An elastic sphere containing gas at 120 kPa has a diameter of 1.0 m. Heating the sphere causes it to expand to a diameter of 1.4 m. During the process the pressure is proportional to the sphere diameter. Calculate the work done by the gas
+A. 143.91 kJ
+B. 200.7 kJ
+C. 154.5 kJ
+D. 133.91 kJ
+Answer: D
+
+What is the lowest permissible water level of a boiler without internal furnace?
+A. 1/2 height of shell
+B. 1/3 height of shell
+C. 1/4 height of shell
+D. 1/5 of shell
+Answer: B
+
+Air is used in a Carnot engine where the volumes at the beginning of the constant temperature heat addition and end of the constant temperature heat rejection are 0.456 cm3 and 6.73 cm3 respectively. Calculate the thermal efficiency.
+A. 0.667
+B. 0.656
+C. 0.786
+D. 0.765
+Answer: B
+
+At ordinary temperature what substance will behave as inert gas and will not react in the combustion process?
+A. nitrogen
+B. hydrogen
+C. sulfur
+D. carbon
+Answer: A
+
+What is the lifting force in kN for a 10 m diameter spherical balloon with helium inside at 101 kPa and 320 K surrounded by air at 101 kPa and 298.15 K?
+A. 17.38 kN
+B. 5.28 kN
+C. 18.73 kN
+D. 8.25 kN
+Answer: B
+
+When the temperature of the surrounding is higher than the blood temperature of human body then the transfer of heat will take place only by
+A. Convection
+B. Cooling
+C. Radiation
+D. Evaporation
+Answer: C
+
+The filament of a 100 W bulb maybe considered a blackbody radiating into a black enclosure at 80 deg. C. Considering only radiation, calculate the filament temperature in deg. C if the filament diameter is 0.10 mm and the length is 6 cm.
+A. 3109.97 deg. C
+B. 2837 deg. C
+C. 3245.45 deg. C
+D. 2313.5 deg. C
+Answer: B
+
+Both Stirling and Ericsson engines are
+A. internal combustion engines
+B. external combustion engines
+C. Carnot engines
+D. Brayton engines
+Answer: B
+
+A circular chip (k = 150 W/m.K) with a diameter 10 mm and thickness 4 mm is embedded in a circuit board. Its front surface is exposed to the flow of a coolant (h = 250 W/m2K) with temperature of 10 deg. C, while its side and black surfaces are perfectly insulated. If at any point in the chip the temperature must not exceed 90 deg. C, what is the steady state heat dissipation of the chip?
+A. 2.86 W
+B. 1.56 W
+C. 2.01 W
+D. 1.74 W
+Answer: B
+
+In Stirling and Ericsson cycle, regeneration can
+A. increase efficiency
+B. control efficiency
+C. decrease efficiency
+D. limit efficiency
+Answer: A
+
+A 1 kg steel (C = 0.5 kJ/kg.K) rivet cools from 800 K to 300 K upon being installed in a riveted structure. The entropy change in kJ/K of this rivet is:
+A. -0.245
+B. -0.49
+C. -0.631
+D. -0.546
+Answer: B
+
+Gauge cock in the boiler is designed to determine
+A. level of steam
+B. level of water
+C. specific heat
+D. pressure
+Answer: B
+
+The heat pump has a performance factor of 8.0. If the heat pump is used as a refrigerator, what is the required horsepower per ton of refrigeration?
+A. 0.942
+B. 0.456
+C. 0.765
+D. 0.673
+Answer: D
+
+The thermal efficiency of gas-vapor cycle compared to steam turbine or gas turbine is
+A. Greater than
+B. Less than
+C. The same
+D. Less than 10%
+Answer: A
+
+Find the COP of the refrigerator whose energy supply equals one-fourth the amount of heat it extracts.
+A. 3
+B. 4
+C. 5
+D. 2
+Answer: B
+
+The relative humidity becomes 100% and where the water vapor starts to condense.
+A. Critical point
+B. Dew point
+C. Saturated point
+D. Cloud point
+Answer: B
+
+If the specific heat at constant pressure for CO2 is given as 0.201 Btu/lb-R, what is the value of the specific heat at constant volume?
+A. 0.156 Btu/lb-R
+B. 0.365 Btu/lb-R
+C. 0.435 Btu/lb-R
+D. 0.435 Btu/lb-R
+Answer: A
+
+In pipe specification, schedule number is used; when the pipe is specified as “Schedule 80”, the pipe corresponds to the
+A. “extra standard” weight
+B. internal pressure
+C. extra strong
+D. “old standard weight”
+Answer: C
+
+An amount of 4000 Btu of heat is transferred from a reservoir at 800 deg.F to a reservoir at 200 deg. F. Find the entropy change of the system.
+A. 2.89
+B. 3.24
+C. 1.34
+D. 3.21
+Answer: A
+
+Mr. De La Cruz wanted to buy a pump for his farm. What is suitable for deepwell?
+A. Reciprocating
+B. Hand lift
+C. Airlift
+D. Centrifugal
+Answer: D
+
+Air flows in a duct at pressure of 150 kPa with a velocity of 200 m/s. The temperature of the air is 310 K. Determine the isentropic stagnation temperature.
+A. 320
+B. 332
+C. 341
+D. 361
+Answer: B
+
+In a cooling tower, the water is cooled mainly by
+A. Condensation
+B. convection
+C. evaporation
+D. conduction
+Answer: B
+
+A reverse Carnot cycle air refrigeration equipment has a compressor working with a compression ratio of 12. The temperature limits of the cycle are 300 K and 270 K. Determine the refrigerating effect of the unit.
+A. 2.45 TR
+B. 1.86 TR
+C. 2.06 TR
+D. 1.26 TR
+Answer: D
+
+A hot block is cooled by blowing cool air over its top surface. The heat that is first transferred to the air layer close to the block is by conduction. It is eventually carried away from the surface by
+A. convection
+B. conduction
+C. radiation
+D. thermal radiation
+Answer: A
+
+A refrigeration system produces 20 kg/hr of ice from water at 20 deg.C. Find the tonnage of the unit.
+A. 0.66
+B. 0.55
+C. 0.77
+D. 0.88
+Answer: A
+
+An engineer inspected an air-conditioning unit. He found out that the unit does not produce any cooling effect, however, the air-conditioning unit is running. He checked the temperatures of the condenser and evaporator and had the unit run. He found out that there was no change in the temperature. What should he do?
+A. Replace fuse
+B. Replace relay
+C. Charge with new refrigerant
+D. Adjust door seal
+Answer: C
+
+About 3 Hp per ton is required to maintain a temperature of – 40 deg. C in a refrigerator. If the refrigerator works on the reverse Carnot cycle, determine the heat rejected to the sink per ton of refrigeration.
+A. 69.72 kCal/min
+B. 70.24 kCal/min
+C. 81.61 kCal/min
+D. 84.65 kCal/min
+Answer: C
+
+A turbine pipe determined its “nominal” size refers to
+A. inside diameter
+B. pipe wall thickness
+C. outside diameter
+D. approximate size
+Answer: A
+
+Determine the mass of ice produced from water per day for the following conditions: Water temperature 22 deg. C, tonnage of the unit 150 tons, operating temperatures – 5 deg. C and 28 deg. C, latent heat of ice 330 kJ/kg.
+A. 107,498 kg
+B. 120,465 kg
+C. 134,112 kg
+D. 140,362 kg
+Answer: A
+
+A cold storage is required to store 20 tons of fish. The fish is supplied at a temperature of 30 deg. C. The specific heat of fish above the freezing point is 2.93 kJ/kg.K. The specific heat of fish below freezing point is 1.26 kJ/kg.K. The fish is stored in cold storage that is maintained at -8 deg. C. The freezing point of the fish is -4 deg. C. The latent heat of solidification of the fish is 235 kJ/kg. If the plant requires 75 kW to drive it, find the time taken to achieve cooling. Assume the actual COP as 0.3 times the Carnot COP of the refrigerating plant.
+A. 14.72 hrs
+B. 9.64 hrs
+C. 10.41 hrs
+D. 12.03 hrs
+Answer: D
+
+A research laboratory building is to be heated and ventilated. Air is to be supplied to a room 12 m by 18 m from the outside at the rate of 1 m3/min air replacement for each square meter of floor space. The design condition include 20 deg. C room temperature and – 20 deg. C outside air temperature. In addition the pressure in the room is to be maintained at a positive pressure of 7 kPa, to ensure that there will be no air leakage into the laboratory. How much heat would be required to condition the air for this room?
+A. 177.11 kW
+B. 154.8 kW
+C. 168.7 kW
+D. 185.3 kW
+Answer: D
+
+The size of a steam reciprocating pumps is generally designated by a three-digit number size as 646. The first digit designates
+A. stroke of the pump in inches
+B. inside diameter of the steam cylinder measured in inches
+C. percent clearance
+D. number of cylinders
+Answer: B
+
+A refrigeration system produces 20 kg/hr of ice from water at 20 deg. C. Find the tonnage of the unit.
+A. 0.66
+B. 0.55
+C. 0.77
+D. 0.88
+Answer: A
+
+About 3 hp per ton is required to maintain a temperature of – 40 deg. C in a refrigerator. If the refrigerator works on the reverse Carnot cycle, determine the heat rejected to the sink per ton of refrigeration.
+A. 69.72 kCal/min
+B. 70.44 kCal/min
+C. 81.61 kCal/min
+D. 84.65 kCal/min
+Answer: C
+
+Determine the mass of ice produced from water per day for the following conditions: water temperature 22 deg C, tonnage of the unit 150 tons, operating temperatures – 5 deg. C and 28 deg C, latent heat of ice 330 kJ/kg.
+A. 107,498 kg
+B. 120,465 kg
+C. 134,112 kg
+D. 140,362 kg
+Answer: A
+
+What should be the cooling requirement due to emission of body to maintain a comfortable temperature in a dance hall that had an attendance of 1500 people if it has been determined that 75% of the people will be dancing and others will be seated. Test have shown that an adult will give off 71.8 W of sensible heat while engaging in moderate dancing and 57.1 W of sensible heat while sitting. The latent heat emissions for similar situations have been found to equal 177.3 W for dancers and 45.5 W for sitters.
+A. 200 kW
+B. 267 kW
+C. 301 kW
+D. 319 kW
+Answer: D
+
+A refrigerator is rated at a USA one ton capacity. It maintains a cooling temperature of 4.4 deg. C (evaporator temperature). A refrigerant with a refrigerating effect of 136 kJ/kg is in the condenser just ahead of the expansion valve. If the refrigerant vapor has a density of 19.80 kg/m3, what should be the capacity of the compressor?
+A. 0.078 m3/min
+B. 0.091 m3/min
+C. 0.102 m3/min
+D. 0.113 m3/min
+Answer: A
+
+An engine operating on a Carnot Cycle between temperatures of 500 deg. C and 30 deg. C produces 50 kJ of work. What change in entropy occurs during the heat rejection portion of the cycle?
+A. 106.4 J/K
+B. 160.4 J/K
+C. 120.5 J/K
+D. 102.5 J/K
+Answer: A
+
+A 3 Hp refrigerator or heat pump operates between 0 deg F and 100 deg. F. The maximum theoretical heat that can be transferred from the cold reservoir is nearest to:
+A. 1300 Btu/hr
+B. 2300 Btu/hr
+C. 35000 Btu/hr
+D. 43000 Btu/hr
+Answer: C
+
+Twenty grams of Oxygen are compressed at constant temperature of 30 deg. C to 5% of their original volume. What work is done on the system in SI.
+A. -2.516
+B. -2.615
+C. -3.75
+D. -4.72
+Answer: D
+
+The increase of enthalpy of a certain gas is 141.9 kJ when the pressure increases from 103.448 kPa to 1034.48 kPa and the volume decreases from 0.4722 cu. m to 0.0745 cu. m. Find the change of internal energy.
+A. 121.45
+B. 114.25
+C. 141.5
+D. 154.2
+Answer: B
+
+Foundations are preferably built of concrete in the proportion of what measure of Portland cement: sand: crushed stones?
+A. 1:2:5
+B. 2:3:5
+C. 2:4:6
+D. 1:2:4
+Answer: D
+
+A six-cylinder, two-stroke marine diesel engine (5 in. x 5.6 in., 1200 rpm, compression ratio 18:1) has intake air at 14.8 psia and 82°F. What is the displacement volume?
+A. 0.2818 ft3
+B. 0.3818 ft3
+C. 0.4518 ft3
+D. 0.5318 ft3
+Answer: B
+
+For the same engine, what is the mass flow rate of air at 85% volumetric efficiency?
+A. 22.4 lb/min
+B. 33.8 lb/min
+C. 28.71 lb/min
+D. 35.2 lb/min
+Answer: C
+
+A diesel engine delivers 200 bhp at 1200 rpm with an indicated power of 250 ihp. What is the mechanical efficiency?
+A. 79%
+B. 85%
+C. 72%
+D. 64%
+Answer: A
+
+An ideal Otto cycle starts compression at 15 psia, 75°F and 13.2 ft3/lb, with an end-of-compression specific volume of 1.76 ft3/lb and 352 Btu/lb of heat supplied. What is the thermal efficiency?
+A. 48.2%
+B. 61.9%
+C. 42.7%
+D. 55.4%
+Answer: D
+
+An ideal Diesel cycle starts at 15 psia, 75°F and 13.2 ft3/lb with a compression ratio of 15 and 352 Btu/lb of heat addition. What is the thermal efficiency?
+A. 60.9%
+B. 55.3%
+C. 66.4%
+D. 52.1%
+Answer: A
+
+A gas mixture at 1 atm has a volumetric analysis of 70% N2, 10% CO2 and 20% O2. What is the partial pressure of N2?
+A. 2.939 psia
+B. 1.470 psia
+C. 12.35 psia
+D. 10.287 psia
+Answer: D
+
+For the mixture in the previous question, what is the percent N2 by mass?
+A. 70.0%
+B. 64.47%
+C. 58.2%
+D. 72.3%
+Answer: B
+
+A mixture is 56% N2, 12% CO2 and 32% O2 by mass. What is the percent N2 by volume?
+A. 56.0%
+B. 48.5%
+C. 61.11%
+D. 65.4%
+Answer: C
+
+What mass of moisture is in 4000 ft3 of saturated atmospheric air at 90°F (barometric pressure 30.12 in. Hg)?
+A. 4.26 lb
+B. 8.55 lb
+C. 12.4 lb
+D. 6.18 lb
+Answer: B
+
+Atmospheric air has a dry bulb temperature of 80°F, a wet bulb temperature of 60°F and a pressure of 14.696 psia. What is its relative humidity?
+A. 45.5%
+B. 36.8%
+C. 29.1%
+D. 22.4%
+Answer: C
+
+What is the enthalpy of air at 80°F dry bulb with a specific humidity of 42.1 grains/lb dry air?
+A. 25.8 Btu/lb dry air
+B. 29.9 Btu/lb dry air
+C. 21.3 Btu/lb dry air
+D. 32.6 Btu/lb dry air
+Answer: A
+
+One hundred lb/min of air is heated from 60°F dry bulb and 55°F wet bulb to 110°F with no change in moisture. What is the heat required?
+A. 750 Btu/min
+B. 1220 Btu/min
+C. 1650 Btu/min
+D. 2130 Btu/min
+Answer: B
+
+One hundred lb/min of air at 100°F and 60% relative humidity is cooled and dehumidified to 50°F. What is the heat removed?
+A. 1250 Btu/min
+B. 2720 Btu/min
+C. 3150 Btu/min
+D. 4300 Btu/min
+Answer: C
+
+Ten lb of air at 50°F and 40 grains/lb are mixed with 25 lb of air at 85°F and 90 grains/lb. What is the specific humidity of the mixture?
+A. 65.0 grains/lb dry air
+B. 75.7 grains/lb dry air
+C. 82.4 grains/lb dry air
+D. 70.2 grains/lb dry air
+Answer: B
+
+Heat losses from compartments total 420,000 Btu/hr. Air is supplied at 100°F and leaves at 70°F and 50% relative humidity, using 100% outdoor air at 20°F and 100% relative humidity. What mass of air must be circulated?
+A. 38,400 lb/hr
+B. 55,260 lb/hr
+C. 72,100 lb/hr
+D. 27,000 lb/hr
+Answer: B
+
+An air-conditioning system has a space heat gain of 240,000 Btu/hr, with space air at 80°F and 40% RH and state C at 45°F. What capacity of refrigerating plant is required?
+A. 33.6 tons
+B. 21.4 tons
+C. 45.2 tons
+D. 12.8 tons
+Answer: A
+
+The specific volume of steam at atmospheric pressure and 212°F is 26.80 ft3/lb. What is its density?
+A. 0.0373 lb/ft3
+B. 0.0268 lb/ft3
+C. 0.0589 lb/ft3
+D. 0.1210 lb/ft3
+Answer: A
+
+The density of mercury is 13,600 kg/m3. What is its specific weight in kN/m3?
+A. 98.1 kN/m3
+B. 154.2 kN/m3
+C. 133.4 kN/m3
+D. 111.5 kN/m3
+Answer: C
+
+A pressure gauge at a turbine inlet reads 400 psi and the barometer reads 30.1 in. Hg. What is the absolute inlet pressure?
+A. 385.2 psia
+B. 414.8 psia
+C. 400.0 psia
+D. 429.6 psia
+Answer: B
+
+A vacuum gauge in the exhaust trunk reads 28.0 in. Hg with a barometer at 30.1 in. Hg. What is the absolute exhaust pressure?
+A. 58.1 in. Hg abs
+B. 28.0 in. Hg abs
+C. 4.2 in. Hg abs
+D. 2.1 in. Hg abs
+Answer: D
+
+A barometer’s mercury column stands exactly 760 mm high. What is the barometric pressure in psi?
+A. 14.6959 psi
+B. 29.9213 psi
+C. 101.325 psi
+D. 33.8985 psi
+Answer: A
+
+The water legs in an open manometer differ by 20 in. (γ = 62.4 lbf/ft3), with atmospheric pressure assumed at 14.7 psi. What is the absolute pressure at point A?
+A. 14.70 psia
+B. 13.98 psia
+C. 15.42 psia
+D. 16.14 psia
+Answer: C
+
+In a differential manometer, mercury (849 lbf/ft3) stands 9 in. higher in the B leg than in the A leg, with water above the mercury. What is the pressure difference pA – pB?
+A. 590 psf
+B. 636.8 psf
+C. 46.8 psf
+D. 683.6 psf
+Answer: A
+
+Steam flows in a pipe at 100 ft/s. What is its kinetic energy per pound?
+A. 77.6 ft·lbf/lb
+B. 310.6 ft·lbf/lb
+C. 155.3 ft·lbf/lb
+D. 100.0 ft·lbf/lb
+Answer: C
+
+A turbine delivers 400 Btu/lb with a steam flow of 20,000 lb/hr. What power is delivered?
+A. 1571 hp
+B. 3143 hp
+C. 2344 hp
+D. 6286 hp
+Answer: B
+
+In a non-flow process the internal energy decreases 20 Btu/lb while 77,800 ft·lbf/lb of work is done on the substance. What is the heat transfer?
+A. 120 Btu/lb added
+B. 100 Btu/lb added
+C. 120 Btu/lb abstracted
+D. 80 Btu/lb abstracted
+Answer: C
+
+In a non-flow adiabatic process, 2 kg of substance gains 5000 J of internal energy. What is the work done on the substance?
+A. 10,000 J/kg
+B. 5000 J/kg
+C. 1250 J/kg
+D. 2500 J/kg
+Answer: D
+
+Steam at 100 psia and 400°F has v = 4.934 ft3/lb and h = 1227.5 Btu/lb. What is its internal energy?
+A. 1136.2 Btu/lb
+B. 1227.5 Btu/lb
+C. 1090.4 Btu/lb
+D. 1181.7 Btu/lb
+Answer: A
+
+What is the saturation pressure of water at 300°F?
+A. 52.4 psia
+B. 66.98 psia
+C. 89.6 psia
+D. 14.7 psia
+Answer: B
+
+What is the saturation temperature of steam at 850 psia?
+A. 510.2°F
+B. 541.8°F
+C. 525.39°F
+D. 498.6°F
+Answer: C
+
+Steam at 65 psia and 298°F is passed through a separating calorimeter that collects 0.5 lb of water in 5 min, while 0.4 lb/min of dry vapor flows. What is the quality?
+A. 80%
+B. 55%
+C. 90%
+D. 65%
+Answer: A
+
+Steam at 210 psia and 386°F has an enthalpy of 1173 Btu/lb from a throttling calorimeter. What is its quality?
+A. 92.4%
+B. 98.7%
+C. 89.5%
+D. 96.8%
+Answer: D
+
+What is the enthalpy of steam at 900 psia and 535°F?
+A. 1204.8 Btu/lb
+B. 1199.2 Btu/lb
+C. 1193.6 Btu/lb
+D. 1186.4 Btu/lb
+Answer: B
+
+What is the superheat of steam at 600 psia and 850°F?
+A. 363.67°F
+B. 486.33°F
+C. 256.2°F
+D. 850.0°F
+Answer: A
+
+Feedwater at 1200 psia and 275°F is compressed liquid. What is its enthalpy?
+A. 271.46 Btu/lb
+B. 220.61 Btu/lb
+C. 246.43 Btu/lb
+D. 264.04 Btu/lb
+Answer: C
+
+Steam expands isentropically from 600 psia and 740°F to 1 psia. What is the enthalpy drop?
+A. 477 Btu/lb
+B. 372 Btu/lb
+C. 526 Btu/lb
+D. 897 Btu/lb
+Answer: A
+
+Steam at 10 psia and 90% quality drops to 2.5 psia in a constant-volume reversible process. What is the final quality?
+A. 90.0%
+B. 36.8%
+C. 24.5%
+D. 12.3%
+Answer: C
+
+Four pounds of dry saturated steam expand isentropically from 275 psia to 125 psia. What is the work done?
+A. 114.2 Btu
+B. 228.4 Btu
+C. 457.1 Btu
+D. 57.1 Btu
+Answer: B
+
+One pound of air at 200°F expands without flow between 90 psia and 15 psia. Which process produces the most work with the least heat supplied?
+A. pv^k = c
+B. pv^1.5 = c
+C. pv = c
+D. All produce equal work
+Answer: C
+
+In a Carnot cycle with air (T1 = 326 K, P1 = 359 kPa, P2 = 1373 kPa, v3/v2 = 2), what is the heat supplied?
+A. 64.85 kJ/kg
+B. 95.17 kJ/kg
+C. 30.32 kJ/kg
+D. 142.6 kJ/kg
+Answer: B
+
+For the same Carnot cycle, what is the thermal efficiency?
+A. 31.86%
+B. 68.1%
+C. 45.2%
+D. 24.7%
+Answer: A
+
+A Carnot cycle has a source at 3460°R, a sink at 520°R and 100 Btu of heat supplied per pound. What is the available energy?
+A. 15 Btu/lb
+B. 73.5 Btu/lb
+C. 100 Btu/lb
+D. 85 Btu/lb
+Answer: D
+
+For 100 Btu added reversibly at 3460°R, what is the entropy change?
+A. 0.0510 Btu/lb.R
+B. 0.0289 Btu/lb.R
+C. 0.1923 Btu/lb.R
+D. 0.0150 Btu/lb.R
+Answer: B
+
+One pound of saturated steam at 212°F is mixed with 9 lb of water at 60°F at atmospheric pressure. What is the final temperature?
+A. 136.0°F
+B. 212.0°F
+C. 172.4°F
+D. 108.5°F
+Answer: C
+
+In an ideal steam cycle with 1744.5 Btu/lb heat added, a 60°F sink, and a superheater outlet at 1500°F, what is the available energy of the ideal cycle?
+A. 868.8 Btu/lb
+B. 1744.5 Btu/lb
+C. 4951 Btu/lb
+D. 575.9 Btu/lb
+Answer: A
+
+A 50% reaction stage has 10 Btu/lb available energy, a fixed blade efficiency of 0.96 and 5 Btu/lb available to the fixed blades. What is the steam velocity leaving the fixed blades?
+A. 392 ft/s
+B. 490 ft/s
+C. 568 ft/s
+D. 316 ft/s
+Answer: B
+
+For the same stage, what is the combined blade efficiency?
+A. 82.6%
+B. 78.4%
+C. 91.2%
+D. 86.9%
+Answer: D
+
+If 5% of the steam in that stage leaks past without doing work, what is the stage efficiency?
+A. 82.6%
+B. 86.9%
+C. 95.0%
+D. 71.3%
+Answer: A
+
+A boiler tube (ID 4 in., wall 0.375 in., ho = 26, hi = 1700 Btu/hr·ft2·°F, k = 26) is clean. What is the overall heat transfer coefficient?
+A. 9.18 Btu/hr·ft2·°F
+B. 16.61 Btu/hr·ft2·°F
+C. 24.69 Btu/hr·ft2·°F
+D. 31.4 Btu/hr·ft2·°F
+Answer: C
+
+For the same tube with a 0.375 in. scale layer (k = 0.6) on the inner surface, what is the overall coefficient?
+A. 9.18 Btu/hr·ft2·°F
+B. 24.69 Btu/hr·ft2·°F
+C. 4.62 Btu/hr·ft2·°F
+D. 13.7 Btu/hr·ft2·°F
+Answer: A
+
+A steam condenser (23,500 ft2) passes cooling water at 40,500 gpm from 71.5°F to 90°F, with steam at 2.45 in. Hg abs. What is the overall U from the acceptance test?
+A. 486 Btu/hr·ft2·°F
+B. 609 Btu/hr·ft2·°F
+C. 375 Btu/hr·ft2·°F
+D. 842 Btu/hr·ft2·°F
+Answer: B
+
+A regenerator heats 1.8 kg/s of air with 1.88 kg/s of exhaust gas (cp = 1090 J/kg·K) cooling from 593°C to 310°C. What is the heat exchanged?
+A. 579.92 kJ/s
+B. 412.6 kJ/s
+C. 1023.4 kJ/s
+D. 283.0 kJ/s
+Answer: A
+
+A naval fuel oil is 0.8663 C, 0.1127 H, 0.0019 O, 0.0028 N and 0.0163 S. What is the theoretical air required per lb of fuel?
+A. 10.6805 lb
+B. 15.2 lb
+C. 13.9069 lb
+D. 3.2264 lb
+Answer: C
+
+For that fuel with 50% excess air, what is the air supplied?
+A. 13.9069 lb/lb fuel
+B. 20.8603 lb/lb fuel
+C. 27.8 lb/lb fuel
+D. 16.0207 lb/lb fuel
+Answer: B
+
+Flue gas by volume is 10% CO2, 2% CO, 8% O2 and 80% N2. What is its apparent molecular weight?
+A. 28.0
+B. 32.4
+C. 31.1
+D. 29.92
+Answer: D
+
+An Orsat analysis gives 11% CO2, 2% CO, 4.5% O2 and 82.5% N2 for a fuel that is 0.87 C. What is the percent excess air (the key ran with 16.77 actual and 14.12 ideal air)?
+A. 8.4%
+B. 18.8%
+C. 26.5%
+D. 35.0%
+Answer: B
+
+In an oil-fired boiler test, 200,000 lb of steam are produced per hour from 15,385 lb of dry fuel (HHV 19,500 Btu/lb). What are the radiation and unaccounted-for losses?
+A. 505.8 Btu/lb dry fuel
+B. 1567.3 Btu/lb dry fuel
+C. 734.1 Btu/lb dry fuel
+D. 60.8 Btu/lb dry fuel
+Answer: C
+
+A boiler burns 16,800 lb of fuel per hour (18,500 Btu/lb) and makes 210,000 lb/hr of steam. What is the boiler efficiency?
+A. 85.0%
+B. 76.8%
+C. 69.2%
+D. 91.3%
+Answer: B
+
+A boiler makes 250,000 lb/hr of steam at 1200 psia and 1050°F from feedwater at 1500 psia and 300°F (h = 1528.9 and 272.39 Btu/lb). What is the factor of evaporation?
+A. 1.295
+B. 1.170
+C. 0.772
+D. 1.518
+Answer: A
+
+Helium (cv = 0.750) and hydrogen (cv = 2.440) are mixed to give cv = 1.0 Btu/lb·°F. What is the volumetric percentage of helium (the key’s value)?
+A. 25.8%
+B. 50.0%
+C. 74.2%
+D. 61.4%
+Answer: C
+
+Air at 45°F DB and 41°F WB is heated and humidified to 72°F DB and 59°F WB. To what temperature must it be heated before humidification?
+A. 64°F
+B. 55°F
+C. 72°F
+D. 81°F
+Answer: A
+
+A room 14 x 16 x 10 ft holds air at 72°F with a vapor partial pressure of 0.2140 psia. What is the mass of dry air in the room?
+A. 120.3 lb
+B. 164.7 lb
+C. 210.9 lb
+D. 1.51 lb
+Answer: B
+
+A heat exchanger receives oil (cp 0.45, 40,000 lb/hr, 160°F) and water (120,000 lb/hr, 60°F). What common temperature is reached in parallel flow with unlimited area?
+A. 73°F
+B. 110°F
+C. 160°F
+D. 85°F
+Answer: A
+
+What is the heat flow through a 10 in. concrete wall, 20 ft long and 8 ft high, with k = 0.10 and a temperature difference of 40°F?
+A. 3840 Btu/hr
+B. 15,360 Btu/hr
+C. 7680 Btu/hr
+D. 2560 Btu/hr
+Answer: C
+
+In a simple impulse stage with a blade speed of 150 m/s, a nozzle angle of 18° and nozzle exit velocity of 320 m/s, what is the relative entering velocity?
+A. 184 m/s
+B. 170 m/s
+C. 320 m/s
+D. 150 m/s
+Answer: A
+
+Steam enters an impulse wheel at 1200 ft/s absolute and leaves at 245 ft/s, with relative velocities of 640 and 540 ft/s. What is the diagram efficiency?
+A. 92.4%
+B. 87.7%
+C. 81.3%
+D. 74.9%
+Answer: B
+
+A converging-diverging nozzle receives steam at 380 psia and 480°F and expands to 50 psia (velocity coefficient 0.98). What is the actual throat velocity?
+A. 1582 ft/s
+B. 2727 ft/s
+C. 1210 ft/s
+D. 1940 ft/s
+Answer: A
+
+For the same nozzle, what is the actual exit velocity?
+A. 1582 ft/s
+B. 3140 ft/s
+C. 2727 ft/s
+D. 2210 ft/s
+Answer: C
+
+For the same nozzle, what is the exit diameter?
+A. 0.50 in.
+B. 0.720 in.
+C. 1.05 in.
+D. 0.362 in.
+Answer: B
+
+Air at 73.5 psia and 1400°F expands isentropically to 14.7 psia in a nozzle. What is the exit velocity?
+A. 1930 ft/s
+B. 2870 ft/s
+C. 3340 ft/s
+D. 714 ft/s
+Answer: B
+
+Air enters a diffuser at 1800 ft/s relative to the aircraft, at 1.05 psia and –70°F. What is the inlet Mach number?
+A. 0.54
+B. 1.86
+C. 2.35
+D. 1.20
+Answer: B
+
+Steam flows at 75,000 lb/hr through a 0.322 ft2 line at 600 psia and 750°F. What is the steam velocity?
+A. 73.3 ft/s
+B. 22.1 ft/s
+C. 146.6 ft/s
+D. 36.7 ft/s
+Answer: A
+
+An air compressor takes in 50 ft3/min of air at 14.7 psia and 60°F. What is the mass flow rate?
+A. 10.18 lb/min
+B. 3.82 lb/min
+C. 7.64 lb/min
+D. 1.91 lb/min
+Answer: B
+
+A deaerating heater at 30 psia receives 100,000 lb/hr condensate, 1,000 lb/hr vent vapor and 5,000 lb/hr drains. What is the exhaust steam flow required?
+A. 12,400 lb/hr
+B. 19,566 lb/hr
+C. 5,000 lb/hr
+D. 123,566 lb/hr
+Answer: B
+
+A Rankine regenerative cycle (1200 psia, 1050°F, 79°F condenser) uses two extractions. What is the thermal efficiency?
+A. 39.2%
+B. 52.8%
+C. 47.4%
+D. 61.5%
+Answer: C
+
+In a PWR secondary loop with 500,000 lb/hr flow, what is the thermal efficiency of the simple Rankine cycle?
+A. 31.0%
+B. 24.5%
+C. 38.7%
+D. 45.2%
+Answer: A
+
+A large turbine receives steam at 560 psia and 800°F and exhausts at 1.5 in. Hg with 10% moisture. What is the internal engine efficiency?
+A. 62.8%
+B. 85.1%
+C. 77.4%
+D. 70.2%
+Answer: C
+
+A 60-kW auxiliary generator at quarter load has a steam chest pressure of 115 psia with the hand valves closed. What is the throttling loss accepted for control?
+A. 33.7 Btu/lb
+B. 38.6 Btu/lb
+C. 71.2 Btu/lb
+D. 4.9 Btu/lb
+Answer: A
+
+Turbine A (850 psia, 940°F, 0.70 psia exhaust, 164,000 lb/hr) delivers 30,000 shp. What is its water rate?
+A. 6.23 lb/shp-hr
+B. 4.18 lb/shp-hr
+C. 5.47 lb/shp-hr
+D. 8.60 lb/shp-hr
+Answer: C
+
+A refrigerating plant removes 10,000 Btu/min with 170 lb/min refrigerant and 60 hp compressor power. What is the actual COP?
+A. 8.33
+B. 3.93
+C. 2.78
+D. 5.12
+Answer: B
+
+For the same plant (40°F evaporation, 100°F condensing), what is the Carnot COP?
+A. 8.33
+B. 3.93
+C. 5.60
+D. 11.2
+Answer: A
+
+A Freon-12 plant circulates 23 lb/min (evaporator 50 psia, condenser 120 psia). What is its capacity?
+A. 3.8 tons
+B. 6.5 tons
+C. 8.2 tons
+D. 12.1 tons
+Answer: B
+
+A 50-ton Freon-12 plant on the standard rating cycle has a refrigerating effect of 54.48 Btu/lb. What is the Freon flow rate?
+A. 183.6 lb/min
+B. 91.8 lb/min
+C. 220.4 lb/min
+D. 54.5 lb/min
+Answer: A
+
+An air refrigeration system with 77°F and 14°F cycle temperatures and a 60°F temperature rise has what COP?
+A. 2.15
+B. 4.80
+C. 3.33
+D. 1.67
+Answer: C
+
+An aircraft cooling system handles 65 lb/min of air (cp = 0.24) with t1 = 342°F, t2 = 142°F, t3 = 252°F and t4 = 145°F. What is the heat transferred to the atmospheric air supply?
+A. 2395 Btu/min
+B. 7184 Btu/min
+C. 3120 Btu/min
+D. 4789.2 Btu/min
+Answer: D
+
+A 50-ton Freon-12 system has a condenser at 180 psia and 120°F liquid. What is the mass of Freon circulated?
+A. 6,400 lb/hr
+B. 25,600 lb/hr
+C. 12,800 lb/hr
+D. 9,200 lb/hr
+Answer: C
+
+In a reversed Carnot cycle, what is the horsepower required per ton of refrigeration if the equivalent power cycle has a thermal efficiency of 50%?
+A. 1.57 hp
+B. 0.673 hp
+C. 2.35 hp
+D. 4.71 hp
+Answer: D
+
+In an ideal Brayton cycle with air entering at 15 psia and 75°F and a turbine inlet of 1600°F, what is the compressor discharge temperature for maximum net work?
+A. 590°F
+B. 1050°F
+C. 535°F
+D. 860°F
+Answer: A
+
+For the same cycle at a pressure ratio of 15, what is the thermal efficiency?
+A. 49.0%
+B. 62.3%
+C. 45.8%
+D. 53.9%
+Answer: D
+
+What is the best intercooler pressure for a two-stage compressor from 105 kPa to 1260 kPa?
+A. 682.5 kPa
+B. 363.7 kPa
+C. 210.0 kPa
+D. 525.0 kPa
+Answer: B
+
+An axial compressor discharges 900 lb/min of air, taking in 14.7 psia and 50°F and delivering 162 psia and 648°F. What is the isentropic compression efficiency?
+A. 84%
+B. 72%
+C. 91%
+D. 66%
+Answer: A
+
+A centrifugal compressor draws air at 100 kPa and 25°C, with a pressure ratio of 3 and an isentropic efficiency of 0.70. What is the actual discharge temperature?
+A. 407.9 K
+B. 455 K
+C. 298 K
+D. 512 K
+Answer: B
+
+In a split-shaft gas turbine (compressor 14.5 psia, 60°F in; 174 psia, 716°F out), what is the compressor isentropic efficiency using constant specific heats?
+A. 82.0%
+B. 70.4%
+C. 91.5%
+D. 65.3%
+Answer: A
+
+For the same gas turbine, what is the compressor turbine power output?
+A. 15,000 hp
+B. 22,900 hp
+C. 45,980 hp
+D. 8,780 hp
+Answer: C
+
+A turbojet with a compression ratio of 12, a turbine inlet at 2000°R and a flight speed of 850 ft/s (116 lb/s of air) has what thrust?
+A. 4,120 lbf
+B. 8,860 lbf
+C. 3,310 lbf
+D. 5,825 lbf
+Answer: D
+
+For the same engine with afterburning to 2500°R, what is the thrust?
+A. 5,825 lbf
+B. 11,400 lbf
+C. 8,860 lbf
+D. 7,150 lbf
+Answer: C
+
+An ideal dual combustion cycle (15 psia, 75°F, r = 12, 176 Btu/lb at constant volume and 176 at constant pressure) has what thermal efficiency using constant specific heats?
+A. 61.9%
+B. 57.6%
+C. 48.3%
+D. 66.7%
+Answer: A
+
+For the same cycle solved with air tables, what is the thermal efficiency?
+A. 61.9%
+B. 52.0%
+C. 57.6%
+D. 63.4%
+Answer: C
+
+A Rankine cycle at 600 psia and 850°F with a 1 in. Hg condenser has what thermal efficiency?
+A. 39.2%
+B. 45.6%
+C. 33.1%
+D. 51.0%
+Answer: A
+
+A geared turbine delivers 35,000 shp at 240 rpm with 95% mechanical efficiency. If mechanical losses vary as the square of speed, what is the mechanical loss at 122 rpm?
+A. 1840 hp
+B. 950 hp
+C. 475 hp
+D. 238 hp
+Answer: C
+
+In a simple impulse stage, steam leaves the nozzle at 1200 ft/s at 15°, with a wheel speed of 580 ft/s and a bucket coefficient of 0.88. What is the required bucket entrance angle?
+A. 15.0°
+B. 28.2°
+C. 35.6°
+D. 42.0°
+Answer: B
+
+For the same stage with 6000 lb/hr of steam, what power is developed in the buckets?
+A. 25.2 hp
+B. 87.7 hp
+C. 118.8 hp
+D. 59.4 hp
+Answer: D
+
+Steam enters a simple impulse wheel at 450 m/s absolute (270 m/s relative) and leaves at 230 m/s relative and 105 m/s absolute. What is the bucket velocity coefficient?
+A. 0.85
+B. 0.60
+C. 0.92
+D. 0.47
+Answer: A
+
+An impulse stage receives steam at 220 psia and 420°F with an available energy of 38.5 Btu/lb. What is the enthalpy after isentropic expansion to the stage pressure (h0 = 1219.8 Btu/lb)?
+A. 1219.8 Btu/lb
+B. 1257.3 Btu/lb
+C. 1183.4 Btu/lb
+D. 1181.3 Btu/lb
+Answer: D
+
+A solid brick wall (k = 1.32 W/m·°C, 20 cm thick, 10 m2) has surface temperatures of 50°C and 15°C. What is the heat transfer?
+A. 462 W
+B. 2310 W
+C. 1155 W
+D. 8250 W
+Answer: B
+
+A furnace wall (diatomaceous earth, insulating brick, firebrick, steel casing; gas at 2100°F, ambient 100°F) has what overall U?
+A. 0.394 Btu/hr·ft2·°F
+B. 1.25 Btu/hr·ft2·°F
+C. 2.54 Btu/hr·ft2·°F
+D. 0.082 Btu/hr·ft2·°F
+Answer: A
+
+For the same wall, what is the temperature at the interface between the insulating brick and the diatomaceous earth block?
+A. 600°F
+B. 1500°F
+C. 1260°F
+D. 1810°F
+Answer: B
+
+A steam line (2.90 in. ID, 800°F steam, 1.5 in. asbestos, 1 in. magnesia) has what overall U based on the outer magnesia surface?
+A. 0.1659 Btu/hr·ft2·°F
+B. 0.4020 Btu/hr·ft2·°F
+C. 1.20 Btu/hr·ft2·°F
+D. 0.0412 Btu/hr·ft2·°F
+Answer: A
+
+A 5/8 in. Admiralty metal tube (wall 0.049 in., steam film 1250, liquid film 20) has what overall coefficient?
+A. 8.34 Btu/hr·ft2·°F
+B. 16.61 Btu/hr·ft2·°F
+C. 24.7 Btu/hr·ft2·°F
+D. 19.8 Btu/hr·ft2·°F
+Answer: B
+
+Air enters a gas turbine nozzle at 1200°F and leaves at 950°F with negligible entering velocity. What is the exit velocity?
+A. 1226 ft/s
+B. 2450 ft/s
+C. 1734 ft/s
+D. 868 ft/s
+Answer: C
+
+A propulsion turbine receives steam at 875 psia and 940°F and exhausts at 0.60 psia with 10% moisture. What work is done per pound?
+A. 962.3 Btu/lb
+B. 481.5 Btu/lb
+C. 240.8 Btu/lb
+D. 1475.6 Btu/lb
+Answer: B
+
+A boiler receives feedwater at 1200 psia and 250°F and delivers steam at 900 psia and 950°F. What heat is added per pound?
+A. 1480.5 Btu/lb
+B. 1180.2 Btu/lb
+C. 1259.5 Btu/lb
+D. 221.0 Btu/lb
+Answer: C
+
+Saturated water at 250°F is pumped to 1200 psia at 60% pump efficiency. What is the total head developed?
+A. 1430 ft
+B. 2865 ft
+C. 5730 ft
+D. 1195 ft
+Answer: B
+
+A water-cooled air compressor takes in air at 15 psia and 60°F and discharges at 60 psia and 200°F, with 21.4 Btu/lb removed as heat. What is the work done?
+A. 55 Btu/lb on the air
+B. 12.2 Btu/lb on the air
+C. 33.6 Btu/lb on the air
+D. 76.4 Btu/lb on the air
+Answer: A
+
+Steam at 215 psia passes through an Ellison throttling calorimeter reading 250°F at standard barometric pressure. What is the quality of the line steam?
+A. 89.7%
+B. 99.1%
+C. 94.0%
+D. 96.24%
+Answer: D
+
+In a lube oil cooler, 400 lb/min of oil (cp 0.50) cools from 140°F to 100°F using 500 lb/min of seawater (cp 0.94) entering at 60°F. What is the water discharge temperature?
+A. 77°F
+B. 94°F
+C. 120°F
+D. 68°F
+Answer: A
+
+Steam at 0.50 psia and 89% quality condenses at 100,000 lb/hr into saturated liquid. What seawater flow is required if it rises from 70°F to 85°F (cp 0.94, density 64 lb/ft3)?
+A. 6,580 gpm
+B. 26,340 gpm
+C. 13,170 gpm
+D. 9,850 gpm
+Answer: C
+
+A counterflow oil cooler (258 ft2) cools 60,000 lb/hr of oil from 145°F to 120°F with water from 75°F to 90°F. What is the overall U?
+A. 29.0 Btu/hr·ft2·°F
+B. 58.4 Btu/hr·ft2·°F
+C. 120.5 Btu/hr·ft2·°F
+D. 16.6 Btu/hr·ft2·°F
+Answer: B
+
+A steam superheater (1620 ft2) handles 220,000 lb/hr, with gas cooling from 2100°F to 1430°F and steam heated to 850°F. What is the operating overall coefficient using the counterflow LMTD?
+A. 30.0 Btu/hr·ft2·°F
+B. 29 Btu/hr·ft2·°F
+C. 58 Btu/hr·ft2·°F
+D. 14.5 Btu/hr·ft2·°F
+Answer: B
+
+A tank of air has a volume of 10 ft3, a pressure of 20 psig and a temperature of 100°F. What is the mass of air in the tank?
+A. 0.84 lb
+B. 3.35 lb
+C. 1.675 lb
+D. 5.97 lb
+Answer: C
+
+A spark ignition engine produces 190 ihp at 85% mechanical efficiency, burning 26.2 lb of gasoline in 20 min with 18.5 lb of air per minute (HV 19,500 Btu/lb). What is the air-fuel ratio?
+A. 7.06
+B. 14.12
+C. 28.2
+D. 18.5
+Answer: B
+
+A two-stroke, 14-cylinder diesel produces a torque of 5960 ft·lb at 1620 rpm. What is its brake horsepower?
+A. 920 hp
+B. 3680 hp
+C. 1840 hp
+D. 2450 hp
+Answer: C
+
+A Diesel cycle with a compression ratio of 16, a peak temperature of 2912°R and initial conditions of 14.7 psia and 60°F has what peak pressure?
+A. 714 psia
+B. 480 psia
+C. 1,050 psia
+D. 235 psia
+Answer: A
+
+A Carnot power cycle operates between 600°F and 70°F. What is its thermal efficiency?
+A. 88.4%
+B. 25.0%
+C. 66.7%
+D. 50%
+Answer: D
+
+A working substance enters a steady-flow system (p1 = 20 psia, v1 = 11.7 ft3/lb, u1 = 101.6 Btu/lb, V1 = 150 ft/s) and leaves (p2 = 25 psia, v2 = 10.3 ft3/lb, u2 = 149.0 Btu/lb, V2 = 500 ft/s), with 10 Btu/lb of heat added. What is the work?
+A. 46.3 Btu/lb done by the fluid
+B. 46.3 Btu/lb done on the fluid
+C. 10.0 Btu/lb done on the fluid
+D. 83.7 Btu/lb done by the fluid
+Answer: B
+
+Air at 60 psia and 1340°F expands isentropically in an ideal nozzle to 15 psia. What is the exit velocity?
+A. 1896 ft/s
+B. 1331 ft/s
+C. 2662 ft/s
+D. 3590 ft/s
+Answer: C
+
+An air nozzle from 54 psia and 1480°F to 18 psia has a coefficient of 0.97. What is the actual exit velocity?
+A. 2432 ft/s
+B. 2577 ft/s
+C. 1216 ft/s
+D. 3110 ft/s
+Answer: A
+
+A steam boiler economizer heats 160,000 lb/hr of water from 250°F to 355°F (net area 3840 ft2) with gas from 1400°F to 800°F. What is the operating heat transfer coefficient (the key’s value)?
+A. 8.00 Btu/hr·ft2·°F
+B. 11.2 Btu/hr·ft2·°F
+C. 2.35 Btu/hr·ft2·°F
+D. 4.66 Btu/hr·ft2·°F
+Answer: D
+
+In an ideal Rankine reheat cycle (1200 psi, 1060°F, reheat at 90 psi to 950°F, 1 in. Hg condenser), what is the thermal efficiency?
+A. 38.2%
+B. 51.6%
+C. 44.5%
+D. 47.9%
+Answer: C
+
+A Rankine regenerative reheat cycle (2000 psia, 1050°F, one extraction, reheat to 950°F) has what optimum extraction pressure?
+A. 90 psia
+B. 340 psia
+C. 26 psia
+D. 170 psia
+Answer: D
+
+Air is compressed in a non-flow polytropic process from 80°F and 15 psia to 285°F and 75 psia. What is the polytropic exponent n?
+A. 1.25
+B. 1.40
+C. 1.10
+D. 1.67
+Answer: A
+
+Air is heated at constant pressure (90 psia) from 540°R to 1500°R and then expanded isentropically to 15 psia, with constant specific heats. What is the net work?
+A. 230.4 Btu/lb
+B. 61.3 Btu/lb
+C. 169.1 Btu/lb
+D. 117.8 Btu/lb
+Answer: A
