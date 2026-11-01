@@ -44005,3 +44005,199 @@ B. 15.15 kW
 C. 11.93 kW
 D. 18.24 kW
 Answer: A
+
+A test of a 10-TR ammonia vapor compression refrigeration system gave the following results: condenser pressure 1600 kPa; evaporator pressure 191 kPa; temperature leaving evaporator coils -10 C; temperature entering compressor 0 C; temperature leaving compressor 100 C; temperature entering condenser 80 C; temperature leaving condenser 35 C; coefficient of performance 3.1. (A) Find heat lost or gained, (a) between evaporator coils and compressor, (b) between compressor and condenser, and (c) to condenser water. (B) Find, (a) temperature in the evaporator coils in saturated state, and (b) quantity of the vapor in the evaporator coils following expansion through valve. (C) Find, (a) the work, and (b) the heat absorbed by jacket water.
+A. (A-a) 40.32 kJ/min; (A-b) 113.3 kJ/min; (A-c) 2377 kJ/min; (B-a) -20 C; (B-b) 19.38 %; (C-a) 11.34 kW; (C-b) 5.58 kW
+B. (A-a) 38.30 kJ/min; (A-b) 99.7 kJ/min; (A-c) 2662 kJ/min; (B-a) -22 C; (B-b) 22.29 %; (C-a) 10.21 kW; (C-b) 6.14 kW
+C. (A-a) 43.55 kJ/min; (A-b) 130.3 kJ/min; (A-c) 2044 kJ/min; (B-a) -18 C; (B-b) 17.44 %; (C-a) 13.61 kW; (C-b) 5.13 kW
+D. (A-a) 34.27 kJ/min; (A-b) 88.4 kJ/min; (A-c) 2971 kJ/min; (B-a) -22 C; (B-b) 25.19 %; (C-a) 9.30 kW; (C-b) 6.58 kW
+Answer: A
+
+What is the average fuel – oil temperature range of the oil in the discharge line to the boiler?
+A. 180 – 200 ͦF
+B. 240 – 260 ͦF
+C. 160 – 180 ͦF
+D. 140 – 160 ͦF
+Answer: A
+
+A change in the efficiency of combustion in a boiler can usually be determined by comparing the previously recorded readings with the current readings of the _________.
+A. Stack temperature and CO
+B. Over the fire draft and CO
+C. Ringelmannn chart and CO2
+D. Stack temperature and CO2
+Answer: D
+
+Solar energy arrives at the outside of the earth’s atmosphere at an average rate of ________.
+A. 1.354 kW/
+B. 1.543 kW/
+C. 2.354 kW/
+D. 2.543 kW/
+Answer: A
+
+At what temperature will water normally turns to steam?
+A. 100 ͦF
+B. 200 ͦF
+C. 150 ͦF
+D. 212 ͦF
+Answer: D
+
+The ASME code states that boilers with over _______square feet heating surface must have two or more safety valve.
+A. 200
+B. 400
+C. 400
+D. 500
+Answer: D
+
+On a pressure control, _______ pressure plus ______pressure equals _______ pressure.
+A. Differential; cut-out; cut-in
+B. Cut-in; cut-out; differential
+C. Cut-in; differential; cut-in
+D. Cut-in pressures equals cut-out pressure
+Answer: C
+
+Top test the vacuum pump, the operator puts the selector switch in the _____ position.
+A. Float
+B. Float or vacuum
+C. Vacuum
+D. Continuous
+Answer: D
+
+The vacuum pump sselector switch is normally in the position during the heating season.
+A. Float or vacuum
+B. Vacuum only
+C. Float only
+D. Continuous
+Answer: A
+
+When a steam trap is functioning properly there is a _______ difference in temperature between the trap inlet and discharge.
+A. 5 ͦF to 10 ͦF
+B. 20 ͦF to 30 ͦF
+C. 10 ͦF to 20 ͦF
+D. No
+Answer: C
+
+Which of the following is not a similarity between a submerged culvert and a siphon?
+A. They both operate full
+B. Torricelli's equation holds
+C. Both can experience entrance and exit losses
+D. In both, the water flows downhill S
+Answer: B
+
+Which of the following is used as high head turbine?
+A. Impulse
+B. Francis
+C. Réaction
+D. Propeller
+Answer: A
+
+Flow measuring devices include all of the following except:
+A. Flow nozzles
+B. Venturi area meters
+C. Pitot tubes
+D. Precision tachometers
+Answer: C
+
+The following are examples of indirect (secondary) measurements to measure flow rates using obstruction meters except:
+A. Pitot static meters
+B. Static pressure probes
+C. Weight and mass scales
+D. Direction-sensing probes
+Answer: D
+
+Refers to organic waste produced from biological waterwaste treatment processes.
+A. Toxic waste
+B. Biosolids
+C. Extrinsic waste
+D. Process waste
+Answer: B
+
+A type of polymer used for Styrofoam cups and “clam shell” food containers.
+A. Polyvinyl chloride (PVC)
+B. Polystyrene (PS)
+C. Low density polyethelene (LDPE)
+D. Polypropylene (PP)
+Answer: B
+
+Is a high – temperature process that turns incinerator ash into a safe glass-like material.
+A. Advance oxidation
+B. Biofitration
+C. Vitrification
+D. Bioventing
+Answer: C
+
+Mass density of liquid (ρ) is given by which of the following?
+A. Ρ = Mass / volume
+B. Ρ = metric slug / m2 2
+C. Ρ = kg-sec / m 4
+D. all of the above
+Answer: D
+
+Which of the following can be used to measure the flow of water in a pipe of diameter 3000 mm?
+A. Venturimeter
+B. Rotameter
+C. Nozzle
+D. Pilot tube
+Answer: D
+
+A pilot tube can be used to measure fluid velocity as described by the Bernoulli’s equation and the relationship between:
+A. Kinetic energy and static pressure
+B. Fluid pressure and height of the fluid
+C. Fluid pressure and impact energy
+D. Pressure and momentum
+Answer: A
+
+Which of the following is the highest head?
+A. 33 inch Hg
+B. 31.0 ft. water
+C. 1.013 kg kg/cm 2
+D. 75.0 cm of Hg
+Answer: A
+
+The pilot tube is a device used for measurement of
+A. Pressure
+B. Flow
+C. Velocity
+D. Discharge
+Answer: C
+
+A pilot tube can be used to measure fluid velocity as described by the Bernoulli’s equation and the relationship between:
+A. Kinetic energy and static pressure
+B. Fluid pressure and static pressure
+C. Fluid pressure and impact energy
+D. Pressure and momentum
+Answer: A
+
+What is the coefficient of contraction?
+A. The ratio of the area of vena contracta to the area of the orifice
+B. The ration of actual discharge to the theoretical discharge
+C. The ratio of the actual velocity to the theoretical velocity
+D. The ratio of the effective head to the actua; head
+Answer: A
+
+Which of the following is not a dimensionless parameter?
+A. Kinetic viscosity
+B. Weber number
+C. Darcy Weisbach friction factor
+D. Froude number
+Answer: A
+
+The rise or fall of head ‘h’ in a capillary tube of diameter ‘d ‘ and liquid surface tension ‘s’ and specific weight ‘w’ is given by:
+A. 4s/wd
+B. 4ds/w
+C. 4wd/s
+D. 4ws/d
+Answer: A
+
+The Mach number is unity or one at the location of smallest flow area, called the:
+A. Decreasing are
+B. Throat
+C. Increasing area
+D. None of these
+Answer: B
+
+In Maxwell’s theory for thermal conductivity of gases and vapors, which of the following is the value of “a” for triatomic gases?
+A. 1.7
+B. 2.4
+C. 1.3
+D. 2.4
+Answer: A
