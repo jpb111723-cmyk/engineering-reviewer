@@ -565,8 +565,16 @@ async function publish(pw) {
     const g = await fetch(url + '?ref=' + encodeURIComponent(GH.branch), { headers: hdr, cache: 'no-store' });
     if (!g.ok) throw new Error(ghErr(g.status));
     const meta = await g.json();
-    if (!meta.content || meta.encoding !== 'base64') throw new Error(SUBJECTS[k].short + ' file is too large for this method.');
-    const text = new TextDecoder().decode(b64d(meta.content)).replace(/\r\n?/g, '\n');
+    let b64 = meta.content;
+    if (!b64 || meta.encoding !== 'base64') {
+      // Contents API omits the body for files over 1 MB; the Git Blobs API serves them (up to 100 MB)
+      const bl = await fetch('https://api.github.com/repos/' + GH.user + '/' + GH.repo + '/git/blobs/' + meta.sha, { headers: hdr, cache: 'no-store' });
+      if (!bl.ok) throw new Error(ghErr(bl.status));
+      const bj = await bl.json();
+      if (!bj.content || bj.encoding !== 'base64') throw new Error(SUBJECTS[k].short + ' file is too large for this method.');
+      b64 = bj.content;
+    }
+    const text = new TextDecoder().decode(b64d(b64)).replace(/\r\n?/g, '\n');
     const parts = text.split(/(\n\s*\n+)/), items = [];
     for (let j = 0; j < parts.length; j += 2) items.push({ b: parts[j], s: parts[j + 1] || '', gone: false, p: undefined });
     const getP = it => { if (it.p === undefined) it.p = parseQuestionsFromText(it.b)[0] || null; return it.p; };
